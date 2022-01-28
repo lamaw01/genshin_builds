@@ -12,7 +12,7 @@ final characterNameFontStyle = TextStyle(
   color: fontColor,
 );
 
-const double starIconSize = 30.0;
+const double starIconSize = 25.0;
 
 //Used in character info
 final characterInfoFontStyle = TextStyle(

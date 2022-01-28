@@ -3,8 +3,8 @@ import 'package:genshin_builds/constants/assets.dart';
 import 'package:genshin_builds/constants/colors.dart';
 import 'package:sizer/sizer.dart';
 
-class SummitShaper extends StatelessWidget {
-  const SummitShaper({Key? key}) : super(key: key);
+class MistsplitterReforged extends StatelessWidget {
+  const MistsplitterReforged({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class SummitShaper extends StatelessWidget {
           Row(
             children: [
               Image.asset(
-                weaponPath + 'summit_shaper.png',
+                weaponPath + 'mistsplitter_reforged.png',
                 width: 35.0,
                 height: 35.0,
               ),
@@ -31,7 +31,7 @@ class SummitShaper extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Summit Shaper',
+                        'Mistsplitter Reforged',
                         style: TextStyle(
                           fontSize: 11.sp,
                           fontWeight: FontWeight.w500,
@@ -52,7 +52,7 @@ class SummitShaper extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    'BASE 608 substat ATK 49.6%',
+                    'BASE 674 substat CRIT DMG 44.1%',
                     style: TextStyle(
                       fontSize: 9.sp,
                       fontWeight: FontWeight.w400,
@@ -65,7 +65,7 @@ class SummitShaper extends StatelessWidget {
           ),
           const SizedBox(height: 5.0),
           Text(
-            "Increases Shield Strength by 20%. Scoring hits on opponents increases ATK by 4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.",
+            "Gain a 12% Elemental DMG Bonus for every element and receive the might of Mistsplitter's Emblem. At stack levels 1/2/3, Mistsplitter's Emblem provides a 8/16/28% Elemental DMG Bonus for the character's Elemental Type. The character will obtain 1 stack of Mistsplitter's Emblem in each of the following scenarios: Normal Attack deals Elemental DMG (stack lasts 5s), casting Elemental Burst (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
             style: TextStyle(
               fontSize: 9.sp,
               fontWeight: FontWeight.w500,

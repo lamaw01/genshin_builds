@@ -28,22 +28,14 @@ class HarbingerOfDawn extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Harbinger of Dawn',
-                    style: TextStyle(
-                      fontSize: 11.sp,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.blue,
-                    ),
-                  ),
                   Row(
                     children: [
                       Text(
-                        'CRIT',
+                        'Harbinger of Dawn',
                         style: TextStyle(
-                          fontSize: 9.sp,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white,
+                          fontSize: 11.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.blue,
                         ),
                       ),
                       const SizedBox(width: 5.0),
@@ -59,15 +51,23 @@ class HarbingerOfDawn extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Text(
+                    'BASE 401 substat CRIT DMG 46.9%',
+                    style: TextStyle(
+                      fontSize: 9.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white,
+                    ),
+                  ),
                 ],
               ),
             ],
           ),
           const SizedBox(height: 5.0),
-          const Text(
-            "When HP is above 90%, increases CRIT Rate by 14/17.5/21/24.5/28%.",
+          Text(
+            "When HP is above 90%, increases CRIT Rate by 14%.",
             style: TextStyle(
-              fontSize: 13,
+              fontSize: 9.sp,
               fontWeight: FontWeight.w500,
               color: Colors.white,
             ),

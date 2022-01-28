@@ -3,8 +3,8 @@ import 'package:genshin_builds/constants/assets.dart';
 import 'package:genshin_builds/constants/colors.dart';
 import 'package:sizer/sizer.dart';
 
-class SummitShaper extends StatelessWidget {
-  const SummitShaper({Key? key}) : super(key: key);
+class SkywardPride extends StatelessWidget {
+  const SkywardPride({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class SummitShaper extends StatelessWidget {
           Row(
             children: [
               Image.asset(
-                weaponPath + 'summit_shaper.png',
+                weaponPath + 'skyward_pride.png',
                 width: 35.0,
                 height: 35.0,
               ),
@@ -31,7 +31,7 @@ class SummitShaper extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Summit Shaper',
+                        "Skyward Pride",
                         style: TextStyle(
                           fontSize: 11.sp,
                           fontWeight: FontWeight.w500,
@@ -52,7 +52,7 @@ class SummitShaper extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    'BASE 608 substat ATK 49.6%',
+                    "BASE 674 substat ER 36.8%",
                     style: TextStyle(
                       fontSize: 9.sp,
                       fontWeight: FontWeight.w400,
@@ -65,7 +65,7 @@ class SummitShaper extends StatelessWidget {
           ),
           const SizedBox(height: 5.0),
           Text(
-            "Increases Shield Strength by 20%. Scoring hits on opponents increases ATK by 4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.",
+            "Increases all DMG by 8%. After using an Elemental Burst, Normal or Charged Attack, on hit, creates a vacuum blade that does 80% of ATK as DMG to opponents along its path. Lasts for 20s or 8 vacuum blades.",
             style: TextStyle(
               fontSize: 9.sp,
               fontWeight: FontWeight.w500,

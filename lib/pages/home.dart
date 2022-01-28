@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_builds/constants/assets.dart';
 import 'package:genshin_builds/constants/colors.dart';
+import 'package:genshin_builds/functions/global_function.dart';
 import 'package:genshin_builds/models/character.dart';
 import 'package:genshin_builds/routes/go.dart';
 import 'package:sizer/sizer.dart';
@@ -14,26 +15,8 @@ final characterList = <Character>[
   Character(name: 'Kokomi', image: 'kokomi.png', element: 'Hydro'),
 ];
 
-String elementType(String element) {
-  if (element == 'Geo') {
-    return 'geo.png';
-  } else if (element == 'Cryo') {
-    return 'cryo.png';
-  } else if (element == 'Electro') {
-    return 'electro.png';
-  } else if (element == 'Pyro') {
-    return 'pyro.png';
-  } else if (element == 'Anemo') {
-    return 'anemo.png';
-  } else if (element == 'Hydro') {
-    return 'hydro.png';
-  } else {
-    return '';
-  }
-}
-
-class HomeView extends StatelessWidget {
-  const HomeView({Key? key}) : super(key: key);
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -75,29 +58,17 @@ class CharacterIcon extends StatelessWidget {
   final String element;
   final Character character;
 
-  Color backGround(String element) {
-    if (element == 'Geo') {
-      return geoBG;
-    } else if (element == 'Cryo') {
-      return cryoBG;
-    } else if (element == 'Electro') {
-      return electroBG;
-    } else if (element == 'Pyro') {
-      return pyroBG;
-    } else if (element == 'Anemo') {
-      return anemoBG;
-    } else if (element == 'Hydro') {
-      return hydroBG;
-    } else {
-      return Colors.teal;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Go.to(context, '/character', arguments: character);
+        if (name == "Albedo") {
+          Go.to(context, '/albedo', arguments: character);
+        } else if (name == "Ayaka") {
+          Go.to(context, '/ayaka', arguments: character);
+        } else if (name == "Beidou") {
+          Go.to(context, '/beidou', arguments: character);
+        }
       },
       child: Stack(
         fit: StackFit.expand,
@@ -106,7 +77,7 @@ class CharacterIcon extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
-              color: backGround(element),
+              color: GlobalFunction.backGround(element),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -116,7 +87,6 @@ class CharacterIcon extends StatelessWidget {
                   width: 70.0,
                   height: 70.0,
                 ),
-                const SizedBox(height: 5.0),
                 Text(
                   name,
                   style: TextStyle(fontSize: 8.sp, color: Colors.white),
@@ -131,7 +101,7 @@ class CharacterIcon extends StatelessWidget {
               backgroundColor: darkBGLighter,
               radius: 10,
               child: Image.asset(
-                elementPath + elementType(element),
+                elementPath + GlobalFunction.elementType(element),
                 width: 15.0,
                 height: 15.0,
               ),

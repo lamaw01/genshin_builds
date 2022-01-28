@@ -3,8 +3,8 @@ import 'package:genshin_builds/constants/assets.dart';
 import 'package:genshin_builds/constants/colors.dart';
 import 'package:sizer/sizer.dart';
 
-class SummitShaper extends StatelessWidget {
-  const SummitShaper({Key? key}) : super(key: key);
+class TheUnforged extends StatelessWidget {
+  const TheUnforged({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class SummitShaper extends StatelessWidget {
           Row(
             children: [
               Image.asset(
-                weaponPath + 'summit_shaper.png',
+                weaponPath + 'the_unforged.png',
                 width: 35.0,
                 height: 35.0,
               ),
@@ -31,7 +31,7 @@ class SummitShaper extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Summit Shaper',
+                        "The Unforged",
                         style: TextStyle(
                           fontSize: 11.sp,
                           fontWeight: FontWeight.w500,
@@ -52,7 +52,7 @@ class SummitShaper extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    'BASE 608 substat ATK 49.6%',
+                    "BASE 608 substat ATK 49.6%",
                     style: TextStyle(
                       fontSize: 9.sp,
                       fontWeight: FontWeight.w400,

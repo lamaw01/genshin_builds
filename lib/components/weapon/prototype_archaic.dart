@@ -3,8 +3,8 @@ import 'package:genshin_builds/constants/assets.dart';
 import 'package:genshin_builds/constants/colors.dart';
 import 'package:sizer/sizer.dart';
 
-class SummitShaper extends StatelessWidget {
-  const SummitShaper({Key? key}) : super(key: key);
+class PrototypeArchaic extends StatelessWidget {
+  const PrototypeArchaic({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class SummitShaper extends StatelessWidget {
           Row(
             children: [
               Image.asset(
-                weaponPath + 'summit_shaper.png',
+                weaponPath + 'prototype_archaic.png',
                 width: 35.0,
                 height: 35.0,
               ),
@@ -31,17 +31,17 @@ class SummitShaper extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Summit Shaper',
+                        "Prototype Archaic",
                         style: TextStyle(
                           fontSize: 11.sp,
                           fontWeight: FontWeight.w500,
-                          color: Colors.yellow,
+                          color: Colors.purple,
                         ),
                       ),
                       const SizedBox(width: 5.0),
                       Row(
                         children: [
-                          for (int i = 0; i < 5; i++)
+                          for (int i = 0; i < 4; i++)
                             const Icon(
                               Icons.star,
                               color: Colors.orange,
@@ -52,7 +52,7 @@ class SummitShaper extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    'BASE 608 substat ATK 49.6%',
+                    "BASE 565 substat ATK 27.6%",
                     style: TextStyle(
                       fontSize: 9.sp,
                       fontWeight: FontWeight.w400,
@@ -65,7 +65,7 @@ class SummitShaper extends StatelessWidget {
           ),
           const SizedBox(height: 5.0),
           Text(
-            "Increases Shield Strength by 20%. Scoring hits on opponents increases ATK by 4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.",
+            "On hit, Normal or Charged Attacks have a 50% chance to deal an additional 240% ATK DMG to opponents within a small AoE. Can only occur once every 15s.",
             style: TextStyle(
               fontSize: 9.sp,
               fontWeight: FontWeight.w500,

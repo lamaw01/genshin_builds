@@ -3,8 +3,8 @@ import 'package:genshin_builds/constants/assets.dart';
 import 'package:genshin_builds/constants/colors.dart';
 import 'package:sizer/sizer.dart';
 
-class SummitShaper extends StatelessWidget {
-  const SummitShaper({Key? key}) : super(key: key);
+class LithicBlade extends StatelessWidget {
+  const LithicBlade({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class SummitShaper extends StatelessWidget {
           Row(
             children: [
               Image.asset(
-                weaponPath + 'summit_shaper.png',
+                weaponPath + 'lithic_blade.png',
                 width: 35.0,
                 height: 35.0,
               ),
@@ -31,17 +31,17 @@ class SummitShaper extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Summit Shaper',
+                        "Lithic Blade",
                         style: TextStyle(
                           fontSize: 11.sp,
                           fontWeight: FontWeight.w500,
-                          color: Colors.yellow,
+                          color: Colors.purple,
                         ),
                       ),
                       const SizedBox(width: 5.0),
                       Row(
                         children: [
-                          for (int i = 0; i < 5; i++)
+                          for (int i = 0; i < 4; i++)
                             const Icon(
                               Icons.star,
                               color: Colors.orange,
@@ -52,7 +52,7 @@ class SummitShaper extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    'BASE 608 substat ATK 49.6%',
+                    "BASE 510 substat ATK 41.3%",
                     style: TextStyle(
                       fontSize: 9.sp,
                       fontWeight: FontWeight.w400,
@@ -65,7 +65,7 @@ class SummitShaper extends StatelessWidget {
           ),
           const SizedBox(height: 5.0),
           Text(
-            "Increases Shield Strength by 20%. Scoring hits on opponents increases ATK by 4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.",
+            "For every character in the party who hails from Liyue, the character who equips this weapon gains 7% ATK increase and 3% CRIT Rate increase. This effect stacks up to 4 times.",
             style: TextStyle(
               fontSize: 9.sp,
               fontWeight: FontWeight.w500,

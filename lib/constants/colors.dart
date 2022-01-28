@@ -16,6 +16,8 @@ Color darkBG = const Color(0xFF19334d);
 
 Color darkBGLighter = const Color(0xFF264d73);
 
-// Color geoIconBG = const Color(0xFFcc9900);
-
 Color geoIconBG = const Color(0xFFe6ac00);
+
+Color cryoIconBG = const Color(0xFF00ace6);
+
+Color electroIconBG = const Color(0xFFb84dff);

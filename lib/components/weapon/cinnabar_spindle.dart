@@ -28,22 +28,14 @@ class CinnabarSpindle extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Cinnabar Spindle',
-                    style: TextStyle(
-                      fontSize: 11.sp,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.purple,
-                    ),
-                  ),
                   Row(
                     children: [
                       Text(
-                        'DEF',
+                        'Cinnabar Spindle',
                         style: TextStyle(
-                          fontSize: 9.sp,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white,
+                          fontSize: 11.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.purple,
                         ),
                       ),
                       const SizedBox(width: 5.0),
@@ -59,15 +51,23 @@ class CinnabarSpindle extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Text(
+                    'BASE 454 subsat DEF 69.0%',
+                    style: TextStyle(
+                      fontSize: 9.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white,
+                    ),
+                  ),
                 ],
               ),
             ],
           ),
           const SizedBox(height: 5.0),
-          const Text(
-            "Elemental Skill DMG is increased by 40/50/60/70/80% of DEF. The effect will be triggered no more than once every 1.5s and will be cleared 0.1s after the Elemental Skill deals DMG.",
+          Text(
+            "Elemental Skill DMG is increased by 40% of DEF. The effect will be triggered no more than once every 1.5s and will be cleared 0.1s after the Elemental Skill deals DMG.",
             style: TextStyle(
-              fontSize: 13,
+              fontSize: 9.sp,
               fontWeight: FontWeight.w500,
               color: Colors.white,
             ),

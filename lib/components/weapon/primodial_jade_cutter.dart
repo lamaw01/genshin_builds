@@ -28,22 +28,14 @@ class PrimordialJadeCutter extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Primordial Jade Cutter',
-                    style: TextStyle(
-                      fontSize: 11.sp,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.yellow,
-                    ),
-                  ),
                   Row(
                     children: [
                       Text(
-                        'CRIT',
+                        'Primordial Jade Cutter',
                         style: TextStyle(
-                          fontSize: 9.sp,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white,
+                          fontSize: 11.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.yellow,
                         ),
                       ),
                       const SizedBox(width: 5.0),
@@ -59,15 +51,23 @@ class PrimordialJadeCutter extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Text(
+                    'BASE 542 substat CRIT RATE 44.1%',
+                    style: TextStyle(
+                      fontSize: 9.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white,
+                    ),
+                  ),
                 ],
               ),
             ],
           ),
           const SizedBox(height: 5.0),
-          const Text(
-            "HP increased by 20/25/30/35/40%. Additionally, provides an ATK Bonus based on 1.2/1.5/1.8/2.1/2.4% of the wielder's Max HP.",
+          Text(
+            "HP increased by 20%. Additionally, provides an ATK Bonus based on 1.2% of the wielder's Max HP.",
             style: TextStyle(
-              fontSize: 13,
+              fontSize: 9.sp,
               fontWeight: FontWeight.w500,
               color: Colors.white,
             ),

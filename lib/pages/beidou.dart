@@ -1,49 +1,39 @@
-import "package:flutter/material.dart";
-import "package:genshin_builds/components/artifact/archaic_petra.dart";
-import "package:genshin_builds/components/artifact/husk_of_opulent_dreams.dart";
+import 'package:flutter/material.dart';
+import 'package:genshin_builds/components/artifact/emblem_of_severed_fate.dart';
+import 'package:genshin_builds/components/artifact/gladiators_finale.dart';
 import 'package:genshin_builds/components/artifact/noblesse_oblige.dart';
-import 'package:genshin_builds/components/materials/basalt_pillar.dart';
-import 'package:genshin_builds/components/materials/cecilia.dart';
-import 'package:genshin_builds/components/materials/crown_of_insight.dart';
-import 'package:genshin_builds/components/materials/forbidden_curse_scroll.dart';
-import 'package:genshin_builds/components/materials/philosophies_of_ballad.dart';
-import 'package:genshin_builds/components/materials/prithiva_topaz_gemstone.dart';
-import 'package:genshin_builds/components/materials/tusk_of_monoceros_caeli.dart';
-import "package:genshin_builds/components/weapon/cinnabar_spindle.dart";
-import "package:genshin_builds/components/weapon/harbinger_of_dawn.dart";
-import "package:genshin_builds/components/weapon/primodial_jade_cutter.dart";
-import "package:genshin_builds/components/weapon/summit_shaper.dart";
-import "package:genshin_builds/constants/assets.dart";
-import "package:genshin_builds/constants/colors.dart";
+import 'package:genshin_builds/components/artifact/shimenawas_reminiscence.dart';
+import 'package:genshin_builds/components/artifact/thundering_fury.dart';
+import 'package:genshin_builds/components/artifact/thundersoother.dart';
+import 'package:genshin_builds/components/material/crown_of_insight.dart';
+import 'package:genshin_builds/components/material/dvalins_sigh.dart';
+import 'package:genshin_builds/components/material/golden_raven_insignia.dart';
+import 'package:genshin_builds/components/material/lightning_prism.dart';
+import 'package:genshin_builds/components/material/noctilucous_jade.dart';
+import 'package:genshin_builds/components/material/philosophies_of_gold.dart';
+import 'package:genshin_builds/components/material/vajrada_amethyst_gemstone.dart';
+import 'package:genshin_builds/components/weapon/akuoumaru.dart';
+import 'package:genshin_builds/components/weapon/blackcliff_slasher.dart';
+import 'package:genshin_builds/components/weapon/lithic_blade.dart';
+import 'package:genshin_builds/components/weapon/luxurious_sea_lord.dart';
+import 'package:genshin_builds/components/weapon/prototype_archaic.dart';
+import 'package:genshin_builds/components/weapon/sacrificial_greatsword.dart';
+import 'package:genshin_builds/components/weapon/serpent_spine.dart';
+import 'package:genshin_builds/components/weapon/skyward_pride.dart';
+import 'package:genshin_builds/components/weapon/the_unforged.dart';
+import 'package:genshin_builds/components/weapon/wolfs_gravestone.dart';
+import 'package:genshin_builds/constants/assets.dart';
+import 'package:genshin_builds/constants/colors.dart';
 import 'package:genshin_builds/constants/variables.dart';
-import "package:genshin_builds/models/character.dart";
-import "package:genshin_builds/routes/go.dart";
-import "package:sizer/sizer.dart";
+import 'package:genshin_builds/functions/global_function.dart';
+import 'package:sizer/sizer.dart';
 
+import 'reusable/character_gacha_spash.dart';
 import 'reusable/table_row_widget.dart';
 import 'reusable/talent_image_name.dart';
 
-class CharacterView extends StatelessWidget {
-  const CharacterView({Key? key, required this.character}) : super(key: key);
-  final Character character;
-
-  String elementType(String element) {
-    if (element == "Geo") {
-      return "geo.png";
-    } else if (element == "Cryo") {
-      return "cryo.png";
-    } else if (element == "Electro") {
-      return "electro.png";
-    } else if (element == "Pyro") {
-      return "pyro.png";
-    } else if (element == "Anemo") {
-      return "anemo.png";
-    } else if (element == "Hydro") {
-      return "hydro.png";
-    } else {
-      return "";
-    }
-  }
+class Beidou extends StatelessWidget {
+  const Beidou({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,27 +43,7 @@ class CharacterView extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Image.asset(
-                    characterPath + "albedo_gacha_splash.png",
-                  ),
-                  Positioned(
-                    top: 1,
-                    left: 1,
-                    child: IconButton(
-                      onPressed: () {
-                        Go.pop(context);
-                      },
-                      icon: const Icon(
-                        Icons.arrow_back,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              const CharacterGachaSplash(image: "beidou_gacha_splash.png"),
               Container(
                 padding: const EdgeInsets.all(10),
                 margin: const EdgeInsets.all(10),
@@ -82,13 +52,13 @@ class CharacterView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      character.name,
+                      "Beidou",
                       style: characterNameFontStyle,
                     ),
                     const SizedBox(height: 5.0),
                     Row(
                       children: [
-                        for (int i = 0; i < 5; i++)
+                        for (int i = 0; i < 4; i++)
                           const Icon(
                             Icons.star,
                             color: Colors.orange,
@@ -104,7 +74,7 @@ class CharacterView extends StatelessWidget {
                           style: characterInfoFontStyle,
                         ),
                         Image.asset(
-                          elementPath + elementType(character.element),
+                          elementPath + GlobalFunction.elementType("Electro"),
                           width: 25.0,
                           height: 25.0,
                         ),
@@ -118,7 +88,7 @@ class CharacterView extends StatelessWidget {
                           style: characterInfoFontStyle,
                         ),
                         Text(
-                          "Mondstadt",
+                          "Liyue",
                           style: characterInfoFontStyle,
                         ),
                       ],
@@ -131,7 +101,7 @@ class CharacterView extends StatelessWidget {
                           style: characterInfoFontStyle,
                         ),
                         Text(
-                          "Sword",
+                          "Claymore",
                           style: characterInfoFontStyle,
                         ),
                       ],
@@ -157,7 +127,7 @@ class CharacterView extends StatelessWidget {
                           style: characterInfoFontStyle,
                         ),
                         Text(
-                          "13 September",
+                          "February 14th",
                           style: characterInfoFontStyle,
                         ),
                       ],
@@ -179,7 +149,7 @@ class CharacterView extends StatelessWidget {
                     ),
                     const SizedBox(height: 10.0),
                     Text(
-                      "A genius known as the Kreindeprinz, he is the Chief Alchemist and Captain of the Investigation Team of the Knight of Favonius",
+                      "Captain of her crew, The Crux. She's quite an unbound and forthright woman.",
                       style: fontStyle1,
                     ),
                   ],
@@ -198,9 +168,9 @@ class CharacterView extends StatelessWidget {
                     ),
                     const SizedBox(height: 10.0),
                     TalentImageName(
-                      image: "albedo_normal_attack.png",
-                      name: "Normal Attack: Favonius Blackwork - Weiss",
-                      color: geoIconBG,
+                      image: "beidou_normal_attack.png",
+                      name: "Normal Attack: Oceanborne",
+                      color: electroIconBG,
                     ),
                     const SizedBox(height: 5.0),
                     Column(
@@ -211,7 +181,7 @@ class CharacterView extends StatelessWidget {
                           style: fontStyle1,
                         ),
                         Text(
-                          "Perform up to 5 rapid strikes",
+                          "Perform up to 5 consecutive strikes.",
                           style: fontStyle2,
                         ),
                       ],
@@ -225,7 +195,11 @@ class CharacterView extends StatelessWidget {
                           style: fontStyle1,
                         ),
                         Text(
-                          "Consumes a certain acount of Stamina to unleash 2 rapid sword strikes",
+                          "Drains Stamina over time to perform continuous slashes.",
+                          style: fontStyle2,
+                        ),
+                        Text(
+                          "At the end of the sequence, perform a more powerful slash.",
                           style: fontStyle2,
                         ),
                       ],
@@ -239,69 +213,88 @@ class CharacterView extends StatelessWidget {
                           style: fontStyle1,
                         ),
                         Text(
-                          "Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+                          "Plunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.",
                           style: fontStyle2,
                         ),
                       ],
                     ),
                     const SizedBox(height: 10.0),
                     TalentImageName(
-                      image: "albedo_elemental_skill.png",
-                      name: "Abiogenesis: Solar Isotoma",
-                      color: geoIconBG,
+                      image: "beidou_elemental_skill.png",
+                      name: "Tidecaller",
+                      color: electroIconBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Albedo creates a Solar Isotoma using alchemy, which deals Aoe Geo DMG on apperance",
+                      "Nothing to worry about. Should anyone raise a hand against her or her men, she will avenge it ten-fold with sword and thunder.",
                       style: fontStyle2,
                     ),
-                    const SizedBox(height: 10.0),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Solar Isotoma",
-                          style: fontStyle1,
-                        ),
-                        Text(
-                          "has the following properties",
-                          style: fontStyle2,
-                        ),
-                        const SizedBox(height: 5.0),
-                        Text(
-                          "• When opponents within the Solar Isotoma field take DMG, the Solar Isotoma will generate Transient Blossoms which deal AoE Geo DMG. DMG dealt scales off Albedo's DEF.",
-                          style: fontStyle2,
-                        ),
-                        const SizedBox(height: 5.0),
-                        Text(
-                          "• Transient Blossoms can only be generated once every 2s.",
-                          style: fontStyle2,
-                        ),
-                        const SizedBox(height: 5.0),
-                        Text(
-                          "• When a character is located at the locus of the Solar Isotoma, the Solar Isotoma will accumulate Geo power to form a crystallized platform that lifts the character up to a certain height. Only one crystallized platform can exist at a time.",
-                          style: fontStyle2,
-                        ),
-                        const SizedBox(height: 5.0),
-                        Text(
-                          "• Solar Isotoma is considered a Geo construct. Only one Solar Isotoma created by Albedo himself can exist at a time.",
-                          style: fontStyle2,
-                        ),
-                      ],
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "Press",
+                      style: fontStyle1,
+                    ),
+                    Text(
+                      "Accumulating the power of lightning, Beidou swings her blade forward fiercely, dealing Electro DMG.",
+                      style: fontStyle2,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "Hold",
+                      style: fontStyle1,
+                    ),
+                    Text(
+                      "Lifts her weapon up as a shield. Max DMG absorbed scales off Beidou's Max HP.",
+                      style: fontStyle2,
+                    ),
+                    Text(
+                      "Attacks using the energy stored within the greatsword upon release or once this ability's duration expires, dealing Electro DMG. DMG dealt scales with the number of times Beidou is attacked in the skill's duration. The greatest DMG Bonus will be attained once this effect is triggered twice.",
+                      style: fontStyle2,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "The shield possesses the following properties:",
+                      style: fontStyle2,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "• Has 250% Electro DMG Absorption Efficiency.",
+                      style: fontStyle2,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "• Applies the Electro element to Beidou upon activation.",
+                      style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
                     TalentImageName(
-                      image: "albedo_elemental_burst.png",
-                      name: "Rite of Progeniture: Tectonic Tide",
-                      color: geoIconBG,
+                      image: "beidou_elemental_burst.png",
+                      name: "Stormbreaker",
+                      color: electroIconBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Under Albedo's command, Geo crystals surge and burst forth, dealing AoE Geo DMG in front of him. If a Solar Isotoma created by Albedo himself is on the field, 7 Fatal Blossoms will be generated in the Solar Isotoma field, bursting violently into bloom and dealing AoE Geo DMG.",
+                      "Recalling her slaying of the great beast Haishan, Beidou calls upon that monstrous strength and the lightning to create a Thunderbeast's Targe around herself, dealing Electro DMG to nearby opponents.",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 5.0),
                     Text(
-                      "Tectonic Tide DMG and Fatal Blossom DMG will not generate Transient Blossoms.",
+                      "Thunderbeast's Targe",
+                      style: fontStyle1,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "• When Normal and Charged Attacks hit, they create a lightning discharge that can jump between opponents, dealing Electro DMG.",
+                      style: fontStyle2,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "• Increases the character's resistance to interruption, and decreases DMG taken.",
+                      style: fontStyle2,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "A maximum of 1 lightning discharge can be triggered per second.",
                       style: fontStyle2,
                     ),
                   ],
@@ -320,35 +313,50 @@ class CharacterView extends StatelessWidget {
                     ),
                     const SizedBox(height: 10.0),
                     TalentImageName(
-                      image: "albedo_passive_1.png",
-                      name: "Calcite Might",
-                      color: geoIconBG,
+                      image: "beidou_passive_1.png",
+                      name: "Retribution",
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Transient Blossoms generated by Abiogenesis: Solar Isotoma deal 25% more DMG to opponents whose HP is below 50%.",
+                      "Counterattacking with Tidecaller at the precise moment when the character is hit grants the maximum DMG Bonus.",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
                     TalentImageName(
-                      image: "albedo_passive_2.png",
-                      name: "Homuncular Nature",
-                      color: geoIconBG,
+                      image: "beidou_passive_2.png",
+                      name: "Lightning Storm",
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Using Rite of Progeniture: Tectonic Tide increases the Elemental Mastery of nearby party members by 125 for 10s.",
+                      "Gain the following effects for 10s after unleashing Tidecaller with its maximum DMG Bonus:",
+                      style: fontStyle2,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "• DMG dealt by Normal and Charged Attacks is increased by 15%. ATK SPD of Normal and Charged Attacks is increased by 15%.",
+                      style: fontStyle2,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "• Greatly reduced delay before unleashing Charged Attacks.",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
                     TalentImageName(
-                      image: "albedo_passive_3.png",
-                      name: "Flash of Genius",
-                      color: geoIconBG,
+                      image: "beidou_passive_3.png",
+                      name: "Conqueror of Tides",
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "When Albedo crafts Weapon Ascension Materials, he has a 10% chance to receive double the product.",
+                      "Decreases swimming Stamina consumption of your characters in the party by 20%.",
+                      style: fontStyle2,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "Not stackable with Passive Talents that provide the exact same effects.",
                       style: fontStyle2,
                     ),
                   ],
@@ -367,76 +375,76 @@ class CharacterView extends StatelessWidget {
                     ),
                     const SizedBox(height: 10.0),
                     TalentImageName(
-                      image: "albedo_constellation_1.png",
-                      name: "Flower of Eden",
-                      color: geoIconBG,
+                      image: "beidou_constellation_1.png",
+                      name: "Sea Beast's Scourge",
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Transient Blossoms generated by Albedo's Abiogenesis: Solar Isotoma regenerate 1.2 Energy for Albedo.",
+                      "When Stormbreaker is used:",
+                      style: fontStyle2,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "Creates a shield that absorbs up to 16% of Beidou's Max HP for 15s.",
+                      style: fontStyle2,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      "This shield absorbs Electro DMG 250% more effectively.",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
                     TalentImageName(
-                      image: "albedo_constellation_2.png",
-                      name: "Opening of Phanerozoic",
-                      color: geoIconBG,
+                      image: "beidou_constellation_2.png",
+                      name: "Upon the Turbulent Sea, the Thunder Arises",
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Transient Blossoms generated by Abiogenesis: Solar Isotoma grant Albedo Fatal Reckoning for 30s:",
-                      style: fontStyle2,
-                    ),
-                    const SizedBox(height: 5.0),
-                    Text(
-                      "• Unleashing Rite of Progeniture: Tectonic Tide consumes all stacks of Fatal Reckoning. Each stack of Fatal Reckoning consumed increases the DMG dealt by Fatal Blossoms and Rite of Progeniture: Tectonic Tide's burst DMG by 30% of Albedo's DEF.",
-                      style: fontStyle2,
-                    ),
-                    const SizedBox(height: 5.0),
-                    Text(
-                      "• This effect stacks up to 4 times.",
+                      "Stormbreaker's arc lightning can jump to 2 additional targets.",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
                     TalentImageName(
-                      image: "albedo_constellation_3.png",
-                      name: "Grace of Helios",
-                      color: geoIconBG,
+                      image: "beidou_constellation_3.png",
+                      name: "Summoner of Storm",
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Increases the Level of Abiogenesis: Solar Isotoma by 3. Maximum upgrade level is 15.",
+                      "Increases the Level of Tidecaller by 3. Maximum upgrade level is 15.",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
                     TalentImageName(
-                      image: "albedo_constellation_4.png",
-                      name: "Descent of Divinity",
-                      color: geoIconBG,
+                      image: "beidou_constellation_4.png",
+                      name: "Stunning Revenge",
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Active party members within the Solar Isotoma field have their Plunging Attack DMG increased by 30%.",
+                      "Upon being attacked, Beidou's Normal Attacks gain an additional instance of 20% Electro DMG for 10s.",
                       style: fontStyle2,
                     ),
                     TalentImageName(
-                      image: "albedo_constellation_5.png",
-                      name: "Tide of Hadean",
-                      color: geoIconBG,
+                      image: "beidou_constellation_5.png",
+                      name: "Crimson Tidewalker",
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Increases the Level of Rite of Progeniture: Tectonic Tide by 3. Maximum upgrade level is 15.",
+                      "Increases the Level of Stormbreaker by 3. Maximum upgrade level is 15.",
                       style: fontStyle2,
                     ),
                     TalentImageName(
-                      image: "albedo_constellation_6.png",
-                      name: "Dust of Purification",
-                      color: geoIconBG,
+                      image: "beidou_constellation_6.png",
+                      name: "	Bane of Evil",
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Active party members within the Solar Isotoma field who are protected by a shield created by Crystallize have their DMG increased by 17%.",
+                      "During the duration of Stormbreaker, the Electro RES of surrounding opponents is decreased by 15%.",
                       style: fontStyle2,
                     ),
                   ],
@@ -455,12 +463,12 @@ class CharacterView extends StatelessWidget {
                     ),
                     const SizedBox(height: 10.0),
                     Text(
-                      "Geo Sub DPS",
+                      "Electro Sub DPS",
                       style: fontStyle3,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Talent Priority: Elemental Skill > Burst > Normal",
+                      "Talent Priority: Elemental Burst > Skill > Normal",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
@@ -470,17 +478,29 @@ class CharacterView extends StatelessWidget {
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "1:2 ratio or 60/120 CRIT rate/dmg",
+                      "1:2 ratio or 60/120 CRIT RATE/DMG",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    const CinnabarSpindle(),
+                    const WolfsGravestone(),
                     const SizedBox(height: 10.0),
-                    const PrimordialJadeCutter(),
+                    const TheUnforged(),
                     const SizedBox(height: 10.0),
-                    const SummitShaper(),
+                    const SkywardPride(),
                     const SizedBox(height: 10.0),
-                    const HarbingerOfDawn(),
+                    const SerpentSpine(),
+                    const SizedBox(height: 10.0),
+                    const LuxuriousSeaLord(),
+                    const SizedBox(height: 10.0),
+                    const Akuoumaru(),
+                    const SizedBox(height: 10.0),
+                    const PrototypeArchaic(),
+                    const SizedBox(height: 10.0),
+                    const LithicBlade(),
+                    const SizedBox(height: 10.0),
+                    const BlackcliffSlasher(),
+                    const SizedBox(height: 10.0),
+                    const SacrificialGreatsword(),
                     const SizedBox(height: 10.0),
                     Text(
                       "Artifact",
@@ -488,30 +508,40 @@ class CharacterView extends StatelessWidget {
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Sands - DEF",
+                      "Sands - ATK% / ER%",
                       style: fontStyle2,
                     ),
                     Text(
-                      "Goblet - DEF / Geo DMG Bonus",
+                      "Goblet - Electro DMG Bonus",
                       style: fontStyle2,
                     ),
                     Text(
-                      "Circlet - CRIT rate / CRIT dmg / DEF",
+                      "Circlet - CRIT RATE / CRIT DMG%",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Substat Priority: CRIT > DEF% > Energy Recharge",
+                      "Substat Priority: CRIT > Energy Recharge > ATK%  ",
+                      style: fontStyle2,
+                    ),
+                    Text(
+                      "Recommended ER: 120% - 180%",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    const HuskOfOpulentDreams(isFullset: true),
+                    const EmblemOfSeveredFate(isFullset: true),
                     const SizedBox(height: 10.0),
-                    const HuskOfOpulentDreams(isFullset: false),
+                    const ThunderingFury(isFullset: false),
                     const SizedBox(height: 10.0),
-                    const ArchaicPetra(isFullset: false),
+                    const GladiatorsFinale(isFullset: false),
+                    const SizedBox(height: 10.0),
+                    const ShimenawasReminiscence(isFullset: false),
                     const SizedBox(height: 10.0),
                     const NoblesseOblige(isFullset: false),
+                    const SizedBox(height: 10.0),
+                    const EmblemOfSeveredFate(isFullset: false),
+                    const SizedBox(height: 10.0),
+                    const Thundersoother(isFullset: true),
                   ],
                 ),
               ),
@@ -534,13 +564,13 @@ class CharacterView extends StatelessWidget {
                     const SizedBox(height: 10.0),
                     Row(
                       children: const [
-                        PrithivaTopazGemstone(),
+                        VajradaAmethystGemstone(),
                         SizedBox(width: 5.0),
-                        BasaltPillar(),
+                        LightningPrism(),
                         SizedBox(width: 5.0),
-                        Cecilia(),
+                        NoctilucousJade(),
                         SizedBox(width: 5.0),
-                        ForbiddenCurseScroll(),
+                        GoldenRavenInsignia(),
                       ],
                     ),
                     const SizedBox(height: 10.0),
@@ -551,11 +581,11 @@ class CharacterView extends StatelessWidget {
                     const SizedBox(height: 10.0),
                     Row(
                       children: const [
-                        PhilosophiesOfBallad(),
+                        PhilosophiesOfGold(),
                         SizedBox(width: 5.0),
-                        ForbiddenCurseScroll(),
+                        GoldenRavenInsignia(),
                         SizedBox(width: 5.0),
-                        TuskOfMonocerosCaeli(),
+                        DvalinsSigh(),
                         SizedBox(width: 5.0),
                         CrownOfInsight(),
                       ],
@@ -619,7 +649,7 @@ class CharacterView extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                "CRIT Rate",
+                                "CRIT RATE",
                                 style: TextStyle(
                                   fontSize: 10.sp,
                                   fontWeight: FontWeight.w400,
@@ -627,7 +657,7 @@ class CharacterView extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                "CRIT dmg",
+                                "CRIT DMG",
                                 style: TextStyle(
                                   fontSize: 10.sp,
                                   fontWeight: FontWeight.w400,
@@ -635,7 +665,7 @@ class CharacterView extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                "Geo dmg Bonus",
+                                "Electro DMG Bonus",
                                 style: TextStyle(
                                   fontSize: 10.sp,
                                   fontWeight: FontWeight.w400,
@@ -644,34 +674,34 @@ class CharacterView extends StatelessWidget {
                               ),
                             ],
                           ),
-                          tableRowWidget(
-                              "0", "1", "1030", "20", "68", "5%", "50%", "0%"),
-                          tableRowWidget("0", "20", "2671", "51", "177", "5%",
+                          tableRowWidget1(
+                              "0", "1", "1094", "19", "54", "5%", "50%", "0%"),
+                          tableRowWidget1("0", "20", "2811", "48", "140", "5%",
                               "50%", "0%"),
-                          tableRowWidget("1", "20", "3554", "67", "235", "5%",
+                          tableRowWidget1("1", "20", "3628", "63", "180", "5%",
                               "50%", "0%"),
-                          tableRowWidget("1", "40", "5317", "101", "101", "5%",
+                          tableRowWidget1("1", "40", "5435", "94", "270", "5%",
                               "50%", "0%"),
-                          tableRowWidget("2", "40", "5944", "113", "394", "5%",
-                              "50%", "7.2%"),
-                          tableRowWidget("2", "50", "6839", "130", "453", "5%",
-                              "50%", "7.2%"),
-                          tableRowWidget("3", "50", "7675", "146", "508", "5%",
-                              "50%", "14.4%"),
-                          tableRowWidget("3", "60", "8579", "163", "568", "5%",
-                              "50%", "14.4%"),
-                          tableRowWidget("4", "60", "9207", "175", "610", "5%",
-                              "50%", "14.4%"),
-                          tableRowWidget("4", "70", "10119", "192", "670", "5%",
-                              "50%", "14.4%"),
-                          tableRowWidget("5", "70", "10746", "204", "712", "5%",
-                              "50%", "21.6%"),
-                          tableRowWidget("5", "80", "11669", "222", "773", "5%",
-                              "50%", "21.6%"),
-                          tableRowWidget("6", "80", "12296", "233", "815", "5%",
-                              "50%", "28.8%"),
-                          tableRowWidget("6", "90", "13226", "251", "876", "5%",
-                              "50%", "28.8%"),
+                          tableRowWidget1("2", "40", "6015", "104", "299", "5%",
+                              "50%", "6%"),
+                          tableRowWidget1("2", "50", "6919", "119", "344", "5%",
+                              "50%", "6%"),
+                          tableRowWidget1("3", "50", "7694", "133", "382", "5%",
+                              "50%", "12%"),
+                          tableRowWidget1("3", "60", "8579", "163", "568", "5%",
+                              "50%", "12%"),
+                          tableRowWidget1("4", "60", "9178", "158", "456", "5%",
+                              "50%", "12%"),
+                          tableRowWidget1("4", "70", "10081", "174", "501",
+                              "5%", "50%", "12%"),
+                          tableRowWidget1("5", "70", "10662", "184", "530",
+                              "5%", "50%", "18%"),
+                          tableRowWidget1("5", "80", "11565", "200", "575",
+                              "5%", "50%", "18%"),
+                          tableRowWidget1("6", "80", "12146", "210", "603",
+                              "5%", "50%", "24%"),
+                          tableRowWidget1("6", "90", "13050", "225", "648",
+                              "5%", "50%", "24%"),
                         ],
                       ),
                     ),

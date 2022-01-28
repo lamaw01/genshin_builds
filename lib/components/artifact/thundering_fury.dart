@@ -3,8 +3,8 @@ import 'package:genshin_builds/constants/assets.dart';
 import 'package:genshin_builds/constants/colors.dart';
 import 'package:sizer/sizer.dart';
 
-class NoblesseOblige extends StatelessWidget {
-  const NoblesseOblige({Key? key, required this.isFullset}) : super(key: key);
+class ThunderingFury extends StatelessWidget {
+  const ThunderingFury({Key? key, required this.isFullset}) : super(key: key);
   final bool isFullset;
 
   @override
@@ -21,7 +21,7 @@ class NoblesseOblige extends StatelessWidget {
           Row(
             children: [
               Image.asset(
-                artifactPath + 'noblesse_oblige.png',
+                artifactPath + "thundering_fury.png",
                 width: 35.0,
                 height: 35.0,
               ),
@@ -30,7 +30,7 @@ class NoblesseOblige extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Noblesse Oblige',
+                    "Thundering Fury",
                     style: TextStyle(
                       fontSize: 11.sp,
                       fontWeight: FontWeight.w500,
@@ -39,7 +39,7 @@ class NoblesseOblige extends StatelessWidget {
                   ),
                   if (isFullset == false) ...[
                     Text(
-                      '2 (PC)',
+                      "2 (PC)",
                       style: TextStyle(
                         fontSize: 9.sp,
                         fontWeight: FontWeight.w400,
@@ -48,7 +48,7 @@ class NoblesseOblige extends StatelessWidget {
                     ),
                   ] else ...[
                     Text(
-                      '4 (PC)',
+                      "4 (PC)",
                       style: TextStyle(
                         fontSize: 9.sp,
                         fontWeight: FontWeight.w400,
@@ -62,7 +62,7 @@ class NoblesseOblige extends StatelessWidget {
           ),
           const SizedBox(height: 5.0),
           Text(
-            "(2) Elemental Burst DMG +20%",
+            "(2) Electro DMG Bonus +15% Bonus",
             style: TextStyle(
               fontSize: 9.sp,
               fontWeight: FontWeight.w500,
@@ -72,7 +72,7 @@ class NoblesseOblige extends StatelessWidget {
           if (isFullset == true) ...[
             const SizedBox(height: 5.0),
             Text(
-              "(4) Upon obtaining an Elemental Shard created through a Crystallize Reaction, all party members gain 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time.",
+              "(4) Increases damage caused by Overloaded, Electro-Charged and Superconduct by 40%. Triggering such effects decreases Elemental Skill CD by 1s. Can only occur once every 0.8s.",
               style: TextStyle(
                 fontSize: 9.sp,
                 fontWeight: FontWeight.w500,

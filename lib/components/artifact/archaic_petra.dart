@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:genshin_builds/constants/assets.dart';
-import 'package:genshin_builds/constants/colors.dart';
+import "package:flutter/material.dart";
+import "package:genshin_builds/constants/assets.dart";
+import "package:genshin_builds/constants/colors.dart";
+import 'package:sizer/sizer.dart';
 
 class ArchaicPetra extends StatelessWidget {
   const ArchaicPetra({Key? key, required this.isFullset}) : super(key: key);
@@ -20,7 +21,7 @@ class ArchaicPetra extends StatelessWidget {
           Row(
             children: [
               Image.asset(
-                artifactPath + 'archaic_petra.png',
+                artifactPath + "archaic_petra.png",
                 width: 35.0,
                 height: 35.0,
               ),
@@ -28,28 +29,28 @@ class ArchaicPetra extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Archaic Petra',
+                  Text(
+                    "Archaic Petra",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 11.sp,
                       fontWeight: FontWeight.w500,
                       color: Colors.orange,
                     ),
                   ),
                   if (isFullset == false) ...[
-                    const Text(
-                      '2 (PC)',
+                    Text(
+                      "2 (PC)",
                       style: TextStyle(
-                        fontSize: 13,
+                        fontSize: 9.sp,
                         fontWeight: FontWeight.w400,
                         color: Colors.white,
                       ),
                     ),
                   ] else ...[
-                    const Text(
-                      '4 (PC)',
+                    Text(
+                      "4 (PC)",
                       style: TextStyle(
-                        fontSize: 13,
+                        fontSize: 9.sp,
                         fontWeight: FontWeight.w400,
                         color: Colors.white,
                       ),
@@ -60,29 +61,20 @@ class ArchaicPetra extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 5.0),
-          const Text(
+          Text(
             "(2) Geo DMG Bonus +15% Bonus",
             style: TextStyle(
-              fontSize: 13,
+              fontSize: 9.sp,
               fontWeight: FontWeight.w500,
               color: Colors.white,
             ),
           ),
           if (isFullset == true) ...[
             const SizedBox(height: 5.0),
-            const Text(
-              "(2) Geo DMG Bonus +15% Bonus",
-              style: TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w500,
-                color: Colors.white,
-              ),
-            ),
-            const SizedBox(height: 5.0),
-            const Text(
+            Text(
               "(4) Upon obtaining an Elemental Shard created through a Crystallize Reaction, all party members gain 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time.",
               style: TextStyle(
-                fontSize: 13,
+                fontSize: 9.sp,
                 fontWeight: FontWeight.w500,
                 color: Colors.white,
               ),
