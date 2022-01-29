@@ -4,6 +4,15 @@ import 'package:genshin_builds/components/artifact/emblem_of_severed_fate.dart';
 import 'package:genshin_builds/components/artifact/gladiators_finale.dart';
 import 'package:genshin_builds/components/artifact/noblesse_oblige.dart';
 import 'package:genshin_builds/components/artifact/shimenawas_reminiscence.dart';
+import 'package:genshin_builds/components/character/ayaka_portrait.dart';
+import 'package:genshin_builds/components/character/barbara_portrait.dart';
+import 'package:genshin_builds/components/character/diona_portrait.dart';
+import 'package:genshin_builds/components/character/kaeya_portrait.dart';
+import 'package:genshin_builds/components/character/kazuha_portrait.dart';
+import 'package:genshin_builds/components/character/kokomi_portrait.dart';
+import 'package:genshin_builds/components/character/rosaria_portrait.dart';
+import 'package:genshin_builds/components/character/sucrose_portait.dart';
+import 'package:genshin_builds/components/character/xingqiu_portrait.dart';
 import 'package:genshin_builds/components/material/bloodjade_branch.dart';
 import 'package:genshin_builds/components/material/crown_of_insight.dart';
 import 'package:genshin_builds/components/material/famed_handguard.dart';
@@ -163,7 +172,7 @@ class Ayaka extends StatelessWidget {
                     TalentImageName(
                       image: "ayaka_normal_attack.png",
                       name: "Normal Attack: Kamisato Art - Kabuki",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Column(
@@ -211,7 +220,7 @@ class Ayaka extends StatelessWidget {
                     TalentImageName(
                       image: "ayaka_elemental_skill.png",
                       name: "Kamisato Art: Hyouka",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -222,7 +231,7 @@ class Ayaka extends StatelessWidget {
                     TalentImageName(
                       image: "ayaka_alternate_sprint.png",
                       name: "Kamisato Art: Senho",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -252,7 +261,7 @@ class Ayaka extends StatelessWidget {
                     TalentImageName(
                       image: "ayaka_elemental_burst.png",
                       name: "Kamisato Art: Soumetsu",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -292,7 +301,7 @@ class Ayaka extends StatelessWidget {
                     TalentImageName(
                       image: "ayaka_passive_1.png",
                       name: "Amatsumi Kunitsumi Sanctification",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -303,7 +312,7 @@ class Ayaka extends StatelessWidget {
                     TalentImageName(
                       image: "ayaka_passive_2.png",
                       name: "Kanten Senmyou Blessing",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -324,7 +333,7 @@ class Ayaka extends StatelessWidget {
                     TalentImageName(
                       image: "ayaka_passive_3.png",
                       name: "Fruits of Shinsa",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -349,7 +358,7 @@ class Ayaka extends StatelessWidget {
                     TalentImageName(
                       image: "ayaka_constellation_1.png",
                       name: "Snowswept Sakura",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -360,7 +369,7 @@ class Ayaka extends StatelessWidget {
                     TalentImageName(
                       image: "ayaka_constellation_2.png",
                       name: "Blizzard Blade Seki no To",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -371,7 +380,7 @@ class Ayaka extends StatelessWidget {
                     TalentImageName(
                       image: "ayaka_constellation_3.png",
                       name: "Frostbloom Kamifubuki",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -382,27 +391,29 @@ class Ayaka extends StatelessWidget {
                     TalentImageName(
                       image: "ayaka_constellation_4.png",
                       name: "Ebb and Flow",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
                       "Opponents damaged by Kamisato Art: Soumetsu's Frostflake Seki no To will have their DEF decreased by 30% for 6s.",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 10.0),
                     TalentImageName(
                       image: "ayaka_constellation_5.png",
                       name: "Blossom Cloud Irutsuki",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
                       "Increases the Level of Kamisato Art: Hyouka by 3.Maximum upgrade level is 15.",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 10.0),
                     TalentImageName(
                       image: "ayaka_constellation_6.png",
                       name: "Dance of Suigetsu",
-                      color: cryoIconBG,
+                      color: cryoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -490,6 +501,61 @@ class Ayaka extends StatelessWidget {
                     const NoblesseOblige(isFullset: false),
                     const SizedBox(height: 10.0),
                     const EmblemOfSeveredFate(isFullset: false),
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
+                width: double.maxFinite,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Team Compositions",
+                      style: chapterFontStyle,
+                    ),
+                    const SizedBox(height: 10.0),
+                    Text(
+                      "Freeze Team",
+                      style: fontStyle3,
+                    ),
+                    const SizedBox(height: 10.0),
+                    Row(
+                      children: const [
+                        AyakaPortrait(),
+                        SizedBox(width: 5.0),
+                        KokomiPortrait(),
+                        SizedBox(width: 5.0),
+                        RosariaPortrait(),
+                        SizedBox(width: 5.0),
+                        KazuhaPortrait(),
+                      ],
+                    ),
+                    const SizedBox(height: 5.0),
+                    Row(
+                      children: const [
+                        AyakaPortrait(),
+                        SizedBox(width: 5.0),
+                        XingqiuPortrait(),
+                        SizedBox(width: 5.0),
+                        DionaPortrait(),
+                        SizedBox(width: 5.0),
+                        KazuhaPortrait(),
+                      ],
+                    ),
+                    const SizedBox(height: 5.0),
+                    Row(
+                      children: const [
+                        AyakaPortrait(),
+                        SizedBox(width: 5.0),
+                        BarbaraPortrait(),
+                        SizedBox(width: 5.0),
+                        KaeyaPortrait(),
+                        SizedBox(width: 5.0),
+                        SucrosePortrait(),
+                      ],
+                    ),
                   ],
                 ),
               ),

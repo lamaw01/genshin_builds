@@ -20,7 +20,7 @@ class PrimordialJadeCutter extends StatelessWidget {
           Row(
             children: [
               Image.asset(
-                weaponPath + 'jade_cutter.png',
+                weaponPath + 'primordial_jade_cutter.png',
                 width: 35.0,
                 height: 35.0,
               ),

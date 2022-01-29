@@ -62,7 +62,7 @@ class ThunderingFury extends StatelessWidget {
           ),
           const SizedBox(height: 5.0),
           Text(
-            "(2) Electro DMG Bonus +15% Bonus",
+            "(2) Electro DMG Bonus +15%",
             style: TextStyle(
               fontSize: 9.sp,
               fontWeight: FontWeight.w500,

@@ -1,18 +1,18 @@
-import 'package:flutter/material.dart';
-import 'package:genshin_builds/constants/assets.dart';
-import 'package:genshin_builds/constants/colors.dart';
-import 'package:genshin_builds/functions/global_function.dart';
-import 'package:genshin_builds/models/character.dart';
-import 'package:genshin_builds/routes/go.dart';
-import 'package:sizer/sizer.dart';
+import "package:flutter/material.dart";
+import "package:genshin_builds/constants/assets.dart";
+import "package:genshin_builds/constants/colors.dart";
+import "package:genshin_builds/functions/global_function.dart";
+import "package:genshin_builds/models/character.dart";
+import "package:genshin_builds/routes/go.dart";
+import "package:sizer/sizer.dart";
 
 final characterList = <Character>[
-  Character(name: 'Albedo', image: 'albedo.png', element: 'Geo'),
-  Character(name: 'Ayaka', image: 'ayaka.png', element: 'Cryo'),
-  Character(name: 'Beidou', image: 'beidou.png', element: 'Electro'),
-  Character(name: 'Hu Tao', image: 'hu_tao.png', element: 'Pyro'),
-  Character(name: 'Kazuha', image: 'kazuha.png', element: 'Anemo'),
-  Character(name: 'Kokomi', image: 'kokomi.png', element: 'Hydro'),
+  Character(name: "Albedo", image: "albedo.png", element: "Geo"),
+  Character(name: "Ayaka", image: "ayaka.png", element: "Cryo"),
+  Character(name: "Beidou", image: "beidou.png", element: "Electro"),
+  Character(name: "Hu Tao", image: "hutao.png", element: "Pyro"),
+  Character(name: "Kazuha", image: "kazuha.png", element: "Anemo"),
+  Character(name: "Kokomi", image: "kokomi.png", element: "Hydro"),
 ];
 
 class Home extends StatelessWidget {
@@ -63,11 +63,17 @@ class CharacterIcon extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (name == "Albedo") {
-          Go.to(context, '/albedo', arguments: character);
+          Go.to(context, "/albedo");
         } else if (name == "Ayaka") {
-          Go.to(context, '/ayaka', arguments: character);
+          Go.to(context, "/ayaka");
         } else if (name == "Beidou") {
-          Go.to(context, '/beidou', arguments: character);
+          Go.to(context, "/beidou");
+        } else if (name == "Hu Tao") {
+          Go.to(context, "/hutao");
+        } else if (name == "Kazuha") {
+          Go.to(context, "/kazuha");
+        } else if (name == "Kokomi") {
+          Go.to(context, "/kokomi");
         }
       },
       child: Stack(

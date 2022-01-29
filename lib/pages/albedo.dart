@@ -2,6 +2,14 @@ import "package:flutter/material.dart";
 import "package:genshin_builds/components/artifact/archaic_petra.dart";
 import "package:genshin_builds/components/artifact/husk_of_opulent_dreams.dart";
 import 'package:genshin_builds/components/artifact/noblesse_oblige.dart';
+import 'package:genshin_builds/components/character/albedo_portrait.dart';
+import 'package:genshin_builds/components/character/gorou_portrait.dart';
+import 'package:genshin_builds/components/character/hutao_portrait.dart';
+import 'package:genshin_builds/components/character/itto_portrait.dart';
+import 'package:genshin_builds/components/character/jean_portrait.dart';
+import 'package:genshin_builds/components/character/xiao_portrait.dart';
+import 'package:genshin_builds/components/character/xingqiu_portrait.dart';
+import 'package:genshin_builds/components/character/zhongli_portrait.dart';
 import 'package:genshin_builds/components/material/basalt_pillar.dart';
 import 'package:genshin_builds/components/material/cecilia.dart';
 import 'package:genshin_builds/components/material/crown_of_insight.dart';
@@ -161,7 +169,7 @@ class Albedo extends StatelessWidget {
                     TalentImageName(
                       image: "albedo_normal_attack.png",
                       name: "Normal Attack: Favonius Blackwork - Weiss",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Column(
@@ -209,7 +217,7 @@ class Albedo extends StatelessWidget {
                     TalentImageName(
                       image: "albedo_elemental_skill.png",
                       name: "Abiogenesis: Solar Isotoma",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -254,7 +262,7 @@ class Albedo extends StatelessWidget {
                     TalentImageName(
                       image: "albedo_elemental_burst.png",
                       name: "Rite of Progeniture: Tectonic Tide",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -284,7 +292,7 @@ class Albedo extends StatelessWidget {
                     TalentImageName(
                       image: "albedo_passive_1.png",
                       name: "Calcite Might",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -295,7 +303,7 @@ class Albedo extends StatelessWidget {
                     TalentImageName(
                       image: "albedo_passive_2.png",
                       name: "Homuncular Nature",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -306,7 +314,7 @@ class Albedo extends StatelessWidget {
                     TalentImageName(
                       image: "albedo_passive_3.png",
                       name: "Flash of Genius",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -331,7 +339,7 @@ class Albedo extends StatelessWidget {
                     TalentImageName(
                       image: "albedo_constellation_1.png",
                       name: "Flower of Eden",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -342,7 +350,7 @@ class Albedo extends StatelessWidget {
                     TalentImageName(
                       image: "albedo_constellation_2.png",
                       name: "Opening of Phanerozoic",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -363,7 +371,7 @@ class Albedo extends StatelessWidget {
                     TalentImageName(
                       image: "albedo_constellation_3.png",
                       name: "Grace of Helios",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -374,27 +382,29 @@ class Albedo extends StatelessWidget {
                     TalentImageName(
                       image: "albedo_constellation_4.png",
                       name: "Descent of Divinity",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
                       "Active party members within the Solar Isotoma field have their Plunging Attack DMG increased by 30%.",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 10.0),
                     TalentImageName(
                       image: "albedo_constellation_5.png",
                       name: "Tide of Hadean",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
                       "Increases the Level of Rite of Progeniture: Tectonic Tide by 3. Maximum upgrade level is 15.",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 10.0),
                     TalentImageName(
                       image: "albedo_constellation_6.png",
                       name: "Dust of Purification",
-                      color: geoIconBG,
+                      color: geoBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -474,6 +484,66 @@ class Albedo extends StatelessWidget {
                     const ArchaicPetra(isFullset: false),
                     const SizedBox(height: 10.0),
                     const NoblesseOblige(isFullset: false),
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
+                width: double.maxFinite,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Team Compositions",
+                      style: chapterFontStyle,
+                    ),
+                    const SizedBox(height: 10.0),
+                    Text(
+                      "Double Geo Team",
+                      style: fontStyle3,
+                    ),
+                    const SizedBox(height: 10.0),
+                    Row(
+                      children: const [
+                        HutaoPortrait(),
+                        SizedBox(width: 5.0),
+                        ZhongliPortrait(),
+                        SizedBox(width: 5.0),
+                        XingqiuPortrait(),
+                        SizedBox(width: 5.0),
+                        AlbedoPortrait(),
+                      ],
+                    ),
+                    const SizedBox(height: 5.0),
+                    Row(
+                      children: const [
+                        XiaoPortrait(),
+                        SizedBox(width: 5.0),
+                        ZhongliPortrait(),
+                        SizedBox(width: 5.0),
+                        JeanPortrait(),
+                        SizedBox(width: 5.0),
+                        AlbedoPortrait(),
+                      ],
+                    ),
+                    const SizedBox(height: 10.0),
+                    Text(
+                      "Mono Geo Team",
+                      style: fontStyle3,
+                    ),
+                    const SizedBox(height: 10.0),
+                    Row(
+                      children: const [
+                        IttoPortrait(),
+                        SizedBox(width: 5.0),
+                        ZhongliPortrait(),
+                        SizedBox(width: 5.0),
+                        GorouPortrait(),
+                        SizedBox(width: 5.0),
+                        AlbedoPortrait(),
+                      ],
+                    ),
                   ],
                 ),
               ),

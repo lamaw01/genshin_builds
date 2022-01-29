@@ -5,6 +5,13 @@ import 'package:genshin_builds/components/artifact/noblesse_oblige.dart';
 import 'package:genshin_builds/components/artifact/shimenawas_reminiscence.dart';
 import 'package:genshin_builds/components/artifact/thundering_fury.dart';
 import 'package:genshin_builds/components/artifact/thundersoother.dart';
+import 'package:genshin_builds/components/character/barbara_portrait.dart';
+import 'package:genshin_builds/components/character/beidou_portrait.dart';
+import 'package:genshin_builds/components/character/fischl_portrait.dart';
+import 'package:genshin_builds/components/character/kazuha_portrait.dart';
+import 'package:genshin_builds/components/character/kokomi_portrait.dart';
+import 'package:genshin_builds/components/character/sucrose_portait.dart';
+import 'package:genshin_builds/components/character/xingqiu_portrait.dart';
 import 'package:genshin_builds/components/material/crown_of_insight.dart';
 import 'package:genshin_builds/components/material/dvalins_sigh.dart';
 import 'package:genshin_builds/components/material/golden_raven_insignia.dart';
@@ -170,7 +177,7 @@ class Beidou extends StatelessWidget {
                     TalentImageName(
                       image: "beidou_normal_attack.png",
                       name: "Normal Attack: Oceanborne",
-                      color: electroIconBG,
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Column(
@@ -222,7 +229,7 @@ class Beidou extends StatelessWidget {
                     TalentImageName(
                       image: "beidou_elemental_skill.png",
                       name: "Tidecaller",
-                      color: electroIconBG,
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -270,7 +277,7 @@ class Beidou extends StatelessWidget {
                     TalentImageName(
                       image: "beidou_elemental_burst.png",
                       name: "Stormbreaker",
-                      color: electroIconBG,
+                      color: electroBG,
                     ),
                     const SizedBox(height: 5.0),
                     Text(
@@ -427,6 +434,7 @@ class Beidou extends StatelessWidget {
                       "Upon being attacked, Beidou's Normal Attacks gain an additional instance of 20% Electro DMG for 10s.",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 10.0),
                     TalentImageName(
                       image: "beidou_constellation_5.png",
                       name: "Crimson Tidewalker",
@@ -437,6 +445,7 @@ class Beidou extends StatelessWidget {
                       "Increases the Level of Stormbreaker by 3. Maximum upgrade level is 15.",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 10.0),
                     TalentImageName(
                       image: "beidou_constellation_6.png",
                       name: "	Bane of Evil",
@@ -525,7 +534,7 @@ class Beidou extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     Text(
-                      "Recommended ER: 120% - 180%",
+                      "Recommended ER: 130% - 180%",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
@@ -542,6 +551,61 @@ class Beidou extends StatelessWidget {
                     const EmblemOfSeveredFate(isFullset: false),
                     const SizedBox(height: 10.0),
                     const Thundersoother(isFullset: true),
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
+                width: double.maxFinite,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Team Compositions",
+                      style: chapterFontStyle,
+                    ),
+                    const SizedBox(height: 10.0),
+                    Text(
+                      "Taser Team",
+                      style: fontStyle3,
+                    ),
+                    const SizedBox(height: 10.0),
+                    Row(
+                      children: const [
+                        BeidouPortrait(),
+                        SizedBox(width: 5.0),
+                        KokomiPortrait(),
+                        SizedBox(width: 5.0),
+                        FischlPortrait(),
+                        SizedBox(width: 5.0),
+                        KazuhaPortrait(),
+                      ],
+                    ),
+                    const SizedBox(height: 5.0),
+                    Row(
+                      children: const [
+                        BeidouPortrait(),
+                        SizedBox(width: 5.0),
+                        XingqiuPortrait(),
+                        SizedBox(width: 5.0),
+                        FischlPortrait(),
+                        SizedBox(width: 5.0),
+                        SucrosePortrait(),
+                      ],
+                    ),
+                    const SizedBox(height: 5.0),
+                    Row(
+                      children: const [
+                        BeidouPortrait(),
+                        SizedBox(width: 5.0),
+                        BarbaraPortrait(),
+                        SizedBox(width: 5.0),
+                        FischlPortrait(),
+                        SizedBox(width: 5.0),
+                        XingqiuPortrait(),
+                      ],
+                    ),
                   ],
                 ),
               ),
