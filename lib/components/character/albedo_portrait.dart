@@ -16,9 +16,8 @@ class AlbedoPortrait extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Container(
-            padding: const EdgeInsets.all(5.0),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8.0),
+              borderRadius: BorderRadius.circular(5.0),
               color: darkBGLighter,
             ),
             child: Image.asset(
@@ -32,7 +31,7 @@ class AlbedoPortrait extends StatelessWidget {
             right: 1,
             child: CircleAvatar(
               backgroundColor: darkBGLighter,
-              radius: 10,
+              radius: 9,
               child: Image.asset(
                 elementPath + GlobalFunction.elementType("Geo"),
                 width: 15.0,

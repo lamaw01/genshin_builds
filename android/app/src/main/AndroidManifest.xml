@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.genshin_builds">
    <application
-        android:label="genshin_builds"
+        android:label="Genshin Builds"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

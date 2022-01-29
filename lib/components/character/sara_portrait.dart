@@ -16,7 +16,6 @@ class SaraPortrait extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Container(
-            padding: const EdgeInsets.all(5.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.0),
               color: darkBGLighter,
@@ -32,7 +31,7 @@ class SaraPortrait extends StatelessWidget {
             right: 1,
             child: CircleAvatar(
               backgroundColor: darkBGLighter,
-              radius: 10,
+              radius: 9,
               child: Image.asset(
                 elementPath + GlobalFunction.elementType("Electro"),
                 width: 15.0,
