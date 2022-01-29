@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:genshin_builds/constants/assets.dart';
 import 'package:genshin_builds/routes/go.dart';
+import 'package:sizer/sizer.dart';
 
 class CharacterGachaSplash extends StatelessWidget {
   const CharacterGachaSplash({Key? key, required this.image}) : super(key: key);
@@ -11,10 +12,20 @@ class CharacterGachaSplash extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        Image.asset(
-          characterPath + image,
+        Image(
+          image: AssetImage(
+            characterPath + image,
+          ),
           width: double.maxFinite,
-          fit: BoxFit.fitWidth,
+          height: 35.h,
+          loadingBuilder: (BuildContext context, Widget child,
+              ImageChunkEvent? loadingProgress) {
+            if (loadingProgress == null) return child;
+            return SizedBox(
+              height: 35.h,
+              width: double.maxFinite,
+            );
+          },
         ),
         Positioned(
           top: 1,

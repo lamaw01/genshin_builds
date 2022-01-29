@@ -5,14 +5,11 @@ import 'package:genshin_builds/components/artifact/tenacity_of_the_millelith.dar
 import 'package:genshin_builds/components/artifact/wanderers_troupe.dart';
 import 'package:genshin_builds/components/character/albedo_portrait.dart';
 import 'package:genshin_builds/components/character/amber_portrait.dart';
-import 'package:genshin_builds/components/character/diona_portrait.dart';
 import 'package:genshin_builds/components/character/hutao_portrait.dart';
 import 'package:genshin_builds/components/character/kazuha_portrait.dart';
-import 'package:genshin_builds/components/character/rosaria_portrait.dart';
 import 'package:genshin_builds/components/character/sucrose_portait.dart';
 import 'package:genshin_builds/components/character/thome_portrait.dart';
 import 'package:genshin_builds/components/character/xingqiu_portrait.dart';
-import 'package:genshin_builds/components/character/yanfei_portriat.dart';
 import 'package:genshin_builds/components/character/zhongli_portrait.dart';
 import 'package:genshin_builds/components/material/agnidus_agate_gemstone.dart';
 import 'package:genshin_builds/components/material/crown_of_insight.dart';
@@ -515,11 +512,11 @@ class Hutao extends StatelessWidget {
                     Row(
                       children: const [
                         HutaoPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         ZhongliPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         XingqiuPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         AlbedoPortrait(),
                       ],
                     ),
@@ -532,53 +529,24 @@ class Hutao extends StatelessWidget {
                     Row(
                       children: const [
                         HutaoPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         XingqiuPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         AmberPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         SucrosePortrait(),
                       ],
                     ),
-                    const SizedBox(height: 5.0),
+                    const SizedBox(height: 10.0),
                     Row(
                       children: const [
                         HutaoPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         XingqiuPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         ThomePortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         KazuhaPortrait(),
-                      ],
-                    ),
-                    const SizedBox(height: 5.0),
-                    Row(
-                      children: const [
-                        HutaoPortrait(),
-                        SizedBox(width: 5.0),
-                        XingqiuPortrait(),
-                        SizedBox(width: 5.0),
-                        YanfeiPortrait(),
-                        SizedBox(width: 5.0),
-                        SucrosePortrait(),
-                      ],
-                    ),
-                    const SizedBox(height: 10.0),
-                    Text(
-                      "Other",
-                      style: fontStyle3,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Row(
-                      children: const [
-                        HutaoPortrait(),
-                        SizedBox(width: 5.0),
-                        DionaPortrait(),
-                        SizedBox(width: 5.0),
-                        RosariaPortrait(),
-                        SizedBox(width: 5.0),
-                        XingqiuPortrait(),
                       ],
                     ),
                   ],
@@ -604,11 +572,11 @@ class Hutao extends StatelessWidget {
                     Row(
                       children: const [
                         AgnidusAgateGemstone(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         JuvenileJade(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         SilkFlower(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         EnergyNectar(),
                       ],
                     ),
@@ -621,11 +589,11 @@ class Hutao extends StatelessWidget {
                     Row(
                       children: const [
                         PhilosophiesOfDiligence(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         EnergyNectar(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         ShardOfAFoulLegacy(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         CrownOfInsight(),
                       ],
                     ),

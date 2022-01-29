@@ -144,11 +144,27 @@ class CharacterIcon extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Image.asset(
-              characterPath + image,
-              width: 30.w,
+            // Image.asset(
+            //   characterPath + image,
+            //   width: 30.w,
+            //   height: 40.h,
+            //   fit: BoxFit.fitWidth,
+            // ),
+            Image(
+              image: AssetImage(
+                characterPath + image,
+              ),
               height: 40.h,
+              width: 30.w,
               fit: BoxFit.fitWidth,
+              loadingBuilder: (BuildContext context, Widget child,
+                  ImageChunkEvent? loadingProgress) {
+                if (loadingProgress == null) return child;
+                return SizedBox(
+                  height: 40.h,
+                  width: 30.w,
+                );
+              },
             ),
             Positioned(
               top: 1,

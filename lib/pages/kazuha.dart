@@ -532,11 +532,11 @@ class Kazuha extends StatelessWidget {
                     Row(
                       children: const [
                         AyakaPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         KokomiPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         RosariaPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         KazuhaPortrait(),
                       ],
                     ),
@@ -549,11 +549,11 @@ class Kazuha extends StatelessWidget {
                     Row(
                       children: const [
                         BeidouPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         KokomiPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         FischlPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         KazuhaPortrait(),
                       ],
                     ),
@@ -566,11 +566,11 @@ class Kazuha extends StatelessWidget {
                     Row(
                       children: const [
                         RaidenShogunPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         BennettPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         SaraPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         KazuhaPortrait(),
                       ],
                     ),
@@ -583,11 +583,11 @@ class Kazuha extends StatelessWidget {
                     Row(
                       children: const [
                         YoimiyaPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         BennettPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         XiangLingPortrait(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         KazuhaPortrait(),
                       ],
                     ),
@@ -614,11 +614,11 @@ class Kazuha extends StatelessWidget {
                     Row(
                       children: const [
                         VayudaTurquoiseGemstone(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         MarionetteCore(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         SeaGanoderma(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         GoldenRavenInsignia(),
                       ],
                     ),
@@ -631,11 +631,11 @@ class Kazuha extends StatelessWidget {
                     Row(
                       children: const [
                         PhilosophiesOfDiligence(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         GoldenRavenInsignia(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         GildedScale(),
-                        SizedBox(width: 5.0),
+                        SizedBox(width: 10.0),
                         CrownOfInsight(),
                       ],
                     ),
