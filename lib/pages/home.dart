@@ -7,12 +7,57 @@ import "package:genshin_builds/routes/go.dart";
 import "package:sizer/sizer.dart";
 
 final characterList = <Character>[
-  Character(name: "Albedo", image: "albedo.png", element: "Geo"),
-  Character(name: "Ayaka", image: "ayaka.png", element: "Cryo"),
-  Character(name: "Beidou", image: "beidou.png", element: "Electro"),
-  Character(name: "Hu Tao", image: "hutao.png", element: "Pyro"),
-  Character(name: "Kazuha", image: "kazuha.png", element: "Anemo"),
-  Character(name: "Kokomi", image: "kokomi.png", element: "Hydro"),
+  Character(name: "Albedo", image: "albedo_gacha_card.png", element: "Geo"),
+  Character(name: "Aloy", image: "aloy_gacha_card.png", element: "Cryo"),
+  Character(name: "Amber", image: "amber_gacha_card.png", element: "Pyro"),
+  Character(name: "Ayaka", image: "ayaka_gacha_card.png", element: "Cryo"),
+  Character(name: "Barbara", image: "barbara_gacha_card.png", element: "Hydro"),
+  Character(name: "Beidou", image: "beidou_gacha_card.png", element: "Electro"),
+  Character(name: "Bennett", image: "bennett_gacha_card.png", element: "Pyro"),
+  Character(
+      name: "Chongyun", image: "chongyun_gacha_card.png", element: "Cryo"),
+  Character(name: "Diluc", image: "diluc_gacha_card.png", element: "Pyro"),
+  Character(name: "Diona", image: "diona_gacha_card.png", element: "Cryo"),
+  Character(name: "Eula", image: "eula_gacha_card.png", element: "Cryo"),
+  Character(name: "Fischl", image: "fischl_gacha_card.png", element: "Electro"),
+  Character(name: "Ganyu", image: "ganyu_gacha_card.png", element: "Cryo"),
+  Character(name: "Gorou", image: "gorou_gacha_card.png", element: "Geo"),
+  Character(name: "Hu Tao", image: "hutao_gacha_card.png", element: "Pyro"),
+  Character(name: "Jean", image: "jean_gacha_card.png", element: "Anemo"),
+  Character(name: "Kaeya", image: "kaeya_gacha_card.png", element: "Cryo"),
+  Character(name: "Kazuha", image: "kazuha_gacha_card.png", element: "Anemo"),
+  Character(name: "Keqing", image: "keqing_gacha_card.png", element: "Electro"),
+  Character(name: "Klee", image: "klee_gacha_card.png", element: "Pyro"),
+  Character(name: "Kokomi", image: "kokomi_gacha_card.png", element: "Hydro"),
+  Character(name: "Sara", image: "sara_gacha_card.png", element: "Electro"),
+  Character(name: "Lisa", image: "lisa_gacha_card.png", element: "Electro"),
+  Character(name: "Mona", image: "mona_gacha_card.png", element: "Hydro"),
+  Character(
+      name: "Nigguang", image: "ningguang_gacha_card.png", element: "Geo"),
+  Character(name: "Noelle", image: "noelle_gacha_card.png", element: "Geo"),
+  Character(name: "Qiqi", image: "qiqi_gacha_card.png", element: "Cryo"),
+  Character(
+      name: "Raiden Shogun",
+      image: "raiden_shougun_gacha_card.png",
+      element: "Electro"),
+  Character(name: "Razor", image: "razor_gacha_card.png", element: "Electro"),
+  Character(name: "Rosaria", image: "rosaria_gacha_card.png", element: "Cryo"),
+  Character(name: "Sayu", image: "sayu_gacha_card.png", element: "Anemo"),
+  Character(name: "Shenhe", image: "shenhe_gacha_card.png", element: "Cryo"),
+  Character(name: "Sucrose", image: "sucrose_gacha_card.png", element: "Anemo"),
+  Character(
+      name: "Tartaglia", image: "tartaglia_gacha_card.png", element: "Hydro"),
+  Character(name: "Thoma", image: "thoma_gacha_card.png", element: "Pyro"),
+  Character(name: "Venti", image: "venti_gacha_card.png", element: "Anemo"),
+  Character(
+      name: "Xiangling", image: "xiangling_gacha_card.png", element: "Pyro"),
+  Character(name: "Xiao", image: "xiao_gacha_card.png", element: "Anemo"),
+  Character(name: "Xingqiu", image: "xingqiu_gacha_card.png", element: "Hydro"),
+  Character(name: "Xinyan", image: "xinyan_gacha_card.png", element: "Pyro"),
+  Character(name: "Yanfei", image: "yanfei_gacha_card.png", element: "Pyro"),
+  Character(name: "Yoimiya", image: "yoimiya_gacha_card.png", element: "Pyro"),
+  Character(name: "Yunjin", image: "yunjin_gacha_card.png", element: "Geo"),
+  Character(name: "Zhongli", image: "zhongli_gacha_card.png", element: "Geo"),
 ];
 
 class Home extends StatelessWidget {
@@ -23,22 +68,37 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: darkBG,
-        body: GridView.builder(
-          padding: const EdgeInsets.all(10.0),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
-            crossAxisSpacing: 7.0,
-            mainAxisSpacing: 7.0,
+        body: Padding(
+          padding: const EdgeInsets.only(
+            top: 10.0,
+            bottom: 10.0,
+            left: 0.0,
+            right: 0.0,
           ),
-          itemCount: characterList.length,
-          itemBuilder: (_, int index) {
-            return CharacterIcon(
-              name: characterList[index].name,
-              image: characterList[index].image,
-              element: characterList[index].element,
-              character: characterList[index],
-            );
-          },
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Center(
+                  child: Wrap(
+                    spacing: 8.0,
+                    runSpacing: 8.0,
+                    children: [
+                      for (int i = 0; i < characterList.length; i++) ...[
+                        CharacterIcon(
+                          name: characterList[i].name,
+                          image: characterList[i].image,
+                          element: characterList[i].element,
+                          character: characterList[i],
+                        ),
+                      ],
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -76,44 +136,49 @@ class CharacterIcon extends StatelessWidget {
           Go.to(context, "/kokomi");
         }
       },
-      child: Stack(
-        fit: StackFit.expand,
-        alignment: Alignment.center,
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              color: GlobalFunction.backGround(element),
+      child: Container(
+        decoration: BoxDecoration(
+          // borderRadius: BorderRadius.circular(10.0),
+          color: GlobalFunction.backGround(element),
+        ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Image.asset(
+              characterPath + image,
+              width: 30.w,
+              height: 40.h,
+              fit: BoxFit.fitWidth,
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  characterPath + image,
-                  width: 70.0,
-                  height: 70.0,
+            Positioned(
+              top: 1,
+              right: 1,
+              child: CircleAvatar(
+                backgroundColor: darkBGLighter,
+                radius: 12,
+                child: Image.asset(
+                  elementPath + GlobalFunction.elementType(element),
+                  width: 20.0,
+                  height: 20.0,
                 ),
-                Text(
-                  name,
-                  style: TextStyle(fontSize: 8.sp, color: Colors.white),
-                ),
-              ],
-            ),
-          ),
-          Positioned(
-            top: 1,
-            right: 1,
-            child: CircleAvatar(
-              backgroundColor: darkBGLighter,
-              radius: 10,
-              child: Image.asset(
-                elementPath + GlobalFunction.elementType(element),
-                width: 15.0,
-                height: 15.0,
               ),
             ),
-          ),
-        ],
+            Positioned(
+              bottom: 5.0,
+              child: Text(
+                name,
+                style: TextStyle(
+                  fontSize: 9.sp,
+                  // color: GlobalFunction.backGround(element),
+                  color: Colors.white,
+                  backgroundColor: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'zh',
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
