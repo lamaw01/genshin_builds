@@ -68,36 +68,30 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: darkBG,
-        body: Padding(
-          padding: const EdgeInsets.only(
-            top: 10.0,
-            bottom: 10.0,
-            left: 0.0,
-            right: 0.0,
-          ),
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Center(
-                  child: Wrap(
-                    spacing: 8.0,
-                    runSpacing: 8.0,
-                    children: [
-                      for (int i = 0; i < characterList.length; i++) ...[
-                        CharacterIcon(
-                          name: characterList[i].name,
-                          image: characterList[i].image,
-                          element: characterList[i].element,
-                          character: characterList[i],
-                        ),
-                      ],
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(height: 10.0),
+              Center(
+                child: Wrap(
+                  spacing: 8.0,
+                  runSpacing: 8.0,
+                  children: [
+                    for (int i = 0; i < characterList.length; i++) ...[
+                      CharacterIcon(
+                        name: characterList[i].name,
+                        image: characterList[i].image,
+                        element: characterList[i].element,
+                        character: characterList[i],
+                      ),
                     ],
-                  ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+              const SizedBox(height: 10.0),
+            ],
           ),
         ),
       ),
@@ -134,6 +128,10 @@ class CharacterIcon extends StatelessWidget {
           Go.to(context, "/kazuha");
         } else if (name == "Kokomi") {
           Go.to(context, "/kokomi");
+        } else if (name == "Raiden Shogun") {
+          Go.to(context, "/raiden_shogun");
+        } else if (name == "Eula") {
+          Go.to(context, "/eula");
         }
       },
       child: Container(

@@ -47,8 +47,8 @@ class Ayaka extends StatelessWidget {
             children: [
               const CharacterGachaSplash(image: "ayaka_gacha_splash.png"),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -139,8 +139,8 @@ class Ayaka extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -158,8 +158,8 @@ class Ayaka extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -287,8 +287,8 @@ class Ayaka extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -344,8 +344,8 @@ class Ayaka extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -384,7 +384,7 @@ class Ayaka extends StatelessWidget {
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Increases the Level of Kamisato Art: Soumetsu by 3.Maximum upgrade level is 15.",
+                      "Increases the Level of Kamisato Art: Soumetsu by 3. Maximum upgrade level is 15.",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
@@ -406,7 +406,7 @@ class Ayaka extends StatelessWidget {
                     ),
                     const SizedBox(height: 5.0),
                     Text(
-                      "Increases the Level of Kamisato Art: Hyouka by 3.Maximum upgrade level is 15.",
+                      "Increases the Level of Kamisato Art: Hyouka by 3. Maximum upgrade level is 15.",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
@@ -424,8 +424,8 @@ class Ayaka extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -472,10 +472,12 @@ class Ayaka extends StatelessWidget {
                       "Sands - ATK%",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Goblet - Cryo DMG Bonus",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Circlet - CRIT DMG / ATK%",
                       style: fontStyle2,
@@ -485,6 +487,7 @@ class Ayaka extends StatelessWidget {
                       "Substat Priority: CRIT > ATK% > Energy Recharge",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Recommended ER: 120% - 150%",
                       style: fontStyle2,
@@ -505,8 +508,8 @@ class Ayaka extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -560,8 +563,8 @@ class Ayaka extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

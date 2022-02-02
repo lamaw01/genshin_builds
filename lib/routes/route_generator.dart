@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:genshin_builds/pages/albedo.dart';
 import 'package:genshin_builds/pages/ayaka.dart';
 import 'package:genshin_builds/pages/beidou.dart';
+import 'package:genshin_builds/pages/eula.dart';
 import 'package:genshin_builds/pages/home.dart';
 import 'package:genshin_builds/pages/hutao.dart';
 import 'package:genshin_builds/pages/kazuha.dart';
 import 'package:genshin_builds/pages/kokomi.dart';
 import 'package:genshin_builds/pages/not_found.dart';
+import 'package:genshin_builds/pages/raiden_shogun.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -27,6 +29,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const Kazuha());
       case '/kokomi':
         return MaterialPageRoute(builder: (_) => const Kokomi());
+      case '/raiden_shogun':
+        return MaterialPageRoute(builder: (_) => const RaidenShogun());
+      case '/eula':
+        return MaterialPageRoute(builder: (_) => const Eula());
       default:
         return MaterialPageRoute(builder: (_) => const NotFound());
     }

@@ -35,7 +35,7 @@ class Deathmatch extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 11.sp,
                           fontWeight: FontWeight.w500,
-                          color: Colors.purple,
+                          color: Colors.purpleAccent,
                         ),
                       ),
                       const SizedBox(width: 5.0),

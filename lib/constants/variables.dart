@@ -48,3 +48,6 @@ final fontStyle3 = TextStyle(
   fontWeight: FontWeight.w500,
   color: fontColor,
 );
+
+//padding of character page
+const double mainPadding = 5.0;

@@ -44,8 +44,8 @@ class Albedo extends StatelessWidget {
             children: [
               const CharacterGachaSplash(image: "albedo_gacha_splash.png"),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,8 +136,8 @@ class Albedo extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -155,8 +155,8 @@ class Albedo extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -278,8 +278,8 @@ class Albedo extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -325,8 +325,8 @@ class Albedo extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -415,8 +415,8 @@ class Albedo extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -488,8 +488,8 @@ class Albedo extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -548,8 +548,8 @@ class Albedo extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(mainPadding),
+                margin: const EdgeInsets.all(mainPadding),
                 width: double.maxFinite,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
