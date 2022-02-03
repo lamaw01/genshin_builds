@@ -466,10 +466,12 @@ class Hutao extends StatelessWidget {
                       "Sands - HP% / EM",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Goblet - Pyro DMG Bonus",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Circlet - CRIT RATE / CRIT DMG",
                       style: fontStyle2,

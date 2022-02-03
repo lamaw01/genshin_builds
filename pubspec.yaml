@@ -39,6 +39,8 @@ dependencies:
 
   new_version: ^0.3.0
 
+  webview_flutter: ^3.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

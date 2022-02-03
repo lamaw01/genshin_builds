@@ -510,7 +510,7 @@ class RaidenShogun extends StatelessWidget {
                       "Circlet - CRIT RATE / CRIT DMG",
                       style: fontStyle2,
                     ),
-                    const SizedBox(height: 2.5),
+                    const SizedBox(height: 5.0),
                     Text(
                       "Substat Priority: CRIT > Energy Recharge > ATK%",
                       style: fontStyle2,

@@ -487,7 +487,6 @@ class Ayaka extends StatelessWidget {
                       "Substat Priority: CRIT > ATK% > Energy Recharge",
                       style: fontStyle2,
                     ),
-                    const SizedBox(height: 2.5),
                     Text(
                       "Recommended ER: 120% - 150%",
                       style: fontStyle2,

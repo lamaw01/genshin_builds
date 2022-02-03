@@ -520,10 +520,12 @@ class Beidou extends StatelessWidget {
                       "Sands - ATK% / ER%",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Goblet - Electro DMG Bonus",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Circlet - CRIT RATE / CRIT DMG%",
                       style: fontStyle2,
@@ -533,8 +535,9 @@ class Beidou extends StatelessWidget {
                       "Substat Priority: CRIT > Energy Recharge > ATK%  ",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
-                      "Recommended ER: 130% - 180%",
+                      "Recommended ER: 130% - 160%",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),

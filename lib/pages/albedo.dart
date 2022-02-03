@@ -463,10 +463,12 @@ class Albedo extends StatelessWidget {
                       "Sands - DEF%",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Goblet - DEF% / Geo DMG Bonus",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Circlet - CRIT RATE / CRIT DMG / DEF%",
                       style: fontStyle2,

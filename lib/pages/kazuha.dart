@@ -484,12 +484,14 @@ class Kazuha extends StatelessWidget {
                       "Sands - EM",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Goblet - EM / Anemo DMG Bonus",
                       style: fontStyle2,
                     ),
+                    const SizedBox(height: 2.5),
                     Text(
-                      "Circlet - EM CRIT RATE / CRIT DMG",
+                      "Circlet - EM / CRIT RATE / CRIT DMG",
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 5.0),
@@ -497,12 +499,12 @@ class Kazuha extends StatelessWidget {
                       "Substat Priority: EM > Energy Recharge > CRIT",
                       style: fontStyle2,
                     ),
-                    const SizedBox(height: 5.0),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Recommended EM: 800",
                       style: fontStyle2,
                     ),
-                    const SizedBox(height: 5.0),
+                    const SizedBox(height: 2.5),
                     Text(
                       "Recommended ER: 120%",
                       style: fontStyle2,

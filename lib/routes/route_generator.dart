@@ -9,6 +9,7 @@ import 'package:genshin_builds/pages/kazuha.dart';
 import 'package:genshin_builds/pages/kokomi.dart';
 import 'package:genshin_builds/pages/not_found.dart';
 import 'package:genshin_builds/pages/raiden_shogun.dart';
+import 'package:genshin_builds/pages/xiao.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -33,6 +34,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const RaidenShogun());
       case '/eula':
         return MaterialPageRoute(builder: (_) => const Eula());
+      case '/xiao':
+        return MaterialPageRoute(builder: (_) => const Xiao());
       default:
         return MaterialPageRoute(builder: (_) => const NotFound());
     }

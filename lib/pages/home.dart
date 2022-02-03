@@ -132,6 +132,8 @@ class CharacterIcon extends StatelessWidget {
           Go.to(context, "/raiden_shogun");
         } else if (name == "Eula") {
           Go.to(context, "/eula");
+        } else if (name == "Xiao") {
+          Go.to(context, "/xiao");
         }
       },
       child: Container(
