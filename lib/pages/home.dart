@@ -1,63 +1,232 @@
 import "package:flutter/material.dart";
-import "package:genshin_builds/constants/assets.dart";
-import "package:genshin_builds/constants/colors.dart";
-import "package:genshin_builds/functions/global_function.dart";
-import "package:genshin_builds/models/character.dart";
-import "package:genshin_builds/routes/go.dart";
 import "package:sizer/sizer.dart";
 
+import '../constants/assets.dart';
+import '../constants/colors.dart';
+import '../functions/global_function.dart';
+import '../models/albedo_data.dart';
+import '../models/character_home_data.dart';
+import '../routes/go.dart';
+
 final characterList = <Character>[
-  Character(name: "Albedo", image: "albedo_gacha_card.png", element: "Geo"),
-  Character(name: "Aloy", image: "aloy_gacha_card.png", element: "Cryo"),
-  Character(name: "Amber", image: "amber_gacha_card.png", element: "Pyro"),
-  Character(name: "Ayaka", image: "ayaka_gacha_card.png", element: "Cryo"),
-  Character(name: "Barbara", image: "barbara_gacha_card.png", element: "Hydro"),
-  Character(name: "Beidou", image: "beidou_gacha_card.png", element: "Electro"),
-  Character(name: "Bennett", image: "bennett_gacha_card.png", element: "Pyro"),
   Character(
-      name: "Chongyun", image: "chongyun_gacha_card.png", element: "Cryo"),
-  Character(name: "Diluc", image: "diluc_gacha_card.png", element: "Pyro"),
-  Character(name: "Diona", image: "diona_gacha_card.png", element: "Cryo"),
+    name: "Albedo",
+    image: "albedo_gacha_card.png",
+    element: "Geo",
+    isDone: true,
+    characterModel: albedo,
+  ),
+  Character(
+    name: "Aloy",
+    image: "aloy_gacha_card.png",
+    element: "Cryo",
+  ),
+  Character(
+    name: "Amber",
+    image: "amber_gacha_card.png",
+    element: "Pyro",
+  ),
+  Character(
+    name: "Ayaka",
+    image: "ayaka_gacha_card.png",
+    element: "Cryo",
+  ),
+  Character(
+    name: "Barbara",
+    image: "barbara_gacha_card.png",
+    element: "Hydro",
+  ),
+  Character(
+    name: "Beidou",
+    image: "beidou_gacha_card.png",
+    element: "Electro",
+  ),
+  Character(
+    name: "Bennett",
+    image: "bennett_gacha_card.png",
+    element: "Pyro",
+  ),
+  Character(
+    name: "Chongyun",
+    image: "chongyun_gacha_card.png",
+    element: "Cryo",
+  ),
+  Character(
+    name: "Diluc",
+    image: "diluc_gacha_card.png",
+    element: "Pyro",
+  ),
+  Character(
+    name: "Diona",
+    image: "diona_gacha_card.png",
+    element: "Cryo",
+  ),
   Character(name: "Eula", image: "eula_gacha_card.png", element: "Cryo"),
-  Character(name: "Fischl", image: "fischl_gacha_card.png", element: "Electro"),
-  Character(name: "Ganyu", image: "ganyu_gacha_card.png", element: "Cryo"),
-  Character(name: "Gorou", image: "gorou_gacha_card.png", element: "Geo"),
-  Character(name: "Hu Tao", image: "hutao_gacha_card.png", element: "Pyro"),
-  Character(name: "Jean", image: "jean_gacha_card.png", element: "Anemo"),
-  Character(name: "Kaeya", image: "kaeya_gacha_card.png", element: "Cryo"),
-  Character(name: "Kazuha", image: "kazuha_gacha_card.png", element: "Anemo"),
-  Character(name: "Keqing", image: "keqing_gacha_card.png", element: "Electro"),
-  Character(name: "Klee", image: "klee_gacha_card.png", element: "Pyro"),
-  Character(name: "Kokomi", image: "kokomi_gacha_card.png", element: "Hydro"),
-  Character(name: "Sara", image: "sara_gacha_card.png", element: "Electro"),
-  Character(name: "Lisa", image: "lisa_gacha_card.png", element: "Electro"),
-  Character(name: "Mona", image: "mona_gacha_card.png", element: "Hydro"),
   Character(
-      name: "Nigguang", image: "ningguang_gacha_card.png", element: "Geo"),
-  Character(name: "Noelle", image: "noelle_gacha_card.png", element: "Geo"),
-  Character(name: "Qiqi", image: "qiqi_gacha_card.png", element: "Cryo"),
+    name: "Fischl",
+    image: "fischl_gacha_card.png",
+    element: "Electro",
+  ),
   Character(
-      name: "Raiden Shogun",
-      image: "raiden_shougun_gacha_card.png",
-      element: "Electro"),
-  Character(name: "Razor", image: "razor_gacha_card.png", element: "Electro"),
-  Character(name: "Rosaria", image: "rosaria_gacha_card.png", element: "Cryo"),
-  Character(name: "Sayu", image: "sayu_gacha_card.png", element: "Anemo"),
-  Character(name: "Shenhe", image: "shenhe_gacha_card.png", element: "Cryo"),
-  Character(name: "Sucrose", image: "sucrose_gacha_card.png", element: "Anemo"),
+    name: "Ganyu",
+    image: "ganyu_gacha_card.png",
+    element: "Cryo",
+  ),
   Character(
-      name: "Tartaglia", image: "tartaglia_gacha_card.png", element: "Hydro"),
-  Character(name: "Thoma", image: "thoma_gacha_card.png", element: "Pyro"),
-  Character(name: "Venti", image: "venti_gacha_card.png", element: "Anemo"),
+    name: "Gorou",
+    image: "gorou_gacha_card.png",
+    element: "Geo",
+  ),
   Character(
-      name: "Xiangling", image: "xiangling_gacha_card.png", element: "Pyro"),
-  Character(name: "Xiao", image: "xiao_gacha_card.png", element: "Anemo"),
-  Character(name: "Xingqiu", image: "xingqiu_gacha_card.png", element: "Hydro"),
-  Character(name: "Xinyan", image: "xinyan_gacha_card.png", element: "Pyro"),
-  Character(name: "Yanfei", image: "yanfei_gacha_card.png", element: "Pyro"),
-  Character(name: "Yoimiya", image: "yoimiya_gacha_card.png", element: "Pyro"),
-  Character(name: "Yunjin", image: "yunjin_gacha_card.png", element: "Geo"),
-  Character(name: "Zhongli", image: "zhongli_gacha_card.png", element: "Geo"),
+    name: "Hu Tao",
+    image: "hutao_gacha_card.png",
+    element: "Pyro",
+  ),
+  Character(
+    name: "Jean",
+    image: "jean_gacha_card.png",
+    element: "Anemo",
+  ),
+  Character(
+    name: "Kaeya",
+    image: "kaeya_gacha_card.png",
+    element: "Cryo",
+  ),
+  Character(
+    name: "Kazuha",
+    image: "kazuha_gacha_card.png",
+    element: "Anemo",
+  ),
+  Character(
+    name: "Keqing",
+    image: "keqing_gacha_card.png",
+    element: "Electro",
+  ),
+  Character(
+    name: "Klee",
+    image: "klee_gacha_card.png",
+    element: "Pyro",
+  ),
+  Character(
+    name: "Kokomi",
+    image: "kokomi_gacha_card.png",
+    element: "Hydro",
+  ),
+  Character(
+    name: "Sara",
+    image: "sara_gacha_card.png",
+    element: "Electro",
+  ),
+  Character(
+    name: "Lisa",
+    image: "lisa_gacha_card.png",
+    element: "Electro",
+  ),
+  Character(
+    name: "Mona",
+    image: "mona_gacha_card.png",
+    element: "Hydro",
+  ),
+  Character(
+    name: "Nigguang",
+    image: "ningguang_gacha_card.png",
+    element: "Geo",
+  ),
+  Character(
+    name: "Noelle",
+    image: "noelle_gacha_card.png",
+    element: "Geo",
+  ),
+  Character(
+    name: "Qiqi",
+    image: "qiqi_gacha_card.png",
+    element: "Cryo",
+  ),
+  Character(
+    name: "Raiden Shogun",
+    image: "raiden_shougun_gacha_card.png",
+    element: "Electro",
+  ),
+  Character(
+    name: "Razor",
+    image: "razor_gacha_card.png",
+    element: "Electro",
+  ),
+  Character(
+    name: "Rosaria",
+    image: "rosaria_gacha_card.png",
+    element: "Cryo",
+  ),
+  Character(
+    name: "Sayu",
+    image: "sayu_gacha_card.png",
+    element: "Anemo",
+  ),
+  Character(
+    name: "Shenhe",
+    image: "shenhe_gacha_card.png",
+    element: "Cryo",
+  ),
+  Character(
+    name: "Sucrose",
+    image: "sucrose_gacha_card.png",
+    element: "Anemo",
+  ),
+  Character(
+    name: "Tartaglia",
+    image: "tartaglia_gacha_card.png",
+    element: "Hydro",
+  ),
+  Character(
+    name: "Thoma",
+    image: "thoma_gacha_card.png",
+    element: "Pyro",
+  ),
+  Character(
+    name: "Venti",
+    image: "venti_gacha_card.png",
+    element: "Anemo",
+  ),
+  Character(
+    name: "Xiangling",
+    image: "xiangling_gacha_card.png",
+    element: "Pyro",
+  ),
+  Character(
+    name: "Xiao",
+    image: "xiao_gacha_card.png",
+    element: "Anemo",
+  ),
+  Character(
+    name: "Xingqiu",
+    image: "xingqiu_gacha_card.png",
+    element: "Hydro",
+  ),
+  Character(
+    name: "Xinyan",
+    image: "xinyan_gacha_card.png",
+    element: "Pyro",
+  ),
+  Character(
+    name: "Yanfei",
+    image: "yanfei_gacha_card.png",
+    element: "Pyro",
+  ),
+  Character(
+    name: "Yoimiya",
+    image: "yoimiya_gacha_card.png",
+    element: "Pyro",
+  ),
+  Character(
+    name: "Yunjin",
+    image: "yunjin_gacha_card.png",
+    element: "Geo",
+  ),
+  Character(
+    name: "Zhongli",
+    image: "zhongli_gacha_card.png",
+    element: "Geo",
+  ),
 ];
 
 class Home extends StatelessWidget {
@@ -116,40 +285,21 @@ class CharacterIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        if (name == "Albedo") {
-          Go.to(context, "/albedo");
-        } else if (name == "Ayaka") {
-          Go.to(context, "/ayaka");
-        } else if (name == "Beidou") {
-          Go.to(context, "/beidou");
-        } else if (name == "Hu Tao") {
-          Go.to(context, "/hutao");
-        } else if (name == "Kazuha") {
-          Go.to(context, "/kazuha");
-        } else if (name == "Kokomi") {
-          Go.to(context, "/kokomi");
-        } else if (name == "Raiden Shogun") {
-          Go.to(context, "/raiden_shogun");
-        } else if (name == "Eula") {
-          Go.to(context, "/eula");
-        } else if (name == "Xiao") {
-          Go.to(context, "/xiao");
+        if (character.isDone) {
+          Go.to(
+            context,
+            '/character_page',
+            arguments: character.characterModel,
+          );
         }
       },
       child: Container(
         decoration: BoxDecoration(
-          // borderRadius: BorderRadius.circular(10.0),
           color: GlobalFunction.backGround(element),
         ),
         child: Stack(
           alignment: Alignment.center,
           children: [
-            // Image.asset(
-            //   characterPath + image,
-            //   width: 30.w,
-            //   height: 40.h,
-            //   fit: BoxFit.fitWidth,
-            // ),
             Image(
               image: AssetImage(
                 characterPath + image,
@@ -173,7 +323,7 @@ class CharacterIcon extends StatelessWidget {
                 backgroundColor: darkBGLighter,
                 radius: 12,
                 child: Image.asset(
-                  elementPath + GlobalFunction.elementType(element),
+                  elementPath + GlobalFunction.elementType(element)!,
                   width: 20.0,
                   height: 20.0,
                 ),
@@ -185,7 +335,6 @@ class CharacterIcon extends StatelessWidget {
                 name,
                 style: TextStyle(
                   fontSize: 9.sp,
-                  // color: GlobalFunction.backGround(element),
                   color: Colors.white,
                   backgroundColor: Colors.black,
                   fontWeight: FontWeight.bold,

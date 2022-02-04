@@ -4,34 +4,25 @@ import 'package:genshin_builds/components/artifact/emblem_of_severed_fate.dart';
 import 'package:genshin_builds/components/artifact/gladiators_finale.dart';
 import 'package:genshin_builds/components/artifact/noblesse_oblige.dart';
 import 'package:genshin_builds/components/artifact/shimenawas_reminiscence.dart';
-import 'package:genshin_builds/components/character/ayaka_portrait.dart';
-import 'package:genshin_builds/components/character/barbara_portrait.dart';
-import 'package:genshin_builds/components/character/diona_portrait.dart';
-import 'package:genshin_builds/components/character/kaeya_portrait.dart';
-import 'package:genshin_builds/components/character/kazuha_portrait.dart';
-import 'package:genshin_builds/components/character/kokomi_portrait.dart';
-import 'package:genshin_builds/components/character/rosaria_portrait.dart';
-import 'package:genshin_builds/components/character/sucrose_portait.dart';
-import 'package:genshin_builds/components/character/xingqiu_portrait.dart';
-import 'package:genshin_builds/components/material/bloodjade_branch.dart';
-import 'package:genshin_builds/components/material/crown_of_insight.dart';
-import 'package:genshin_builds/components/material/famed_handguard.dart';
-import 'package:genshin_builds/components/material/perpetual_heart.dart';
-import 'package:genshin_builds/components/material/philosophies_of_elegance.dart';
-import 'package:genshin_builds/components/material/sakura_bloom.dart';
-import 'package:genshin_builds/components/material/shivada_jade_gemstone.dart';
-import 'package:genshin_builds/components/weapon/amenoma_kageuchi.dart';
+import 'package:genshin_builds/components/character_portrait/ayaka_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/barbara_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/diona_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/kaeya_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/kazuha_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/kokomi_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/rosaria_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/sucrose_portait.dart';
+import 'package:genshin_builds/components/character_portrait/xingqiu_portrait.dart';
 import 'package:genshin_builds/components/weapon/blackcliff_longsword.dart';
 import 'package:genshin_builds/components/weapon/mistsplitter_reforged.dart';
+import 'package:genshin_builds/components/weapon/model/weapon_data.dart';
+import 'package:genshin_builds/components/weapon/model/weapon_widget.dart';
 import 'package:genshin_builds/components/weapon/primodial_jade_cutter.dart';
 import 'package:genshin_builds/constants/assets.dart';
 import 'package:genshin_builds/constants/colors.dart';
 import 'package:genshin_builds/constants/variables.dart';
-import 'package:genshin_builds/functions/global_function.dart';
-import 'package:sizer/sizer.dart';
 
 import 'reusable/character_gacha_spash.dart';
-import 'reusable/table_row_widget.dart';
 import 'reusable/talent_image_name.dart';
 
 class Ayaka extends StatelessWidget {
@@ -76,7 +67,7 @@ class Ayaka extends StatelessWidget {
                           style: characterInfoFontStyle,
                         ),
                         Image.asset(
-                          elementPath + GlobalFunction.elementType("Cryo"),
+                          elementPath + cryoElement,
                           width: 25.0,
                           height: 25.0,
                         ),
@@ -459,7 +450,7 @@ class Ayaka extends StatelessWidget {
                     const SizedBox(height: 10.0),
                     const PrimordialJadeCutter(),
                     const SizedBox(height: 10.0),
-                    const AmenomaKageuchi(),
+                    WeaponWidget(weaponModel: amenomaKageuchi),
                     const SizedBox(height: 10.0),
                     const BlackcliffLongsword(),
                     const SizedBox(height: 10.0),
@@ -561,161 +552,161 @@ class Ayaka extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(mainPadding),
-                margin: const EdgeInsets.all(mainPadding),
-                width: double.maxFinite,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Materials",
-                      style: chapterFontStyle,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Text(
-                      "Ascension Materials",
-                      style: fontStyle3,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Row(
-                      children: const [
-                        ShivadaJadeGemstone(),
-                        SizedBox(width: 10.0),
-                        PerpetualHeart(),
-                        SizedBox(width: 10.0),
-                        SakuraBloom(),
-                        SizedBox(width: 10.0),
-                        FamedHandguard(),
-                      ],
-                    ),
-                    const SizedBox(height: 10.0),
-                    Text(
-                      "Talent Materials",
-                      style: fontStyle3,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Row(
-                      children: const [
-                        PhilosophiesOfElegance(),
-                        SizedBox(width: 10.0),
-                        FamedHandguard(),
-                        SizedBox(width: 10.0),
-                        BloodjadeBranch(),
-                        SizedBox(width: 10.0),
-                        CrownOfInsight(),
-                      ],
-                    ),
-                    const SizedBox(height: 10.0),
-                    Text(
-                      "Stats",
-                      style: fontStyle3,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Center(
-                      child: Table(
-                        border: TableBorder.all(
-                          width: 0.5,
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
-                        defaultVerticalAlignment:
-                            TableCellVerticalAlignment.middle,
-                        children: [
-                          TableRow(
-                            children: [
-                              Text(
-                                "ASC",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "LVL",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "HP",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "ATK",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "DEF",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "CRIT RATE",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "CRIT DMG",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                          tableRowWidget2(
-                              "0", "1", "1001", "27", "61", "5%", "50%"),
-                          tableRowWidget2(
-                              "0", "20", "2597", "69", "158", "5%", "50%"),
-                          tableRowWidget2(
-                              "1", "20", "3455", "92", "211", "5%", "50%"),
-                          tableRowWidget2(
-                              "1", "40", "5170", "138", "315", "5%", "50%"),
-                          tableRowWidget2(
-                              "2", "40", "5779", "154", "352", "5%", "59.6%"),
-                          tableRowWidget2(
-                              "2", "50", "6649", "177", "405", "5%", "59.6%"),
-                          tableRowWidget2(
-                              "3", "60", "7462", "198", "455", "5%", "69.2%"),
-                          tableRowWidget2(
-                              "3", "60", "8341", "222", "509", "5%", "69.2%"),
-                          tableRowWidget2(
-                              "4", "70", "8951", "238", "546", "5%", "69.2%"),
-                          tableRowWidget2(
-                              "4", "70", "9838", "262", "600", "5%", "69.2%"),
-                          tableRowWidget2(
-                              "5", "80", "10448", "278", "637", "5%", "78.8%"),
-                          tableRowWidget2(
-                              "5", "80", "11345", "302", "302", "5%", "78.8%"),
-                          tableRowWidget2(
-                              "6", "80", "11954", "318", "729", "5%", "88.4%"),
-                          tableRowWidget2(
-                              "6", "90", "12858", "342", "784", "5%", "88.4%"),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              // Container(
+              //   padding: const EdgeInsets.all(mainPadding),
+              //   margin: const EdgeInsets.all(mainPadding),
+              //   width: double.maxFinite,
+              //   child: Column(
+              //     crossAxisAlignment: CrossAxisAlignment.start,
+              //     children: [
+              //       Text(
+              //         "Materials",
+              //         style: chapterFontStyle,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Text(
+              //         "Ascension Materials",
+              //         style: fontStyle3,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Row(
+              //         children: const [
+              //           ShivadaJadeGemstone(),
+              //           SizedBox(width: 10.0),
+              //           PerpetualHeart(),
+              //           SizedBox(width: 10.0),
+              //           SakuraBloom(),
+              //           SizedBox(width: 10.0),
+              //           FamedHandguard(),
+              //         ],
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Text(
+              //         "Talent Materials",
+              //         style: fontStyle3,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Row(
+              //         children: const [
+              //           PhilosophiesOfElegance(),
+              //           SizedBox(width: 10.0),
+              //           FamedHandguard(),
+              //           SizedBox(width: 10.0),
+              //           BloodjadeBranch(),
+              //           SizedBox(width: 10.0),
+              //           CrownOfInsight(),
+              //         ],
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Text(
+              //         "Stats",
+              //         style: fontStyle3,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Center(
+              //         child: Table(
+              //           border: TableBorder.all(
+              //             width: 0.5,
+              //             color: Colors.white,
+              //             borderRadius: BorderRadius.circular(5.0),
+              //           ),
+              //           defaultVerticalAlignment:
+              //               TableCellVerticalAlignment.middle,
+              //           children: [
+              //             TableRow(
+              //               children: [
+              //                 Text(
+              //                   "ASC",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "LVL",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w500,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "HP",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "ATK",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "DEF",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "CRIT RATE",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "CRIT DMG",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //               ],
+              //             ),
+              //             tableRowWidget2(
+              //                 "0", "1", "1001", "27", "61", "5%", "50%"),
+              //             tableRowWidget2(
+              //                 "0", "20", "2597", "69", "158", "5%", "50%"),
+              //             tableRowWidget2(
+              //                 "1", "20", "3455", "92", "211", "5%", "50%"),
+              //             tableRowWidget2(
+              //                 "1", "40", "5170", "138", "315", "5%", "50%"),
+              //             tableRowWidget2(
+              //                 "2", "40", "5779", "154", "352", "5%", "59.6%"),
+              //             tableRowWidget2(
+              //                 "2", "50", "6649", "177", "405", "5%", "59.6%"),
+              //             tableRowWidget2(
+              //                 "3", "60", "7462", "198", "455", "5%", "69.2%"),
+              //             tableRowWidget2(
+              //                 "3", "60", "8341", "222", "509", "5%", "69.2%"),
+              //             tableRowWidget2(
+              //                 "4", "70", "8951", "238", "546", "5%", "69.2%"),
+              //             tableRowWidget2(
+              //                 "4", "70", "9838", "262", "600", "5%", "69.2%"),
+              //             tableRowWidget2(
+              //                 "5", "80", "10448", "278", "637", "5%", "78.8%"),
+              //             tableRowWidget2(
+              //                 "5", "80", "11345", "302", "302", "5%", "78.8%"),
+              //             tableRowWidget2(
+              //                 "6", "80", "11954", "318", "729", "5%", "88.4%"),
+              //             tableRowWidget2(
+              //                 "6", "90", "12858", "342", "784", "5%", "88.4%"),
+              //           ],
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),

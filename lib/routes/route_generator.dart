@@ -1,43 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:genshin_builds/pages/albedo.dart';
-import 'package:genshin_builds/pages/ayaka.dart';
-import 'package:genshin_builds/pages/beidou.dart';
-import 'package:genshin_builds/pages/eula.dart';
-import 'package:genshin_builds/pages/home.dart';
-import 'package:genshin_builds/pages/hutao.dart';
-import 'package:genshin_builds/pages/kazuha.dart';
-import 'package:genshin_builds/pages/kokomi.dart';
-import 'package:genshin_builds/pages/not_found.dart';
-import 'package:genshin_builds/pages/raiden_shogun.dart';
-import 'package:genshin_builds/pages/xiao.dart';
+
+import '../constants/colors.dart';
+import '../models/character_model.dart';
+import '../pages/home.dart';
+import '../pages/reusable/character_page.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    // ignore: unused_local_variable
     final Object? args = settings.arguments;
+
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => const Home());
-      case '/albedo':
-        return MaterialPageRoute(builder: (_) => const Albedo());
-      case '/ayaka':
-        return MaterialPageRoute(builder: (_) => const Ayaka());
-      case '/beidou':
-        return MaterialPageRoute(builder: (_) => const Beidou());
-      case '/hutao':
-        return MaterialPageRoute(builder: (_) => const Hutao());
-      case '/kazuha':
-        return MaterialPageRoute(builder: (_) => const Kazuha());
-      case '/kokomi':
-        return MaterialPageRoute(builder: (_) => const Kokomi());
-      case '/raiden_shogun':
-        return MaterialPageRoute(builder: (_) => const RaidenShogun());
-      case '/eula':
-        return MaterialPageRoute(builder: (_) => const Eula());
-      case '/xiao':
-        return MaterialPageRoute(builder: (_) => const Xiao());
+      case '/character_page':
+        return MaterialPageRoute(builder: (_) {
+          var arg = args as CharacterModel;
+          return CharacterPage(characterModel: arg);
+        });
       default:
-        return MaterialPageRoute(builder: (_) => const NotFound());
+        return MaterialPageRoute(
+          builder: (_) => Scaffold(
+            appBar: AppBar(
+              backgroundColor: darkBG,
+              title: const Text('Page Not Found'),
+            ),
+          ),
+        );
     }
   }
 }

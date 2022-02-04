@@ -78,6 +78,7 @@ flutter:
     - assets/character/
     - assets/talent/
     - assets/weapon/
+    - assets/weapon_type/
     - assets/artifact/
     - assets/material/
     - assets/element/

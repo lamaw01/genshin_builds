@@ -2,21 +2,14 @@ import "package:flutter/material.dart";
 import "package:genshin_builds/components/artifact/archaic_petra.dart";
 import "package:genshin_builds/components/artifact/husk_of_opulent_dreams.dart";
 import 'package:genshin_builds/components/artifact/noblesse_oblige.dart';
-import 'package:genshin_builds/components/character/albedo_portrait.dart';
-import 'package:genshin_builds/components/character/gorou_portrait.dart';
-import 'package:genshin_builds/components/character/hutao_portrait.dart';
-import 'package:genshin_builds/components/character/itto_portrait.dart';
-import 'package:genshin_builds/components/character/jean_portrait.dart';
-import 'package:genshin_builds/components/character/xiao_portrait.dart';
-import 'package:genshin_builds/components/character/xingqiu_portrait.dart';
-import 'package:genshin_builds/components/character/zhongli_portrait.dart';
-import 'package:genshin_builds/components/material/basalt_pillar.dart';
-import 'package:genshin_builds/components/material/cecilia.dart';
-import 'package:genshin_builds/components/material/crown_of_insight.dart';
-import 'package:genshin_builds/components/material/forbidden_curse_scroll.dart';
-import 'package:genshin_builds/components/material/philosophies_of_ballad.dart';
-import 'package:genshin_builds/components/material/prithiva_topaz_gemstone.dart';
-import 'package:genshin_builds/components/material/tusk_of_monoceros_caeli.dart';
+import 'package:genshin_builds/components/character_portrait/albedo_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/gorou_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/hutao_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/itto_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/jean_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/xiao_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/xingqiu_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/zhongli_portrait.dart';
 import "package:genshin_builds/components/weapon/cinnabar_spindle.dart";
 import "package:genshin_builds/components/weapon/harbinger_of_dawn.dart";
 import "package:genshin_builds/components/weapon/primodial_jade_cutter.dart";
@@ -24,11 +17,8 @@ import "package:genshin_builds/components/weapon/summit_shaper.dart";
 import "package:genshin_builds/constants/assets.dart";
 import "package:genshin_builds/constants/colors.dart";
 import 'package:genshin_builds/constants/variables.dart';
-import 'package:genshin_builds/functions/global_function.dart';
-import "package:sizer/sizer.dart";
 
 import 'reusable/character_gacha_spash.dart';
-import 'reusable/table_row_widget.dart';
 import 'reusable/talent_image_name.dart';
 
 class Albedo extends StatelessWidget {
@@ -73,7 +63,7 @@ class Albedo extends StatelessWidget {
                           style: characterInfoFontStyle,
                         ),
                         Image.asset(
-                          elementPath + GlobalFunction.elementType("Geo"),
+                          elementPath + geoElement,
                           width: 25.0,
                           height: 25.0,
                         ),
@@ -549,169 +539,169 @@ class Albedo extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(mainPadding),
-                margin: const EdgeInsets.all(mainPadding),
-                width: double.maxFinite,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Materials",
-                      style: chapterFontStyle,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Text(
-                      "Ascension Materials",
-                      style: fontStyle3,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Row(
-                      children: const [
-                        PrithivaTopazGemstone(),
-                        SizedBox(width: 10.0),
-                        BasaltPillar(),
-                        SizedBox(width: 10.0),
-                        Cecilia(),
-                        SizedBox(width: 10.0),
-                        ForbiddenCurseScroll(),
-                      ],
-                    ),
-                    const SizedBox(height: 10.0),
-                    Text(
-                      "Talent Materials",
-                      style: fontStyle3,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Row(
-                      children: const [
-                        PhilosophiesOfBallad(),
-                        SizedBox(width: 10.0),
-                        ForbiddenCurseScroll(),
-                        SizedBox(width: 10.0),
-                        TuskOfMonocerosCaeli(),
-                        SizedBox(width: 10.0),
-                        CrownOfInsight(),
-                      ],
-                    ),
-                    const SizedBox(height: 10.0),
-                    Text(
-                      "Stats",
-                      style: fontStyle3,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Center(
-                      child: Table(
-                        border: TableBorder.all(
-                          width: 0.5,
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
-                        defaultVerticalAlignment:
-                            TableCellVerticalAlignment.middle,
-                        children: [
-                          TableRow(
-                            children: [
-                              Text(
-                                "ASC",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "LVL",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "HP",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "ATK",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "DEF",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "CRIT RATE",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "CRIT DMG",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "Geo DMG Bonus",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                          tableRowWidget1(
-                              "0", "1", "1030", "20", "68", "5%", "50%", "0%"),
-                          tableRowWidget1("0", "20", "2671", "51", "177", "5%",
-                              "50%", "0%"),
-                          tableRowWidget1("1", "20", "3554", "67", "235", "5%",
-                              "50%", "0%"),
-                          tableRowWidget1("1", "40", "5317", "101", "101", "5%",
-                              "50%", "0%"),
-                          tableRowWidget1("2", "40", "5944", "113", "394", "5%",
-                              "50%", "7.2%"),
-                          tableRowWidget1("2", "50", "6839", "130", "453", "5%",
-                              "50%", "7.2%"),
-                          tableRowWidget1("3", "50", "7675", "146", "508", "5%",
-                              "50%", "14.4%"),
-                          tableRowWidget1("3", "60", "8579", "163", "568", "5%",
-                              "50%", "14.4%"),
-                          tableRowWidget1("4", "60", "9207", "175", "610", "5%",
-                              "50%", "14.4%"),
-                          tableRowWidget1("4", "70", "10119", "192", "670",
-                              "5%", "50%", "14.4%"),
-                          tableRowWidget1("5", "70", "10746", "204", "712",
-                              "5%", "50%", "21.6%"),
-                          tableRowWidget1("5", "80", "11669", "222", "773",
-                              "5%", "50%", "21.6%"),
-                          tableRowWidget1("6", "80", "12296", "233", "815",
-                              "5%", "50%", "28.8%"),
-                          tableRowWidget1("6", "90", "13226", "251", "876",
-                              "5%", "50%", "28.8%"),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              // Container(
+              //   padding: const EdgeInsets.all(mainPadding),
+              //   margin: const EdgeInsets.all(mainPadding),
+              //   width: double.maxFinite,
+              //   child: Column(
+              //     crossAxisAlignment: CrossAxisAlignment.start,
+              //     children: [
+              //       Text(
+              //         "Materials",
+              //         style: chapterFontStyle,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Text(
+              //         "Ascension Materials",
+              //         style: fontStyle3,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Row(
+              //         children: const [
+              //           PrithivaTopazGemstone(),
+              //           SizedBox(width: 10.0),
+              //           BasaltPillar(),
+              //           SizedBox(width: 10.0),
+              //           Cecilia(),
+              //           SizedBox(width: 10.0),
+              //           ForbiddenCurseScroll(),
+              //         ],
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Text(
+              //         "Talent Materials",
+              //         style: fontStyle3,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Row(
+              //         children: const [
+              //           PhilosophiesOfBallad(),
+              //           SizedBox(width: 10.0),
+              //           ForbiddenCurseScroll(),
+              //           SizedBox(width: 10.0),
+              //           TuskOfMonocerosCaeli(),
+              //           SizedBox(width: 10.0),
+              //           CrownOfInsight(),
+              //         ],
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Text(
+              //         "Stats",
+              //         style: fontStyle3,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Center(
+              //         child: Table(
+              //           border: TableBorder.all(
+              //             width: 0.5,
+              //             color: Colors.white,
+              //             borderRadius: BorderRadius.circular(5.0),
+              //           ),
+              //           defaultVerticalAlignment:
+              //               TableCellVerticalAlignment.middle,
+              //           children: [
+              //             TableRow(
+              //               children: [
+              //                 Text(
+              //                   "ASC",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "LVL",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w500,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "HP",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "ATK",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "DEF",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "CRIT RATE",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "CRIT DMG",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "Geo DMG Bonus",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //               ],
+              //             ),
+              //             tableRowWidget1(
+              //                 "0", "1", "1030", "20", "68", "5%", "50%", "0%"),
+              //             tableRowWidget1("0", "20", "2671", "51", "177", "5%",
+              //                 "50%", "0%"),
+              //             tableRowWidget1("1", "20", "3554", "67", "235", "5%",
+              //                 "50%", "0%"),
+              //             tableRowWidget1("1", "40", "5317", "101", "101", "5%",
+              //                 "50%", "0%"),
+              //             tableRowWidget1("2", "40", "5944", "113", "394", "5%",
+              //                 "50%", "7.2%"),
+              //             tableRowWidget1("2", "50", "6839", "130", "453", "5%",
+              //                 "50%", "7.2%"),
+              //             tableRowWidget1("3", "50", "7675", "146", "508", "5%",
+              //                 "50%", "14.4%"),
+              //             tableRowWidget1("3", "60", "8579", "163", "568", "5%",
+              //                 "50%", "14.4%"),
+              //             tableRowWidget1("4", "60", "9207", "175", "610", "5%",
+              //                 "50%", "14.4%"),
+              //             tableRowWidget1("4", "70", "10119", "192", "670",
+              //                 "5%", "50%", "14.4%"),
+              //             tableRowWidget1("5", "70", "10746", "204", "712",
+              //                 "5%", "50%", "21.6%"),
+              //             tableRowWidget1("5", "80", "11669", "222", "773",
+              //                 "5%", "50%", "21.6%"),
+              //             tableRowWidget1("6", "80", "12296", "233", "815",
+              //                 "5%", "50%", "28.8%"),
+              //             tableRowWidget1("6", "90", "13226", "251", "876",
+              //                 "5%", "50%", "28.8%"),
+              //           ],
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),

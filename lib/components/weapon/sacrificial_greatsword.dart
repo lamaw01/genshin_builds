@@ -52,7 +52,7 @@ class SacrificialGreatsword extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    "BASE 565 substat ER 30.6%%",
+                    "BASE 565 substat ER 30.6%",
                     style: TextStyle(
                       fontSize: 9.sp,
                       fontWeight: FontWeight.w400,

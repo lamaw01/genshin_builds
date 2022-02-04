@@ -5,24 +5,18 @@ import 'package:genshin_builds/components/artifact/noblesse_oblige.dart';
 import 'package:genshin_builds/components/artifact/shimenawas_reminiscence.dart';
 import 'package:genshin_builds/components/artifact/thundering_fury.dart';
 import 'package:genshin_builds/components/artifact/thundersoother.dart';
-import 'package:genshin_builds/components/character/barbara_portrait.dart';
-import 'package:genshin_builds/components/character/beidou_portrait.dart';
-import 'package:genshin_builds/components/character/fischl_portrait.dart';
-import 'package:genshin_builds/components/character/kazuha_portrait.dart';
-import 'package:genshin_builds/components/character/kokomi_portrait.dart';
-import 'package:genshin_builds/components/character/sucrose_portait.dart';
-import 'package:genshin_builds/components/character/xingqiu_portrait.dart';
-import 'package:genshin_builds/components/material/crown_of_insight.dart';
-import 'package:genshin_builds/components/material/dvalins_sigh.dart';
-import 'package:genshin_builds/components/material/golden_raven_insignia.dart';
-import 'package:genshin_builds/components/material/lightning_prism.dart';
-import 'package:genshin_builds/components/material/noctilucous_jade.dart';
-import 'package:genshin_builds/components/material/philosophies_of_gold.dart';
-import 'package:genshin_builds/components/material/vajrada_amethyst_gemstone.dart';
-import 'package:genshin_builds/components/weapon/akuoumaru.dart';
+import 'package:genshin_builds/components/character_portrait/barbara_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/beidou_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/fischl_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/kazuha_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/kokomi_portrait.dart';
+import 'package:genshin_builds/components/character_portrait/sucrose_portait.dart';
+import 'package:genshin_builds/components/character_portrait/xingqiu_portrait.dart';
 import 'package:genshin_builds/components/weapon/blackcliff_slasher.dart';
 import 'package:genshin_builds/components/weapon/lithic_blade.dart';
 import 'package:genshin_builds/components/weapon/luxurious_sea_lord.dart';
+import 'package:genshin_builds/components/weapon/model/weapon_data.dart';
+import 'package:genshin_builds/components/weapon/model/weapon_widget.dart';
 import 'package:genshin_builds/components/weapon/prototype_archaic.dart';
 import 'package:genshin_builds/components/weapon/sacrificial_greatsword.dart';
 import 'package:genshin_builds/components/weapon/serpent_spine.dart';
@@ -32,11 +26,8 @@ import 'package:genshin_builds/components/weapon/wolfs_gravestone.dart';
 import 'package:genshin_builds/constants/assets.dart';
 import 'package:genshin_builds/constants/colors.dart';
 import 'package:genshin_builds/constants/variables.dart';
-import 'package:genshin_builds/functions/global_function.dart';
-import 'package:sizer/sizer.dart';
 
 import 'reusable/character_gacha_spash.dart';
-import 'reusable/table_row_widget.dart';
 import 'reusable/talent_image_name.dart';
 
 class Beidou extends StatelessWidget {
@@ -81,7 +72,7 @@ class Beidou extends StatelessWidget {
                           style: characterInfoFontStyle,
                         ),
                         Image.asset(
-                          elementPath + GlobalFunction.elementType("Electro"),
+                          elementPath + electroElement,
                           width: 25.0,
                           height: 25.0,
                         ),
@@ -501,7 +492,8 @@ class Beidou extends StatelessWidget {
                     const SizedBox(height: 10.0),
                     const LuxuriousSeaLord(),
                     const SizedBox(height: 10.0),
-                    const Akuoumaru(),
+                    // const Akuoumaru(),
+                    WeaponWidget(weaponModel: akuoumaru),
                     const SizedBox(height: 10.0),
                     const PrototypeArchaic(),
                     const SizedBox(height: 10.0),
@@ -612,169 +604,169 @@ class Beidou extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(mainPadding),
-                margin: const EdgeInsets.all(mainPadding),
-                width: double.maxFinite,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Materials",
-                      style: chapterFontStyle,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Text(
-                      "Ascension Materials",
-                      style: fontStyle3,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Row(
-                      children: const [
-                        VajradaAmethystGemstone(),
-                        SizedBox(width: 10.0),
-                        LightningPrism(),
-                        SizedBox(width: 10.0),
-                        NoctilucousJade(),
-                        SizedBox(width: 10.0),
-                        GoldenRavenInsignia(),
-                      ],
-                    ),
-                    const SizedBox(height: 10.0),
-                    Text(
-                      "Talent Materials",
-                      style: fontStyle3,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Row(
-                      children: const [
-                        PhilosophiesOfGold(),
-                        SizedBox(width: 10.0),
-                        GoldenRavenInsignia(),
-                        SizedBox(width: 10.0),
-                        DvalinsSigh(),
-                        SizedBox(width: 10.0),
-                        CrownOfInsight(),
-                      ],
-                    ),
-                    const SizedBox(height: 10.0),
-                    Text(
-                      "Stats",
-                      style: fontStyle3,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Center(
-                      child: Table(
-                        border: TableBorder.all(
-                          width: 0.5,
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
-                        defaultVerticalAlignment:
-                            TableCellVerticalAlignment.middle,
-                        children: [
-                          TableRow(
-                            children: [
-                              Text(
-                                "ASC",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "LVL",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "HP",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "ATK",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "DEF",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "CRIT RATE",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "CRIT DMG",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "Electro DMG Bonus",
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                          tableRowWidget1(
-                              "0", "1", "1094", "19", "54", "5%", "50%", "0%"),
-                          tableRowWidget1("0", "20", "2811", "48", "140", "5%",
-                              "50%", "0%"),
-                          tableRowWidget1("1", "20", "3628", "63", "180", "5%",
-                              "50%", "0%"),
-                          tableRowWidget1("1", "40", "5435", "94", "270", "5%",
-                              "50%", "0%"),
-                          tableRowWidget1("2", "40", "6015", "104", "299", "5%",
-                              "50%", "6%"),
-                          tableRowWidget1("2", "50", "6919", "119", "344", "5%",
-                              "50%", "6%"),
-                          tableRowWidget1("3", "50", "7694", "133", "382", "5%",
-                              "50%", "12%"),
-                          tableRowWidget1("3", "60", "8579", "163", "568", "5%",
-                              "50%", "12%"),
-                          tableRowWidget1("4", "60", "9178", "158", "456", "5%",
-                              "50%", "12%"),
-                          tableRowWidget1("4", "70", "10081", "174", "501",
-                              "5%", "50%", "12%"),
-                          tableRowWidget1("5", "70", "10662", "184", "530",
-                              "5%", "50%", "18%"),
-                          tableRowWidget1("5", "80", "11565", "200", "575",
-                              "5%", "50%", "18%"),
-                          tableRowWidget1("6", "80", "12146", "210", "603",
-                              "5%", "50%", "24%"),
-                          tableRowWidget1("6", "90", "13050", "225", "648",
-                              "5%", "50%", "24%"),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              // Container(
+              //   padding: const EdgeInsets.all(mainPadding),
+              //   margin: const EdgeInsets.all(mainPadding),
+              //   width: double.maxFinite,
+              //   child: Column(
+              //     crossAxisAlignment: CrossAxisAlignment.start,
+              //     children: [
+              //       Text(
+              //         "Materials",
+              //         style: chapterFontStyle,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Text(
+              //         "Ascension Materials",
+              //         style: fontStyle3,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Row(
+              //         children: const [
+              //           VajradaAmethystGemstone(),
+              //           SizedBox(width: 10.0),
+              //           LightningPrism(),
+              //           SizedBox(width: 10.0),
+              //           NoctilucousJade(),
+              //           SizedBox(width: 10.0),
+              //           GoldenRavenInsignia(),
+              //         ],
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Text(
+              //         "Talent Materials",
+              //         style: fontStyle3,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Row(
+              //         children: const [
+              //           PhilosophiesOfGold(),
+              //           SizedBox(width: 10.0),
+              //           GoldenRavenInsignia(),
+              //           SizedBox(width: 10.0),
+              //           DvalinsSigh(),
+              //           SizedBox(width: 10.0),
+              //           CrownOfInsight(),
+              //         ],
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Text(
+              //         "Stats",
+              //         style: fontStyle3,
+              //       ),
+              //       const SizedBox(height: 10.0),
+              //       Center(
+              //         child: Table(
+              //           border: TableBorder.all(
+              //             width: 0.5,
+              //             color: Colors.white,
+              //             borderRadius: BorderRadius.circular(5.0),
+              //           ),
+              //           defaultVerticalAlignment:
+              //               TableCellVerticalAlignment.middle,
+              //           children: [
+              //             TableRow(
+              //               children: [
+              //                 Text(
+              //                   "ASC",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "LVL",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w500,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "HP",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "ATK",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "DEF",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "CRIT RATE",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "CRIT DMG",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //                 Text(
+              //                   "Electro DMG Bonus",
+              //                   style: TextStyle(
+              //                     fontSize: 10.sp,
+              //                     fontWeight: FontWeight.w400,
+              //                     color: Colors.white,
+              //                   ),
+              //                 ),
+              //               ],
+              //             ),
+              //             tableRowWidget1(
+              //                 "0", "1", "1094", "19", "54", "5%", "50%", "0%"),
+              //             tableRowWidget1("0", "20", "2811", "48", "140", "5%",
+              //                 "50%", "0%"),
+              //             tableRowWidget1("1", "20", "3628", "63", "180", "5%",
+              //                 "50%", "0%"),
+              //             tableRowWidget1("1", "40", "5435", "94", "270", "5%",
+              //                 "50%", "0%"),
+              //             tableRowWidget1("2", "40", "6015", "104", "299", "5%",
+              //                 "50%", "6%"),
+              //             tableRowWidget1("2", "50", "6919", "119", "344", "5%",
+              //                 "50%", "6%"),
+              //             tableRowWidget1("3", "50", "7694", "133", "382", "5%",
+              //                 "50%", "12%"),
+              //             tableRowWidget1("3", "60", "8579", "163", "568", "5%",
+              //                 "50%", "12%"),
+              //             tableRowWidget1("4", "60", "9178", "158", "456", "5%",
+              //                 "50%", "12%"),
+              //             tableRowWidget1("4", "70", "10081", "174", "501",
+              //                 "5%", "50%", "12%"),
+              //             tableRowWidget1("5", "70", "10662", "184", "530",
+              //                 "5%", "50%", "18%"),
+              //             tableRowWidget1("5", "80", "11565", "200", "575",
+              //                 "5%", "50%", "18%"),
+              //             tableRowWidget1("6", "80", "12146", "210", "603",
+              //                 "5%", "50%", "24%"),
+              //             tableRowWidget1("6", "90", "13050", "225", "648",
+              //                 "5%", "50%", "24%"),
+              //           ],
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),

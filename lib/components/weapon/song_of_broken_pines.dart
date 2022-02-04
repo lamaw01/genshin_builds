@@ -65,16 +65,7 @@ class SongOfBrokenPines extends StatelessWidget {
           ),
           const SizedBox(height: 5.0),
           Text(
-            "When you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the 'Millennial Movement: Banner-Hymn' effect for 12s. 'Millennial Movement: Banner-Hymn' increases Normal ATK SPD by 12% and increases ATK by 20%.",
-            style: TextStyle(
-              fontSize: 9.sp,
-              fontWeight: FontWeight.w500,
-              color: Colors.white,
-            ),
-          ),
-          const SizedBox(height: 5.0),
-          Text(
-            "Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the 'Millennial Movement', buffs of the same type will not stack.",
+            "When you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the 'Millennial Movement: Banner-Hymn' effect for 12s. 'Millennial Movement: Banner-Hymn' increases Normal ATK SPD by 12% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the 'Millennial Movement', buffs of the same type will not stack.",
             style: TextStyle(
               fontSize: 9.sp,
               fontWeight: FontWeight.w500,

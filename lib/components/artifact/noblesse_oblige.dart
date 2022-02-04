@@ -72,7 +72,7 @@ class NoblesseOblige extends StatelessWidget {
           if (isFullset == true) ...[
             const SizedBox(height: 5.0),
             Text(
-              "(4) Upon obtaining an Elemental Shard created through a Crystallize Reaction, all party members gain 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time.",
+              "(4) Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack.",
               style: TextStyle(
                 fontSize: 9.sp,
                 fontWeight: FontWeight.w500,
