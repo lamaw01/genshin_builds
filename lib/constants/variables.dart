@@ -49,5 +49,8 @@ final fontStyle3 = TextStyle(
   color: fontColor,
 );
 
-//padding of character page
 const double mainPadding = 5.0;
+
+const double secondaryPadding = 10.0;
+
+const double tertiaryPadding = 20.0;

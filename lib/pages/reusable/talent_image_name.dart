@@ -20,7 +20,7 @@ class TalentImageName extends StatelessWidget {
     return Row(
       children: [
         Image.asset(
-          isNormalAttack ? weaponTypePath + image : tallentPath + image,
+          tallentPath + image,
           width: 50.0,
           height: 50.0,
           color: color,

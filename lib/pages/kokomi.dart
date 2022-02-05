@@ -157,7 +157,7 @@ class Kokomi extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_normal_attack.png",
                       name: "Normal Attack: The Shape of Water",
                       color: hydroBG,
@@ -205,7 +205,7 @@ class Kokomi extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_elemental_skill.png",
                       name: "Kurage's Oath",
                       color: hydroBG,
@@ -231,7 +231,7 @@ class Kokomi extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_elemental_burst.png",
                       name: "Nereid's Ascension",
                       color: hydroBG,
@@ -276,7 +276,7 @@ class Kokomi extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_passive_1.png",
                       name: "Tamanooya's Casket",
                       color: hydroBG,
@@ -287,7 +287,7 @@ class Kokomi extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_passive_2.png",
                       name: "Song of Pearls",
                       color: hydroBG,
@@ -298,7 +298,7 @@ class Kokomi extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_passive_3.png",
                       name: "Princess of Watatsumi",
                       color: hydroBG,
@@ -314,7 +314,7 @@ class Kokomi extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_passive_4.png",
                       name: "Flawless Strategy",
                       color: hydroBG,
@@ -339,7 +339,7 @@ class Kokomi extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_constellation_1.png",
                       name: "At Water's Edge",
                       color: hydroBG,
@@ -355,7 +355,7 @@ class Kokomi extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_constellation_2.png",
                       name: "The Clouds Like Waves Rippling",
                       color: hydroBG,
@@ -376,7 +376,7 @@ class Kokomi extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_constellation_3.png",
                       name: "The Moon, A Ship O'er the Seas",
                       color: hydroBG,
@@ -387,7 +387,7 @@ class Kokomi extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_constellation_4.png",
                       name: "The Moon Overlooks the Waters",
                       color: hydroBG,
@@ -403,7 +403,7 @@ class Kokomi extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_constellation_5.png",
                       name: "	All Streams Flow to the Sea",
                       color: hydroBG,
@@ -414,7 +414,7 @@ class Kokomi extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kokomi_constellation_6.png",
                       name: "Sango Isshin",
                       color: hydroBG,

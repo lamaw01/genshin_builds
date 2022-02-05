@@ -162,7 +162,7 @@ class Xiao extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_normal_attack.png",
                       name: "Normal Attack: Whirlwind Thrust",
                       color: anemoBG,
@@ -218,7 +218,7 @@ class Xiao extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_elemental_skill.png",
                       name: "Lemniscatic Wind Cycling",
                       color: anemoBG,
@@ -237,7 +237,7 @@ class Xiao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_elemental_burst.png",
                       name: "Bane of All Evil",
                       color: anemoBG,
@@ -291,7 +291,7 @@ class Xiao extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_passive_1.png",
                       name: "Conqueror of Evil: Tamer of Demons",
                       color: anemoBG,
@@ -302,7 +302,7 @@ class Xiao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_passive_2.png",
                       name: "Dissolution Eon: Heaven Fall	",
                       color: anemoBG,
@@ -318,7 +318,7 @@ class Xiao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_passive_3.png",
                       name: "Transcension: Gravity Defier",
                       color: anemoBG,
@@ -348,7 +348,7 @@ class Xiao extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_constellation_1.png",
                       name: "Dissolution Eon: Destroyer of Worlds",
                       color: anemoBG,
@@ -359,7 +359,7 @@ class Xiao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_constellation_2.png",
                       name: "Annihilation Eon: Blossom of Kaleidos",
                       color: anemoBG,
@@ -370,7 +370,7 @@ class Xiao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_constellation_3.png",
                       name: "Conqueror of Evil: Wrath Deity",
                       color: anemoBG,
@@ -381,7 +381,7 @@ class Xiao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_constellation_4.png",
                       name: "Transcension: Extinction of Suffering",
                       color: anemoBG,
@@ -392,7 +392,7 @@ class Xiao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_constellation_5.png",
                       name: "Evolution Eon: Origin of Ignorance",
                       color: anemoBG,
@@ -403,7 +403,7 @@ class Xiao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "xiao_constellation_6.png",
                       name: "Conqueror of Evil: Guardian Yaksha",
                       color: anemoBG,

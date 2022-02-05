@@ -157,7 +157,7 @@ class RaidenShogun extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_normal_attack.png",
                       name: "Normal Attack: Origin",
                       color: electroBG,
@@ -205,7 +205,7 @@ class RaidenShogun extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_elemental_skill.png",
                       name: "Transcendence: Baleful Omen",
                       color: electroBG,
@@ -255,7 +255,7 @@ class RaidenShogun extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_elemental_burst.png",
                       name: "Secret Art: Musou Shinsetsu",
                       color: electroBG,
@@ -309,7 +309,7 @@ class RaidenShogun extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_passive_1.png",
                       name: "Wishes Unnumbered",
                       color: electroBG,
@@ -320,7 +320,7 @@ class RaidenShogun extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_passive_2.png",
                       name: "Enlightened One",
                       color: electroBG,
@@ -341,7 +341,7 @@ class RaidenShogun extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_passive_3.png",
                       name: "All-Preserver",
                       color: electroBG,
@@ -366,7 +366,7 @@ class RaidenShogun extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_constellation_1.png",
                       name: "Ominous Inscription",
                       color: electroBG,
@@ -377,7 +377,7 @@ class RaidenShogun extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_constellation_2.png",
                       name: "Steelbreaker",
                       color: electroBG,
@@ -388,7 +388,7 @@ class RaidenShogun extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_constellation_3.png",
                       name: "Shinkage Bygones",
                       color: electroBG,
@@ -399,7 +399,7 @@ class RaidenShogun extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_constellation_4.png",
                       name: "Pledge of Propriety",
                       color: electroBG,
@@ -410,7 +410,7 @@ class RaidenShogun extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_constellation_5.png",
                       name: "Shogun's Descent",
                       color: electroBG,
@@ -421,7 +421,7 @@ class RaidenShogun extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "raiden_shogun_constellation_6.png",
                       name: "Wishbearer",
                       color: electroBG,

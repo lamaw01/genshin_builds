@@ -168,7 +168,7 @@ class Eula extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_normal_attack.png",
                       name: "Normal Attack: Favonius Bladework - Edel",
                       color: cryoBG,
@@ -220,7 +220,7 @@ class Eula extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_elemental_skill.png",
                       name: "Icetide Vortex",
                       color: cryoBG,
@@ -276,7 +276,7 @@ class Eula extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_elemental_burst.png",
                       name: "Glacial Illumination",
                       color: cryoBG,
@@ -316,7 +316,7 @@ class Eula extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_passive_1.png",
                       name: "Roiling Rime",
                       color: cryoBG,
@@ -327,7 +327,7 @@ class Eula extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_passive_2.png",
                       name: "Wellspring of War-Lust",
                       color: cryoBG,
@@ -338,7 +338,7 @@ class Eula extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_passive_3.png",
                       name: "Aristocratic Introspection",
                       color: cryoBG,
@@ -363,7 +363,7 @@ class Eula extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_constellation_1.png",
                       name: "Tidal Illusion",
                       color: cryoBG,
@@ -379,7 +379,7 @@ class Eula extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_constellation_2.png",
                       name: "Lady of Seafoam",
                       color: cryoBG,
@@ -390,7 +390,7 @@ class Eula extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_constellation_3.png",
                       name: "Lawrence Pedigree",
                       color: cryoBG,
@@ -401,7 +401,7 @@ class Eula extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_constellation_4.png",
                       name: "The Obstinacy of One's Inferiors",
                       color: cryoBG,
@@ -412,7 +412,7 @@ class Eula extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_constellation_5.png",
                       name: "Chivalric Quality",
                       color: cryoBG,
@@ -423,7 +423,7 @@ class Eula extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "eula_constellation_6.png",
                       name: "Noble Obligation",
                       color: cryoBG,

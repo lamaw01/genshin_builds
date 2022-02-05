@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:genshin_builds/constants/colors.dart';
 
-import '../../constants/assets.dart';
+import '../../constants/colors.dart';
 import '../../constants/variables.dart';
-import '../../functions/global_function.dart';
 import '../../models/character_model.dart';
 import 'character_gacha_spash.dart';
 import 'character_info.dart';
@@ -27,55 +25,8 @@ class CharacterPage extends StatelessWidget {
               children: [
                 CharacterGachaSplash(image: characterModel.gachaSplashArt),
                 const SizedBox(height: 20.0),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      characterModel.name,
-                      style: characterNameFontStyle,
-                    ),
-                    Row(
-                      children: [
-                        for (int i = 0; i < characterModel.rarity; i++)
-                          const Icon(
-                            Icons.star,
-                            color: Colors.orange,
-                            size: starIconSize,
-                          )
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 5.0),
-                Row(
-                  children: [
-                    Text(
-                      "Element: ",
-                      style: characterInfoFontStyle,
-                    ),
-                    Image.asset(
-                      elementPath +
-                          GlobalFunction.elementType(characterModel.element)!,
-                      width: 25.0,
-                      height: 25.0,
-                    ),
-                  ],
-                ),
                 CharacterInfo(
-                  infoTitle: "Region: ",
-                  infoDetail: characterModel.region,
-                ),
-                CharacterInfo(
-                  infoTitle: "Weapon type: ",
-                  infoDetail: characterModel.weaponType,
-                ),
-                CharacterInfo(
-                  infoTitle: "Role: ",
-                  infoDetail: characterModel.role,
-                ),
-                CharacterInfo(
-                  infoTitle: "Birthday: ",
-                  infoDetail: characterModel.birthday,
+                  characterModel: characterModel,
                 ),
                 const SizedBox(height: 20.0),
                 Text(

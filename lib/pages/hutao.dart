@@ -160,7 +160,7 @@ class Hutao extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_normal_attack.png",
                       name: "Normal Attack: Secret Spear of Wangsheng",
                       color: pyroBG,
@@ -208,7 +208,7 @@ class Hutao extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_elemental_skill.png",
                       name: "Guide to Afterlife",
                       color: pyroBG,
@@ -244,7 +244,7 @@ class Hutao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_elemental_burst.png",
                       name: "Spirit Soother",
                       color: pyroBG,
@@ -279,7 +279,7 @@ class Hutao extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_passive_1.png",
                       name: "Flutter By",
                       color: pyroBG,
@@ -290,7 +290,7 @@ class Hutao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_passive_2.png",
                       name: "Sanguine Rouge",
                       color: pyroBG,
@@ -301,7 +301,7 @@ class Hutao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_passive_3.png",
                       name: "The More the Merrier",
                       color: pyroBG,
@@ -326,7 +326,7 @@ class Hutao extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_constellation_1.png",
                       name: "Crimson Bouquet",
                       color: pyroBG,
@@ -337,7 +337,7 @@ class Hutao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_constellation_2.png",
                       name: "Ominous Rainfall",
                       color: pyroBG,
@@ -353,7 +353,7 @@ class Hutao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_constellation_3.png",
                       name: "Lingering Carmine",
                       color: pyroBG,
@@ -364,7 +364,7 @@ class Hutao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_constellation_4.png",
                       name: "Garden of Eternal Rest",
                       color: pyroBG,
@@ -375,7 +375,7 @@ class Hutao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_constellation_5.png",
                       name: "Floral Incense",
                       color: pyroBG,
@@ -386,7 +386,7 @@ class Hutao extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "hutao_constellation_6.png",
                       name: "Butterfly's Embrace",
                       color: pyroBG,

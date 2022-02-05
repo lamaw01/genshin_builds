@@ -156,7 +156,7 @@ class Albedo extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_normal_attack.png",
                       name: "Normal Attack: Favonius Blackwork - Weiss",
                       color: geoBG,
@@ -204,7 +204,7 @@ class Albedo extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_elemental_skill.png",
                       name: "Abiogenesis: Solar Isotoma",
                       color: geoBG,
@@ -249,7 +249,7 @@ class Albedo extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_elemental_burst.png",
                       name: "Rite of Progeniture: Tectonic Tide",
                       color: geoBG,
@@ -279,7 +279,7 @@ class Albedo extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_passive_1.png",
                       name: "Calcite Might",
                       color: geoBG,
@@ -290,7 +290,7 @@ class Albedo extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_passive_2.png",
                       name: "Homuncular Nature",
                       color: geoBG,
@@ -301,7 +301,7 @@ class Albedo extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_passive_3.png",
                       name: "Flash of Genius",
                       color: geoBG,
@@ -326,7 +326,7 @@ class Albedo extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_constellation_1.png",
                       name: "Flower of Eden",
                       color: geoBG,
@@ -337,7 +337,7 @@ class Albedo extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_constellation_2.png",
                       name: "Opening of Phanerozoic",
                       color: geoBG,
@@ -358,7 +358,7 @@ class Albedo extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_constellation_3.png",
                       name: "Grace of Helios",
                       color: geoBG,
@@ -369,7 +369,7 @@ class Albedo extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_constellation_4.png",
                       name: "Descent of Divinity",
                       color: geoBG,
@@ -380,7 +380,7 @@ class Albedo extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_constellation_5.png",
                       name: "Tide of Hadean",
                       color: geoBG,
@@ -391,7 +391,7 @@ class Albedo extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "albedo_constellation_6.png",
                       name: "Dust of Purification",
                       color: geoBG,

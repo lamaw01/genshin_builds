@@ -165,7 +165,7 @@ class Beidou extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_normal_attack.png",
                       name: "Normal Attack: Oceanborne",
                       color: electroBG,
@@ -217,7 +217,7 @@ class Beidou extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_elemental_skill.png",
                       name: "Tidecaller",
                       color: electroBG,
@@ -265,7 +265,7 @@ class Beidou extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_elemental_burst.png",
                       name: "Stormbreaker",
                       color: electroBG,
@@ -310,7 +310,7 @@ class Beidou extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_passive_1.png",
                       name: "Retribution",
                       color: electroBG,
@@ -321,7 +321,7 @@ class Beidou extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_passive_2.png",
                       name: "Lightning Storm",
                       color: electroBG,
@@ -342,7 +342,7 @@ class Beidou extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_passive_3.png",
                       name: "Conqueror of Tides",
                       color: electroBG,
@@ -372,7 +372,7 @@ class Beidou extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_constellation_1.png",
                       name: "Sea Beast's Scourge",
                       color: electroBG,
@@ -393,7 +393,7 @@ class Beidou extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_constellation_2.png",
                       name: "Upon the Turbulent Sea, the Thunder Arises",
                       color: electroBG,
@@ -404,7 +404,7 @@ class Beidou extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_constellation_3.png",
                       name: "Summoner of Storm",
                       color: electroBG,
@@ -415,7 +415,7 @@ class Beidou extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_constellation_4.png",
                       name: "Stunning Revenge",
                       color: electroBG,
@@ -426,7 +426,7 @@ class Beidou extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_constellation_5.png",
                       name: "Crimson Tidewalker",
                       color: electroBG,
@@ -437,7 +437,7 @@ class Beidou extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "beidou_constellation_6.png",
                       name: "	Bane of Evil",
                       color: electroBG,

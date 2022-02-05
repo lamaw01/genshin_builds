@@ -160,7 +160,7 @@ class Ayaka extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_normal_attack.png",
                       name: "Normal Attack: Kamisato Art - Kabuki",
                       color: cryoBG,
@@ -208,7 +208,7 @@ class Ayaka extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_elemental_skill.png",
                       name: "Kamisato Art: Hyouka",
                       color: cryoBG,
@@ -219,7 +219,7 @@ class Ayaka extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_alternate_sprint.png",
                       name: "Kamisato Art: Senho",
                       color: cryoBG,
@@ -249,7 +249,7 @@ class Ayaka extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_elemental_burst.png",
                       name: "Kamisato Art: Soumetsu",
                       color: cryoBG,
@@ -289,7 +289,7 @@ class Ayaka extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_passive_1.png",
                       name: "Amatsumi Kunitsumi Sanctification",
                       color: cryoBG,
@@ -300,7 +300,7 @@ class Ayaka extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_passive_2.png",
                       name: "Kanten Senmyou Blessing",
                       color: cryoBG,
@@ -321,7 +321,7 @@ class Ayaka extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_passive_3.png",
                       name: "Fruits of Shinsa",
                       color: cryoBG,
@@ -346,7 +346,7 @@ class Ayaka extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_constellation_1.png",
                       name: "Snowswept Sakura",
                       color: cryoBG,
@@ -357,7 +357,7 @@ class Ayaka extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_constellation_2.png",
                       name: "Blizzard Blade Seki no To",
                       color: cryoBG,
@@ -368,7 +368,7 @@ class Ayaka extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_constellation_3.png",
                       name: "Frostbloom Kamifubuki",
                       color: cryoBG,
@@ -379,7 +379,7 @@ class Ayaka extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_constellation_4.png",
                       name: "Ebb and Flow",
                       color: cryoBG,
@@ -390,7 +390,7 @@ class Ayaka extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_constellation_5.png",
                       name: "Blossom Cloud Irutsuki",
                       color: cryoBG,
@@ -401,7 +401,7 @@ class Ayaka extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "ayaka_constellation_6.png",
                       name: "Dance of Suigetsu",
                       color: cryoBG,

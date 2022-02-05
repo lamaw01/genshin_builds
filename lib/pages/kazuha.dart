@@ -160,7 +160,7 @@ class Kazuha extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_normal_attack.png",
                       name: "Normal Attack: Garyuu Bladework",
                       color: anemoBG,
@@ -208,7 +208,7 @@ class Kazuha extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_elemental_skill.png",
                       name: "Chihayaburu",
                       color: anemoBG,
@@ -224,7 +224,7 @@ class Kazuha extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_elemental_burst.png",
                       name: "Kazuha Slash",
                       color: anemoBG,
@@ -269,7 +269,7 @@ class Kazuha extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_passive_1.png",
                       name: "Soumon Swordsmanship",
                       color: anemoBG,
@@ -285,7 +285,7 @@ class Kazuha extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_passive_2.png",
                       name: "Poetics of Fuubutsu",
                       color: anemoBG,
@@ -296,7 +296,7 @@ class Kazuha extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_passive_3.png",
                       name: "Cloud Strider",
                       color: anemoBG,
@@ -326,7 +326,7 @@ class Kazuha extends StatelessWidget {
                       style: chapterFontStyle,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_constellation_1.png",
                       name: "Scarlet Hills",
                       color: anemoBG,
@@ -342,7 +342,7 @@ class Kazuha extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_constellation_2.png",
                       name: "Yamaarashi Tailwind",
                       color: anemoBG,
@@ -368,7 +368,7 @@ class Kazuha extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_constellation_3.png",
                       name: "Maple Monogatari",
                       color: anemoBG,
@@ -379,7 +379,7 @@ class Kazuha extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_constellation_4.png",
                       name: "Oozora Genpou",
                       color: anemoBG,
@@ -400,7 +400,7 @@ class Kazuha extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_constellation_5.png",
                       name: "Wisdom of Bansei",
                       color: anemoBG,
@@ -411,7 +411,7 @@ class Kazuha extends StatelessWidget {
                       style: fontStyle2,
                     ),
                     const SizedBox(height: 10.0),
-                    TalentImageName(
+                    const TalentImageName(
                       image: "kazuha_constellation_6.png",
                       name: "Crimson Momiji",
                       color: anemoBG,

@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:genshin_builds/models/ayaka_data.dart';
 import "package:sizer/sizer.dart";
 
 import '../constants/assets.dart';
@@ -30,6 +31,8 @@ final characterList = <Character>[
     name: "Ayaka",
     image: "ayaka_gacha_card.png",
     element: "Cryo",
+    isDone: true,
+    characterModel: ayaka,
   ),
   Character(
     name: "Barbara",
@@ -61,7 +64,11 @@ final characterList = <Character>[
     image: "diona_gacha_card.png",
     element: "Cryo",
   ),
-  Character(name: "Eula", image: "eula_gacha_card.png", element: "Cryo"),
+  Character(
+    name: "Eula",
+    image: "eula_gacha_card.png",
+    element: "Cryo",
+  ),
   Character(
     name: "Fischl",
     image: "fischl_gacha_card.png",

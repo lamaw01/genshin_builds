@@ -74,7 +74,7 @@ final hutaoPortrait = CharacterPortraitModel(
 
 final ittoPortrait = CharacterPortraitModel(
   name: 'Itto',
-  image: 'hutao.png',
+  image: 'itto.png',
   element: 'Geo',
 );
 
@@ -93,7 +93,7 @@ final kaeyaPortrait = CharacterPortraitModel(
 final kazuhaPortrait = CharacterPortraitModel(
   name: 'Kaeya',
   image: 'kazuha.png',
-  element: 'Cryo',
+  element: 'Anemo',
 );
 
 final kokomiPortrait = CharacterPortraitModel(
