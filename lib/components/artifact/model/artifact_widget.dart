@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import "package:genshin_builds/constants/assets.dart";
 import "package:genshin_builds/constants/colors.dart";
-import 'package:sizer/sizer.dart';
 
 import 'artifact_model.dart';
 
@@ -14,10 +14,11 @@ class ArtifactWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _theme = Theme.of(context);
     return Container(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(8.0.r),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5.0),
+        borderRadius: BorderRadius.circular(5.0.r),
         color: darkBGLighter,
       ),
       child: Column(
@@ -27,62 +28,45 @@ class ArtifactWidget extends StatelessWidget {
             children: [
               Image.asset(
                 artifactPath + artifactModel.image,
-                width: 35.0,
-                height: 35.0,
+                width: 40.r,
+                height: 40.0.r,
               ),
-              const SizedBox(width: 5.0),
+              SizedBox(height: 5.h),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     artifactModel.name,
-                    style: TextStyle(
-                      fontSize: 11.sp,
-                      fontWeight: FontWeight.w500,
+                    style: _theme.textTheme.bodyLarge!.copyWith(
                       color: Colors.orange,
+                      fontSize: 14.sp,
                     ),
                   ),
                   if (isFullset == false) ...[
                     Text(
                       "2 (PC)",
-                      style: TextStyle(
-                        fontSize: 9.sp,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.white,
-                      ),
+                      style: _theme.textTheme.bodyMedium,
                     ),
                   ] else ...[
                     Text(
                       "4 (PC)",
-                      style: TextStyle(
-                        fontSize: 9.sp,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.white,
-                      ),
+                      style: _theme.textTheme.bodyMedium,
                     ),
                   ],
                 ],
               ),
             ],
           ),
-          const SizedBox(height: 5.0),
+          SizedBox(height: 5.h),
           Text(
             "(2) " + artifactModel.twoPcEffect,
-            style: TextStyle(
-              fontSize: 9.sp,
-              fontWeight: FontWeight.w500,
-              color: Colors.white,
-            ),
+            style: _theme.textTheme.bodyMedium,
           ),
           if (isFullset == true) ...[
-            const SizedBox(height: 5.0),
+            SizedBox(height: 5.h),
             Text(
               "(4) " + artifactModel.fourPcEffect,
-              style: TextStyle(
-                fontSize: 9.sp,
-                fontWeight: FontWeight.w500,
-                color: Colors.white,
-              ),
+              style: _theme.textTheme.bodyMedium,
             ),
           ]
         ],

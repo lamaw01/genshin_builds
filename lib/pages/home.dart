@@ -1,11 +1,11 @@
 import "package:flutter/material.dart";
-import 'package:genshin_builds/models/ayaka_data.dart';
-import "package:sizer/sizer.dart";
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../constants/assets.dart';
 import '../constants/colors.dart';
 import '../functions/global_function.dart';
 import '../models/albedo_data.dart';
+import '../models/ayaka_data.dart';
 import '../models/character_home_data.dart';
 import '../routes/go.dart';
 
@@ -243,17 +243,16 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: darkBG,
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 10.0),
+              SizedBox(height: 8.h),
               Center(
                 child: Wrap(
-                  spacing: 8.0,
-                  runSpacing: 8.0,
+                  spacing: 8.0.w,
+                  runSpacing: 8.0.h,
                   children: [
                     for (int i = 0; i < characterList.length; i++) ...[
                       CharacterIcon(
@@ -266,7 +265,7 @@ class Home extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 10.0),
+              SizedBox(height: 8.h),
             ],
           ),
         ),
@@ -290,6 +289,7 @@ class CharacterIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _theme = Theme.of(context);
     return GestureDetector(
       onTap: () {
         if (character.isDone) {
@@ -311,15 +311,15 @@ class CharacterIcon extends StatelessWidget {
               image: AssetImage(
                 characterPath + image,
               ),
-              height: 40.h,
-              width: 30.w,
+              height: 325.h,
+              width: 125.w,
               fit: BoxFit.fitWidth,
               loadingBuilder: (BuildContext context, Widget child,
                   ImageChunkEvent? loadingProgress) {
                 if (loadingProgress == null) return child;
                 return SizedBox(
-                  height: 40.h,
-                  width: 30.w,
+                  height: 300.h,
+                  width: 125.w,
                 );
               },
             ),
@@ -328,11 +328,11 @@ class CharacterIcon extends StatelessWidget {
               right: 1,
               child: CircleAvatar(
                 backgroundColor: darkBGLighter,
-                radius: 12,
+                radius: 12.r,
                 child: Image.asset(
                   elementPath + GlobalFunction.elementType(element)!,
-                  width: 20.0,
-                  height: 20.0,
+                  width: 20.0.r,
+                  height: 20.0.r,
                 ),
               ),
             ),
@@ -340,13 +340,7 @@ class CharacterIcon extends StatelessWidget {
               bottom: 5.0,
               child: Text(
                 name,
-                style: TextStyle(
-                  fontSize: 9.sp,
-                  color: Colors.white,
-                  backgroundColor: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'zh',
-                ),
+                style: _theme.textTheme.titleSmall!,
               ),
             ),
           ],

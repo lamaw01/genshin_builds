@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../components/artifact/model/artifact_data.dart';
 import '../components/artifact/model/artifact_widget.dart';
@@ -27,44 +28,47 @@ final ayaka = CharacterModel(
   birthday: 'September 28th',
   description:
       "Daughter of the Yashiro Commission's Kamisato Clan. Dignified and elegant, as well as wise and strong.",
-  talent1: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        isNormalAttack: true,
-        image: "sword_type.png",
-        name: "Normal Attack: Kamisato Art - Kabuki",
-        color: cryoBG,
-      ),
-      const SizedBox(height: mainPadding),
-      Text(
-        "Normal Attack",
-        style: fontStyle1,
-      ),
-      Text(
-        "Performs up to 5 rapid strikes.",
-        style: fontStyle2,
-      ),
-      const SizedBox(height: mainPadding),
-      Text(
-        "Charged Attack",
-        style: fontStyle1,
-      ),
-      Text(
-        "Consumes a certain amount of Stamina to unleash a flurry of sword ki.",
-        style: fontStyle2,
-      ),
-      const SizedBox(height: mainPadding),
-      Text(
-        "Plunging Attack",
-        style: fontStyle1,
-      ),
-      Text(
-        "Plunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact.",
-        style: fontStyle2,
-      ),
-    ],
-  ),
+  talent1: Builder(builder: (context) {
+    var _theme = Theme.of(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const TalentImageName(
+          isNormalAttack: true,
+          image: "sword_type.png",
+          name: "Normal Attack: Kamisato Art - Kabuki",
+          color: cryoBG,
+        ),
+        SizedBox(height: 5.h),
+        Text(
+          "Normal Attack",
+          style: _theme.textTheme.labelSmall,
+        ),
+        Text(
+          "Performs up to 5 rapid strikes.",
+          style: fontStyle2,
+        ),
+        SizedBox(height: 5.h),
+        Text(
+          "Charged Attack",
+          style: _theme.textTheme.labelSmall,
+        ),
+        Text(
+          "Consumes a certain amount of Stamina to unleash a flurry of sword ki.",
+          style: fontStyle2,
+        ),
+        SizedBox(height: 5.h),
+        Text(
+          "Plunging Attack",
+          style: _theme.textTheme.labelSmall,
+        ),
+        Text(
+          "Plunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact.",
+          style: fontStyle2,
+        ),
+      ],
+    );
+  }),
   talent2: Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -87,12 +91,12 @@ final ayaka = CharacterModel(
         name: "Kamisato Art: Senho",
         color: cryoBG,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "Ayaka consumes Stamina and cloaks herself in a frozen fog that moves with her.",
         style: fontStyle2,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "In Senho form, she moves swiftly upon water.",
         style: fontStyle2,
@@ -101,48 +105,51 @@ final ayaka = CharacterModel(
         "When she reappears, the following effects occur:",
         style: fontStyle2,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "• Ayaka unleashes frigid energy to apply Cryo on nearby opponents.",
         style: fontStyle2,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "• Coldness condenses around Ayaka's blade, infusing her attacks with Cryo for a brief period.",
         style: fontStyle2,
       ),
     ],
   ),
-  talent3: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "ayaka_elemental_burst.png",
-        name: "Kamisato Art: Soumetsu",
-        color: cryoBG,
-      ),
-      const SizedBox(height: mainPadding),
-      Text(
-        "Summons forth a snowstorm with flawless poise, unleashing a Frostflake Seki no To that moves forward continuously.",
-        style: fontStyle2,
-      ),
-      const SizedBox(height: mainPadding),
-      Text(
-        "Frostflake Seki no To",
-        style: fontStyle1,
-      ),
-      const SizedBox(height: mainPadding),
-      Text(
-        "• A storm of whirling icy winds that slashes repeatedly at every enemy it touches, dealing Cryo DMG.",
-        style: fontStyle2,
-      ),
-      const SizedBox(height: mainPadding),
-      Text(
-        "• The snowstorm explodes after its duration ends, dealing AoE Cryo DMG.",
-        style: fontStyle2,
-      ),
-    ],
-  ),
+  talent3: Builder(builder: (context) {
+    var _theme = Theme.of(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const TalentImageName(
+          image: "ayaka_elemental_burst.png",
+          name: "Kamisato Art: Soumetsu",
+          color: cryoBG,
+        ),
+        SizedBox(height: 5.h),
+        Text(
+          "Summons forth a snowstorm with flawless poise, unleashing a Frostflake Seki no To that moves forward continuously.",
+          style: fontStyle2,
+        ),
+        SizedBox(height: 5.h),
+        Text(
+          "Frostflake Seki no To",
+          style: _theme.textTheme.labelSmall,
+        ),
+        SizedBox(height: 5.h),
+        Text(
+          "• A storm of whirling icy winds that slashes repeatedly at every enemy it touches, dealing Cryo DMG.",
+          style: fontStyle2,
+        ),
+        SizedBox(height: 5.h),
+        Text(
+          "• The snowstorm explodes after its duration ends, dealing AoE Cryo DMG.",
+          style: fontStyle2,
+        ),
+      ],
+    );
+  }),
   passive1: Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -151,7 +158,7 @@ final ayaka = CharacterModel(
         name: "Amatsumi Kunitsumi Sanctification",
         color: cryoBG,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "After using Kamisato Art: Hyouka, Kamisato Ayaka's Normal and Charged attacks deal 30% increased DMG for 6s.",
         style: fontStyle2,
@@ -166,17 +173,17 @@ final ayaka = CharacterModel(
         name: "Kanten Senmyou Blessing",
         color: cryoBG,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "When the Cryo application at the end of Kamisato Art: Senho hits an opponent, Kamisato Ayaka gains the following effects:",
         style: fontStyle2,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "• Restores 10 Stamina",
         style: fontStyle2,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "• Gains 18% Cryo DMG Bonus for 10s.",
         style: fontStyle2,
@@ -191,7 +198,7 @@ final ayaka = CharacterModel(
         name: "Fruits of Shinsa",
         color: cryoBG,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "When Ayaka crafts Weapon Ascension Materials, she has a 10% chance to receive double the product.",
         style: fontStyle2,
@@ -206,7 +213,7 @@ final ayaka = CharacterModel(
         name: "Snowswept Sakura",
         color: cryoBG,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "When Kamisato Ayaka's Normal or Charged Attacks deal Cryo DMG to opponents, it has a 50% chance of decreasing the CD of Kamisato Art: Hyouka by 0.3s. This effect can occur once every 0.1s.",
         style: fontStyle2,
@@ -221,7 +228,7 @@ final ayaka = CharacterModel(
         name: "Blizzard Blade Seki no To",
         color: cryoBG,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "When casting Kamisato Art: Soumetsu, unleashes 2 smaller additional Frostflake Seki no To, each dealing 20% of the original storm's DMG.",
         style: fontStyle2,
@@ -236,7 +243,7 @@ final ayaka = CharacterModel(
         name: "Frostbloom Kamifubuki",
         color: cryoBG,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "Increases the Level of Kamisato Art: Soumetsu by 3. Maximum upgrade level is 15.",
         style: fontStyle2,
@@ -251,7 +258,7 @@ final ayaka = CharacterModel(
         name: "Ebb and Flow",
         color: cryoBG,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "Opponents damaged by Kamisato Art: Soumetsu's Frostflake Seki no To will have their DEF decreased by 30% for 6s.",
         style: fontStyle2,
@@ -266,7 +273,7 @@ final ayaka = CharacterModel(
         name: "Blossom Cloud Irutsuki",
         color: cryoBG,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "Increases the Level of Kamisato Art: Hyouka by 3. Maximum upgrade level is 15.",
         style: fontStyle2,
@@ -281,7 +288,7 @@ final ayaka = CharacterModel(
         name: "Dance of Suigetsu",
         color: cryoBG,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "Kamisato Ayaka gains Usurahi Butou every 10s, increasing her Charged Attack DMG by 298%. This buff will be cleared 0.5s after Ayaka's Charged ATK hits an opponent, after which the timer for this ability will restart.",
         style: fontStyle2,
@@ -305,7 +312,7 @@ final ayaka = CharacterModel(
         "Weapon",
         style: fontStyle3,
       ),
-      const SizedBox(height: mainPadding),
+      SizedBox(height: 5.h),
       Text(
         "1:5 ratio or 40/200 CRIT RATE/DMG",
         style: fontStyle2,
@@ -335,7 +342,6 @@ final ayaka = CharacterModel(
         "Recommended ER: 120% - 150%",
         style: fontStyle2,
       ),
-      const SizedBox(height: secondaryPadding),
       ArtifactRecommend(
         artifactWidgetList: [
           ArtifactWidget(artifactModel: blizzardStrayer, isFullset: true),

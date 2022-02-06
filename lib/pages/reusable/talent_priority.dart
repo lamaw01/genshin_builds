@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/assets.dart';
-import '../../constants/variables.dart';
 
 class TalentPriority extends StatelessWidget {
   const TalentPriority({
@@ -18,41 +18,38 @@ class TalentPriority extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _theme = Theme.of(context);
     return Row(
       children: [
         Text(
           "Talent Priority:",
-          style: fontStyle1,
+          style: _theme.textTheme.titleMedium,
         ),
-        const SizedBox(width: 10.0),
+        SizedBox(height: 5.h),
         Image.asset(
           tallentPath + talent1,
-          width: 50.0,
-          height: 50.0,
+          width: 50.0.r,
+          height: 50.0.r,
           color: color,
         ),
-        const SizedBox(width: 10.0),
+        SizedBox(height: 5.h),
         Text(
           ">",
-          style: fontStyle2,
+          style: TextStyle(fontSize: 14.sp),
         ),
-        const SizedBox(width: 10.0),
-        Image.asset(
-          tallentPath + talent2,
-          width: 50.0,
-          height: 50.0,
-          color: color,
-        ),
-        const SizedBox(width: 10.0),
+        SizedBox(height: 5.h),
+        Image.asset(tallentPath + talent2,
+            width: 50.0.r, height: 50.0.r, color: color),
+        SizedBox(height: 5.h),
         Text(
           ">",
-          style: fontStyle2,
+          style: TextStyle(fontSize: 14.sp),
         ),
-        const SizedBox(width: 10.0),
+        SizedBox(height: 5.h),
         Image.asset(
           tallentPath + talent3,
-          width: 50.0,
-          height: 50.0,
+          width: 50.0.r,
+          height: 50.0.r,
           color: color,
         ),
       ],

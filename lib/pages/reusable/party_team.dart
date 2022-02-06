@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../components/character_portrait/model/character_portrait_model.dart';
 import '../../components/character_portrait/model/character_portrait_widget.dart';
@@ -20,16 +21,16 @@ class PartyTeam extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 10.0),
+        SizedBox(height: 10.h),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CharacterPortraitWidget(characterPortraitModel: firstSlot),
-            const SizedBox(width: 10.0),
+            SizedBox(width: 10.w),
             CharacterPortraitWidget(characterPortraitModel: secondSlot),
-            const SizedBox(width: 10.0),
+            SizedBox(width: 10.w),
             CharacterPortraitWidget(characterPortraitModel: thirdSlot),
-            const SizedBox(width: 10.0),
+            SizedBox(width: 10.w),
             CharacterPortraitWidget(characterPortraitModel: fourthSlot),
           ],
         ),

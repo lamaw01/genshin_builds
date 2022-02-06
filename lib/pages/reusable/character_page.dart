@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../constants/colors.dart';
-import '../../constants/variables.dart';
 import '../../models/character_model.dart';
 import 'character_gacha_spash.dart';
 import 'character_info.dart';
@@ -13,94 +12,91 @@ class CharacterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _theme = Theme.of(context);
     return SafeArea(
       child: Scaffold(
-        backgroundColor: darkBG,
+        // backgroundColor: darkBG,
         body: SingleChildScrollView(
           child: Container(
-            padding: const EdgeInsets.all(5.0),
-            margin: const EdgeInsets.all(5.0),
+            padding: EdgeInsets.all(8.0.r),
+            margin: EdgeInsets.all(8.0.r),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CharacterGachaSplash(image: characterModel.gachaSplashArt),
-                const SizedBox(height: 20.0),
                 CharacterInfo(
                   characterModel: characterModel,
                 ),
-                const SizedBox(height: 20.0),
+                SizedBox(height: 20.h),
                 Text(
                   "Description",
-                  style: chapterFontStyle,
-                  textAlign: TextAlign.start,
+                  style: _theme.textTheme.headlineMedium,
                 ),
-                const SizedBox(height: 5.0),
+                SizedBox(height: 10.h),
                 Text(
                   characterModel.description!,
-                  style: fontStyle1,
+                  style: _theme.textTheme.bodyLarge,
                 ),
-                const SizedBox(height: 20.0),
+                SizedBox(height: 10.h),
                 Text(
                   "Talents",
-                  style: chapterFontStyle,
-                  textAlign: TextAlign.start,
+                  style: _theme.textTheme.headlineMedium,
                 ),
-                const SizedBox(height: 10.0),
+                SizedBox(height: 10.h),
                 characterModel.talent1!,
-                const SizedBox(height: 5.0),
+                SizedBox(height: 10.h),
                 characterModel.talent2!,
-                const SizedBox(height: 5.0),
+                SizedBox(height: 10.h),
                 if (characterModel.talent2_5 != null) ...[
                   characterModel.talent2_5!,
-                  const SizedBox(height: 5.0),
+                  SizedBox(height: 10.h),
                 ],
                 characterModel.talent3!,
-                const SizedBox(height: 20.0),
+                SizedBox(height: 20.h),
                 Text(
                   "Passives",
-                  style: chapterFontStyle,
-                  textAlign: TextAlign.start,
+                  style: _theme.textTheme.headlineMedium,
                 ),
-                const SizedBox(height: 10.0),
+                SizedBox(height: 10.h),
                 characterModel.passive1!,
-                const SizedBox(height: 5.0),
+                SizedBox(height: 10.h),
                 characterModel.passive2!,
-                const SizedBox(height: 5.0),
+                SizedBox(height: 10.h),
                 characterModel.passive3!,
                 if (characterModel.passive4 != null) ...[
-                  const SizedBox(height: 5.0),
+                  SizedBox(height: 10.h),
                   characterModel.passive4!,
                 ],
-                const SizedBox(height: 20.0),
+                SizedBox(height: 20.h),
                 Text(
                   "Constellations",
-                  style: chapterFontStyle,
+                  style: _theme.textTheme.headlineMedium,
                 ),
-                const SizedBox(height: 10.0),
+                SizedBox(height: 10.h),
                 characterModel.constellation1!,
-                const SizedBox(height: 5.0),
+                SizedBox(height: 10.h),
                 characterModel.constellation2!,
-                const SizedBox(height: 5.0),
+                SizedBox(height: 10.h),
                 characterModel.constellation3!,
-                const SizedBox(height: 5.0),
+                SizedBox(height: 10.h),
                 characterModel.constellation4!,
-                const SizedBox(height: 5.0),
+                SizedBox(height: 10.h),
                 characterModel.constellation5!,
-                const SizedBox(height: 5.0),
+                SizedBox(height: 10.h),
                 characterModel.constellation6!,
-                const SizedBox(height: 20.0),
+                SizedBox(height: 20.h),
                 Text(
                   "Builds",
-                  style: chapterFontStyle,
+                  style: _theme.textTheme.headlineMedium,
                 ),
-                const SizedBox(height: 10.0),
+                SizedBox(height: 10.h),
                 characterModel.builds!,
-                const SizedBox(height: 20.0),
+                SizedBox(height: 20.h),
                 Text(
                   "Team Compositions",
-                  style: chapterFontStyle,
+                  style: _theme.textTheme.headlineMedium,
                 ),
-                const SizedBox(height: 10.0),
+                SizedBox(height: 10.h),
                 characterModel.teamComposition!,
               ],
             ),

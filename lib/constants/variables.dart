@@ -1,35 +1,12 @@
 import 'package:flutter/material.dart';
-import "package:sizer/sizer.dart";
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 const double materialIconSize = 40.0;
 
 const Color fontColor = Colors.white;
 
-//Used in character name
-final characterNameFontStyle = TextStyle(
-  fontSize: 20.sp,
-  fontWeight: FontWeight.bold,
-  color: fontColor,
-);
-
-const double starIconSize = 25.0;
-
-//Used in character info
-final characterInfoFontStyle = TextStyle(
-  fontSize: 13.sp,
-  fontWeight: FontWeight.w600,
-  color: fontColor,
-);
-
-//Used in chapter name
-final chapterFontStyle = TextStyle(
-  fontSize: 16.sp,
-  fontWeight: FontWeight.bold,
-  color: fontColor,
-);
-
 //Used in talent title
-final fontStyle1 = TextStyle(
+final sfontStyle1 = TextStyle(
   fontSize: 11.sp,
   fontWeight: FontWeight.w500,
   color: fontColor,
@@ -49,8 +26,9 @@ final fontStyle3 = TextStyle(
   color: fontColor,
 );
 
-const double mainPadding = 5.0;
-
-const double secondaryPadding = 10.0;
-
-const double tertiaryPadding = 20.0;
+//Used in weapon description
+final fontStyle4 = TextStyle(
+  fontSize: 9.sp,
+  fontWeight: FontWeight.w400,
+  color: Colors.white,
+);

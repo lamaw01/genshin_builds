@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/assets.dart';
-import '../../constants/variables.dart';
 import '../../functions/global_function.dart';
 import '../../models/character_model.dart';
 
@@ -12,6 +12,7 @@ class CharacterInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _theme = Theme.of(context);
     return Column(
       children: [
         Column(
@@ -19,84 +20,78 @@ class CharacterInfo extends StatelessWidget {
           children: [
             Text(
               characterModel.name,
-              style: characterNameFontStyle,
+              style: _theme.textTheme.titleLarge,
             ),
-            const SizedBox(height: 2.5),
             Row(
               children: [
                 for (int i = 0; i < characterModel.rarity; i++)
-                  const Icon(
+                  Icon(
                     Icons.star,
+                    size: 22.5.r,
                     color: Colors.orange,
-                    size: starIconSize,
                   )
               ],
             ),
           ],
         ),
-        const SizedBox(height: 5.0),
         Row(
           children: [
             Text(
               "Element: ",
-              style: characterInfoFontStyle,
+              style: _theme.textTheme.headlineSmall,
             ),
             Image.asset(
               elementPath + GlobalFunction.elementType(characterModel.element)!,
-              width: 25.0,
-              height: 25.0,
+              width: 20.0.r,
+              height: 20.0.r,
             ),
           ],
         ),
-        const SizedBox(height: 5.0),
         Row(
           children: [
             Text(
               "Region: ",
-              style: characterInfoFontStyle,
+              style: _theme.textTheme.headlineSmall,
             ),
             Text(
               characterModel.region,
-              style: characterInfoFontStyle,
+              style: _theme.textTheme.headlineSmall,
             ),
           ],
         ),
-        const SizedBox(height: 5.0),
         Row(
           children: [
             Text(
               "Weapon type: ",
-              style: characterInfoFontStyle,
+              style: _theme.textTheme.headlineSmall,
             ),
             Text(
               characterModel.weaponType,
-              style: characterInfoFontStyle,
+              style: _theme.textTheme.headlineSmall,
             ),
           ],
         ),
-        const SizedBox(height: 5.0),
         Row(
           children: [
             Text(
               "Role: ",
-              style: characterInfoFontStyle,
+              style: _theme.textTheme.headlineSmall,
             ),
             Text(
               characterModel.role,
-              style: characterInfoFontStyle,
+              style: _theme.textTheme.headlineSmall,
             ),
           ],
         ),
-        const SizedBox(height: 5.0),
         Row(
           children: [
             Text(
               "Birthday: ",
-              style: characterInfoFontStyle,
+              style: _theme.textTheme.headlineSmall,
             ),
             Text(
               characterModel.birthday,
-              style: characterInfoFontStyle,
+              style: _theme.textTheme.headlineSmall,
             ),
           ],
         ),

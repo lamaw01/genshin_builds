@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../components/artifact/model/artifact_widget.dart';
 
@@ -11,10 +12,10 @@ class ArtifactRecommend extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 10.0),
+        SizedBox(height: 10.h),
         for (var weapon in artifactWidgetList) ...[
           weapon,
-          const SizedBox(height: 10.0)
+          SizedBox(height: 10.h),
         ],
       ],
     );

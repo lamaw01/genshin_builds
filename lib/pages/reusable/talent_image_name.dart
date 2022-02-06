@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:genshin_builds/constants/assets.dart';
-import 'package:sizer/sizer.dart';
 
 class TalentImageName extends StatelessWidget {
   const TalentImageName(
@@ -17,22 +17,19 @@ class TalentImageName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _theme = Theme.of(context);
     return Row(
       children: [
         Image.asset(
           tallentPath + image,
-          width: 50.0,
-          height: 50.0,
+          width: 50.r,
+          height: 50.r,
           color: color,
         ),
-        const SizedBox(width: 5.0),
+        SizedBox(height: 5.h),
         Text(
           name,
-          style: TextStyle(
-            fontSize: 11.sp,
-            fontWeight: FontWeight.w500,
-            color: Colors.white,
-          ),
+          style: _theme.textTheme.titleMedium,
         ),
       ],
     );

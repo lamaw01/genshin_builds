@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
-
-import '../../constants/variables.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ArtifactStatRecommend extends StatelessWidget {
   const ArtifactStatRecommend(
@@ -15,25 +14,26 @@ class ArtifactStatRecommend extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _theme = Theme.of(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 5.0),
+        SizedBox(height: 2.h),
         Text(
           "Sands - $sand",
-          style: fontStyle2,
+          style: _theme.textTheme.bodyMedium,
         ),
-        const SizedBox(height: 2.5),
+        SizedBox(height: 2.h),
         Text(
           "Goblet - $goblet",
-          style: fontStyle2,
+          style: _theme.textTheme.bodyMedium,
         ),
-        const SizedBox(height: 2.5),
+        SizedBox(height: 2.h),
         Text(
           "Circlet - $circlet",
-          style: fontStyle2,
+          style: _theme.textTheme.bodyMedium,
         ),
-        const SizedBox(height: 5.0),
+        SizedBox(height: 2.h),
       ],
     );
   }

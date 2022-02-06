@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:genshin_builds/constants/assets.dart';
 import 'package:genshin_builds/routes/go.dart';
-import 'package:sizer/sizer.dart';
 
 class CharacterGachaSplash extends StatelessWidget {
   const CharacterGachaSplash({Key? key, required this.image}) : super(key: key);
@@ -17,12 +17,12 @@ class CharacterGachaSplash extends StatelessWidget {
             characterPath + image,
           ),
           width: double.maxFinite,
-          height: 35.h,
+          height: 250.h,
           loadingBuilder: (BuildContext context, Widget child,
               ImageChunkEvent? loadingProgress) {
             if (loadingProgress == null) return child;
             return SizedBox(
-              height: 35.h,
+              height: 250.h,
               width: double.maxFinite,
             );
           },
@@ -34,8 +34,9 @@ class CharacterGachaSplash extends StatelessWidget {
             onPressed: () {
               Go.pop(context);
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
+              size: 25.r,
               color: Colors.white,
             ),
           ),
