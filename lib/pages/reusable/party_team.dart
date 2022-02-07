@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../components/character_portrait/model/character_portrait_model.dart';
-import '../../components/character_portrait/model/character_portrait_widget.dart';
+import '../../components/character_portrait/character_portrait_model.dart';
+import '../../components/character_portrait/character_portrait_widget.dart';
 
 class PartyTeam extends StatelessWidget {
   const PartyTeam(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../components/artifact/model/artifact_widget.dart';
+import '../../components/artifact/artifact_widget.dart';
 
 class ArtifactRecommend extends StatelessWidget {
   const ArtifactRecommend({Key? key, required this.artifactWidgetList})

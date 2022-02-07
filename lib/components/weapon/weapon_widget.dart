@@ -29,7 +29,7 @@ class WeaponWidget extends StatelessWidget {
                 width: 40.0.r,
                 height: 40.0.r,
               ),
-              SizedBox(height: 5.h),
+              SizedBox(width: 5.h),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -43,7 +43,7 @@ class WeaponWidget extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 5.h),
+                      SizedBox(width: 5.h),
                       Row(
                         children: [
                           for (int i = 0; i < weaponModel.rarity; i++)

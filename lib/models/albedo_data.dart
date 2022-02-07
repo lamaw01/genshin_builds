@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../components/artifact/model/artifact_data.dart';
-import '../components/artifact/model/artifact_widget.dart';
-import '../components/character_portrait/model/character_portrait_data.dart';
-import '../components/weapon/model/weapon_data.dart';
-import '../components/weapon/model/weapon_widget.dart';
+import '../components/artifact/artifact_data.dart';
+import '../components/artifact/artifact_widget.dart';
+import '../components/character_portrait/character_portrait_data.dart';
+import '../components/weapon/weapon_data.dart';
+import '../components/weapon/weapon_widget.dart';
 import '../constants/colors.dart';
 
 import '../pages/reusable/artifact_recommend.dart';
 import '../pages/reusable/artifact_stat_recommend.dart';
 import '../pages/reusable/party_team.dart';
-import '../pages/reusable/talent_image_name.dart';
 import '../pages/reusable/talent_priority.dart';
 import '../pages/reusable/weapon_recommend.dart';
 import 'character_model.dart';
@@ -28,7 +27,7 @@ var _bodyText2 = TextStyle(
   color: Colors.white,
 );
 
-final albedo = CharacterModel(
+var albedo = CharacterModel(
   gachaSplashArt: 'albedo_gacha_splash.png',
   gachaSplashCard: 'albedo_gacha_card.png',
   name: 'Albedo',
@@ -40,249 +39,164 @@ final albedo = CharacterModel(
   birthday: 'September 13th',
   description:
       'A genius known as the Kreindeprinz, he is the Chief Alchemist and Captain of the Investigation Team of the Knight of Favonius',
-  talent1: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        isNormalAttack: true,
-        image: "sword_type.png",
-        name: "Normal Attack: Favonius Blackwork - Weiss",
-        color: geoBG,
+  color: geoBG,
+  talent1: TalentNormalModel(
+    talentImage: 'sword_type.png',
+    talentName: 'Normal Attack: Favonius Blackwork - Weiss',
+    normalAttackDesc: [
+      'Perform up to 5 rapid strikes',
+    ],
+    chargedlAttackDesc: [
+      'Consumes a certain acount of Stamina to unleash 2 rapid sword strikes'
+    ],
+    plungelAttackDesc: [
+      'Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.'
+    ],
+  ),
+  talent2: TalentSkillModel(
+    talentImage: 'albedo_elemental_skill.png',
+    talentName: 'Abiogenesis: Solar Isotoma',
+    description: [
+      TalentText(
+        talentText:
+            'Albedo creates a Solar Isotoma using alchemy, which deals Aoe Geo DMG on apperance',
       ),
-      SizedBox(height: 5.h),
-      Text(
-        "Normal Attack",
-        style: _bodyText1,
+      TalentText(
+        talentText: 'Solar Isotoma',
+        isHighlight: true,
       ),
-      Text(
-        "Perform up to 5 rapid strikes",
-        style: _bodyText2,
+      TalentText(
+        talentText: 'has the following properties:',
       ),
-      SizedBox(height: 5.h),
-      Text(
-        "Charged Attack",
-        style: _bodyText1,
+      TalentText(
+        talentText:
+            "• When opponents within the Solar Isotoma field take DMG, the Solar Isotoma will generate Transient Blossoms which deal AoE Geo DMG. DMG dealt scales off Albedo's DEF.",
       ),
-      Text(
-        "Consumes a certain acount of Stamina to unleash 2 rapid sword strikes",
-        style: _bodyText2,
+      TalentText(
+        talentText:
+            'Albedo creates a Solar Isotoma using alchemy, which deals Aoe Geo DMG on apperance',
       ),
-      SizedBox(height: 5.h),
-      Text(
-        "Plunging Attack",
-        style: _bodyText1,
+      TalentText(
+        talentText: '• Transient Blossoms can only be generated once every 2s.',
       ),
-      Text(
-        "Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-        style: _bodyText2,
+      TalentText(
+        talentText:
+            '• When a character is located at the locus of the Solar Isotoma, the Solar Isotoma will accumulate Geo power to form a crystallized platform that lifts the character up to a certain height. Only one crystallized platform can exist at a time.',
+      ),
+      TalentText(
+        talentText:
+            '• Solar Isotoma is considered a Geo ruct. Only one Solar Isotoma created by Albedo himself can exist at a time.',
       ),
     ],
   ),
-  talent2: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "albedo_elemental_skill.png",
-        name: "Abiogenesis: Solar Isotoma",
-        color: geoBG,
+  talent3: TalentSkillModel(
+    talentImage: 'albedo_elemental_burst.png',
+    talentName: 'Rite of Progeniture: Tectonic Tide',
+    description: [
+      TalentText(
+        talentText:
+            "Under Albedo's command, Geo crystals surge and burst forth, dealing AoE Geo DMG in front of him. If a Solar Isotoma created by Albedo himself is on the field, 7 Fatal Blossoms will be generated in the Solar Isotoma field, bursting violently into bloom and dealing AoE Geo DMG.",
       ),
-      Text(
-        "Albedo creates a Solar Isotoma using alchemy, which deals Aoe Geo DMG on apperance",
-        style: _bodyText2,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "Solar Isotoma",
-        style: _bodyText1,
-      ),
-      Text(
-        "has the following properties:",
-        style: _bodyText2,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "• When opponents within the Solar Isotoma field take DMG, the Solar Isotoma will generate Transient Blossoms which deal AoE Geo DMG. DMG dealt scales off Albedo's DEF.",
-        style: _bodyText2,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "• Transient Blossoms can only be generated once every 2s.",
-        style: _bodyText2,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "• When a character is located at the locus of the Solar Isotoma, the Solar Isotoma will accumulate Geo power to form a crystallized platform that lifts the character up to a certain height. Only one crystallized platform can exist at a time.",
-        style: _bodyText2,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "• Solar Isotoma is considered a Geo ruct. Only one Solar Isotoma created by Albedo himself can exist at a time.",
-        style: _bodyText2,
+      TalentText(
+        talentText:
+            'Tectonic Tide DMG and Fatal Blossom DMG will not generate Transient Blossoms.',
       ),
     ],
   ),
-  talent3: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "albedo_elemental_burst.png",
-        name: "Rite of Progeniture: Tectonic Tide",
-        color: geoBG,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "Under Albedo's command, Geo crystals surge and burst forth, dealing AoE Geo DMG in front of him. If a Solar Isotoma created by Albedo himself is on the field, 7 Fatal Blossoms will be generated in the Solar Isotoma field, bursting violently into bloom and dealing AoE Geo DMG.",
-        style: _bodyText2,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "Tectonic Tide DMG and Fatal Blossom DMG will not generate Transient Blossoms.",
-        style: _bodyText2,
+  passive1: PassiveModel(
+    talentImage: 'albedo_passive_1.png',
+    talentName: 'Calcite Might',
+    description: [
+      TalentText(
+        talentText:
+            'Transient Blossoms generated by Abiogenesis: Solar Isotoma deal 25% more DMG to opponents whose HP is below 50%.',
       ),
     ],
   ),
-  passive1: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "albedo_passive_1.png",
-        name: "Calcite Might",
-        color: geoBG,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "Transient Blossoms generated by Abiogenesis: Solar Isotoma deal 25% more DMG to opponents whose HP is below 50%.",
-        style: _bodyText2,
+  passive2: PassiveModel(
+    talentImage: 'albedo_passive_2.png',
+    talentName: 'Homuncular Nature',
+    description: [
+      TalentText(
+        talentText:
+            'Using Rite of Progeniture: Tectonic Tide increases the Elemental Mastery of nearby party members by 125 for 10s.',
       ),
     ],
   ),
-  passive2: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "albedo_passive_2.png",
-        name: "Homuncular Nature",
-        color: geoBG,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "Using Rite of Progeniture: Tectonic Tide increases the Elemental Mastery of nearby party members by 125 for 10s.",
-        style: _bodyText2,
+  passive3: PassiveModel(
+    talentImage: 'albedo_passive_3.png',
+    talentName: 'Flash of Genius',
+    description: [
+      TalentText(
+        talentText:
+            'When Albedo crafts Weapon Ascension Materials, he has a 10% chance to receive double the product.',
       ),
     ],
   ),
-  passive3: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "albedo_passive_3.png",
-        name: "Flash of Genius",
-        color: geoBG,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "When Albedo crafts Weapon Ascension Materials, he has a 10% chance to receive double the product.",
-        style: _bodyText2,
+  constellation1: ConstellationModel(
+    talentImage: 'albedo_constellation_1.png',
+    talentName: 'Flower of Eden',
+    description: [
+      TalentText(
+        talentText:
+            "Transient Blossoms generated by Albedo's Abiogenesis: Solar Isotoma regenerate 1.2 Energy for Albedo.",
       ),
     ],
   ),
-  constellation1: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "albedo_constellation_1.png",
-        name: "Flower of Eden",
-        color: geoBG,
+  constellation2: ConstellationModel(
+    talentImage: 'albedo_constellation_2.png',
+    talentName: 'Opening of Phanerozoic',
+    description: [
+      TalentText(
+        talentText:
+            'Transient Blossoms generated by Abiogenesis: Solar Isotoma grant Albedo Fatal Reckoning for 30s:',
       ),
-      SizedBox(height: 5.h),
-      Text(
-        "Transient Blossoms generated by Albedo's Abiogenesis: Solar Isotoma regenerate 1.2 Energy for Albedo.",
-        style: _bodyText2,
+      TalentText(
+        talentText:
+            "• Unleashing Rite of Progeniture: Tectonic Tide consumes all stacks of Fatal Reckoning. Each stack of Fatal Reckoning consumed increases the DMG dealt by Fatal Blossoms and Rite of Progeniture: Tectonic Tide's burst DMG by 30% of Albedo's DEF.",
       ),
-    ],
-  ),
-  constellation2: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "albedo_constellation_2.png",
-        name: "Opening of Phanerozoic",
-        color: geoBG,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "Transient Blossoms generated by Abiogenesis: Solar Isotoma grant Albedo Fatal Reckoning for 30s:",
-        style: _bodyText2,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "• Unleashing Rite of Progeniture: Tectonic Tide consumes all stacks of Fatal Reckoning. Each stack of Fatal Reckoning consumed increases the DMG dealt by Fatal Blossoms and Rite of Progeniture: Tectonic Tide's burst DMG by 30% of Albedo's DEF.",
-        style: _bodyText2,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "• This effect stacks up to 4 times.",
-        style: _bodyText2,
+      TalentText(
+        talentText: '• This effect stacks up to 4 times',
       ),
     ],
   ),
-  constellation3: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "albedo_constellation_3.png",
-        name: "Grace of Helios",
-        color: geoBG,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "Increases the Level of Abiogenesis: Solar Isotoma by 3. Maximum upgrade level is 15.",
-        style: _bodyText2,
+  constellation3: ConstellationModel(
+    talentImage: 'albedo_constellation_3.png',
+    talentName: 'Grace of Helios',
+    description: [
+      TalentText(
+        talentText:
+            'Increases the Level of Abiogenesis: Solar Isotoma by 3. Maximum upgrade level is 15.',
       ),
     ],
   ),
-  constellation4: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "albedo_constellation_4.png",
-        name: "Descent of Divinity",
-        color: geoBG,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "Active party members within the Solar Isotoma field have their Plunging Attack DMG increased by 30%.",
-        style: _bodyText2,
+  constellation4: ConstellationModel(
+    talentImage: 'albedo_constellation_4.png',
+    talentName: 'Descent of Divinity',
+    description: [
+      TalentText(
+        talentText:
+            'Active party members within the Solar Isotoma field have their Plunging Attack DMG increased by 30%.',
       ),
     ],
   ),
-  constellation5: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "albedo_constellation_5.png",
-        name: "Tide of Hadean",
-        color: geoBG,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "Increases the Level of Rite of Progeniture: Tectonic Tide by 3. Maximum upgrade level is 15.",
-        style: _bodyText2,
+  constellation5: ConstellationModel(
+    talentImage: 'albedo_constellation_5.png',
+    talentName: 'Tide of Hadean',
+    description: [
+      TalentText(
+        talentText:
+            'Increases the Level of Rite of Progeniture: Tectonic Tide by 3. Maximum upgrade level is 15.',
       ),
     ],
   ),
-  constellation6: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const TalentImageName(
-        image: "albedo_constellation_6.png",
-        name: "Dust of Purification",
-        color: geoBG,
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "Active party members within the Solar Isotoma field who are protected by a shield created by Crystallize have their DMG increased by 17%.",
-        style: _bodyText2,
+  constellation6: ConstellationModel(
+    talentImage: 'albedo_constellation_6.png',
+    talentName: 'Dust of Purification',
+    description: [
+      TalentText(
+        talentText:
+            'Active party members within the Solar Isotoma field who are protected by a shield created by Crystallize have their DMG increased by 17%.',
       ),
     ],
   ),
@@ -306,7 +220,7 @@ final albedo = CharacterModel(
       SizedBox(height: 5.h),
       Text(
         "1:2 ratio or 60/120 CRIT RATE/DMG",
-        style: _bodyText2,
+        style: _bodyText2.copyWith(fontWeight: FontWeight.w600),
       ),
       WeaponRecommend(
         weaponWidgetList: [

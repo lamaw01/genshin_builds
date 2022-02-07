@@ -26,7 +26,7 @@ class TalentImageName extends StatelessWidget {
           height: 50.r,
           color: color,
         ),
-        SizedBox(height: 5.h),
+        SizedBox(width: 5.w),
         Text(
           name,
           style: _theme.textTheme.titleMedium,

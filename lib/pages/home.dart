@@ -5,7 +5,6 @@ import '../constants/assets.dart';
 import '../constants/colors.dart';
 import '../functions/global_function.dart';
 import '../models/albedo_data.dart';
-import '../models/ayaka_data.dart';
 import '../models/character_home_data.dart';
 import '../routes/go.dart';
 
@@ -31,8 +30,8 @@ final characterList = <Character>[
     name: "Ayaka",
     image: "ayaka_gacha_card.png",
     element: "Cryo",
-    isDone: true,
-    characterModel: ayaka,
+    // isDone: true,
+    // characterModel: ayaka,
   ),
   Character(
     name: "Barbara",

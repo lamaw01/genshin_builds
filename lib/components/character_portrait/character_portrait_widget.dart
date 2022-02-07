@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../constants/assets.dart';
-import '../../../constants/colors.dart';
-import '../../../functions/global_function.dart';
+import '../../constants/assets.dart';
+import '../../constants/colors.dart';
+import '../../functions/global_function.dart';
 import 'character_portrait_model.dart';
 
 class CharacterPortraitWidget extends StatelessWidget {

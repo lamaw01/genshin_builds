@@ -18,18 +18,21 @@ class TalentPriority extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _theme = Theme.of(context);
     return Row(
       children: [
         Text(
           "Talent Priority:",
-          style: _theme.textTheme.titleMedium,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 15.sp,
+            fontWeight: FontWeight.w500,
+          ),
         ),
         SizedBox(height: 5.h),
         Image.asset(
           tallentPath + talent1,
-          width: 50.0.r,
-          height: 50.0.r,
+          width: 40.0.r,
+          height: 40.0.r,
           color: color,
         ),
         SizedBox(height: 5.h),
@@ -39,7 +42,7 @@ class TalentPriority extends StatelessWidget {
         ),
         SizedBox(height: 5.h),
         Image.asset(tallentPath + talent2,
-            width: 50.0.r, height: 50.0.r, color: color),
+            width: 40.0.r, height: 40.0.r, color: color),
         SizedBox(height: 5.h),
         Text(
           ">",
@@ -47,9 +50,9 @@ class TalentPriority extends StatelessWidget {
         ),
         SizedBox(height: 5.h),
         Image.asset(
-          tallentPath + talent3,
-          width: 50.0.r,
-          height: 50.0.r,
+          weaponTypePath + talent3,
+          width: 40.0.r,
+          height: 40.0.r,
           color: color,
         ),
       ],

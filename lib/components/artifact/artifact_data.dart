@@ -1,4 +1,4 @@
-import 'package:genshin_builds/components/artifact/model/artifact_model.dart';
+import 'package:genshin_builds/components/artifact/artifact_model.dart';
 
 final archaicPetra = ArtifactModel(
   image: 'archaic_petra.png',

@@ -10,24 +10,25 @@ class CharacterModel {
   final String weaponType;
   final String role;
   final String birthday;
-  final String? description;
+  final String description;
+  final Color color;
 
-  final Widget? talent1;
-  final Widget? talent2;
-  final Widget? talent2_5;
-  final Widget? talent3;
+  final TalentNormalModel talent1;
+  final TalentSkillModel talent2;
+  final TalentSkillModel? talent2_5;
+  final TalentSkillModel talent3;
 
-  final Widget? passive1;
-  final Widget? passive2;
-  final Widget? passive3;
-  final Widget? passive4;
+  final PassiveModel passive1;
+  final PassiveModel passive2;
+  final PassiveModel passive3;
+  final PassiveModel? passive4;
 
-  final Widget? constellation1;
-  final Widget? constellation2;
-  final Widget? constellation3;
-  final Widget? constellation4;
-  final Widget? constellation5;
-  final Widget? constellation6;
+  final ConstellationModel constellation1;
+  final ConstellationModel constellation2;
+  final ConstellationModel constellation3;
+  final ConstellationModel constellation4;
+  final ConstellationModel constellation5;
+  final ConstellationModel constellation6;
 
   final Widget? builds;
   final Widget? teamComposition;
@@ -45,21 +46,22 @@ class CharacterModel {
     required this.weaponType,
     required this.role,
     required this.birthday,
-    this.description,
-    this.talent1,
-    this.talent2,
-    this.talent3,
+    required this.description,
+    required this.color,
+    required this.talent1,
+    required this.talent2,
+    required this.talent3,
     this.talent2_5,
-    this.passive1,
-    this.passive2,
-    this.passive3,
+    required this.passive1,
+    required this.passive2,
+    required this.passive3,
     this.passive4,
-    this.constellation1,
-    this.constellation2,
-    this.constellation3,
-    this.constellation4,
-    this.constellation5,
-    this.constellation6,
+    required this.constellation1,
+    required this.constellation2,
+    required this.constellation3,
+    required this.constellation4,
+    required this.constellation5,
+    required this.constellation6,
     this.builds,
     this.teamComposition,
     this.ascensionMaterials,
@@ -93,4 +95,63 @@ class TalentMaterials {
     this.talentMats3,
     this.talentMats4,
   );
+}
+
+class TalentNormalModel {
+  final String talentImage;
+  final String talentName;
+  final List<String> normalAttackDesc;
+  final List<String> chargedlAttackDesc;
+  final List<String> plungelAttackDesc;
+
+  TalentNormalModel({
+    required this.talentImage,
+    required this.talentName,
+    required this.normalAttackDesc,
+    required this.chargedlAttackDesc,
+    required this.plungelAttackDesc,
+  });
+}
+
+class TalentSkillModel {
+  final String talentImage;
+  final String talentName;
+  final List<TalentText> description;
+
+  TalentSkillModel({
+    required this.talentImage,
+    required this.talentName,
+    required this.description,
+  });
+}
+
+class TalentText {
+  final String talentText;
+  final bool isHighlight;
+
+  TalentText({required this.talentText, this.isHighlight = false});
+}
+
+class PassiveModel {
+  final String talentImage;
+  final String talentName;
+  final List<TalentText> description;
+
+  PassiveModel({
+    required this.talentImage,
+    required this.talentName,
+    required this.description,
+  });
+}
+
+class ConstellationModel {
+  final String talentImage;
+  final String talentName;
+  final List<TalentText> description;
+
+  ConstellationModel({
+    required this.talentImage,
+    required this.talentName,
+    required this.description,
+  });
 }

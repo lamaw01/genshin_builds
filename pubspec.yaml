@@ -79,8 +79,8 @@ flutter:
     - assets/talent/
     - assets/weapon/
     - assets/artifact/
-    - assets/material/
     - assets/element/
+    - assets/weapon_type/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
