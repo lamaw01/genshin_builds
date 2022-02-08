@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../character_data/character_model.dart';
 import '../constants/colors.dart';
-import '../models/character_model.dart';
 import '../pages/home.dart';
-import '../pages/reusable/character_page.dart';
+import '../pages/character_page.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {

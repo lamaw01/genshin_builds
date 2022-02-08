@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../pages/widgets/build.dart';
+import '../pages/widgets/team_composition.dart';
+
 class CharacterModel {
   final String gachaSplashArt;
   final String gachaSplashCard;
@@ -30,11 +33,8 @@ class CharacterModel {
   final ConstellationModel constellation5;
   final ConstellationModel constellation6;
 
-  final Widget? builds;
-  final Widget? teamComposition;
-
-  final AscensionMaterials? ascensionMaterials;
-  final TalentMaterials? talentMaterials;
+  final List<Build> builds;
+  final List<TeamComposition> teams;
 
   CharacterModel({
     required this.gachaSplashArt,
@@ -62,39 +62,9 @@ class CharacterModel {
     required this.constellation4,
     required this.constellation5,
     required this.constellation6,
-    this.builds,
-    this.teamComposition,
-    this.ascensionMaterials,
-    this.talentMaterials,
+    required this.builds,
+    required this.teams,
   });
-}
-
-class AscensionMaterials {
-  final String ascMats1;
-  final String ascMats2;
-  final String ascMats3;
-  final String ascMats4;
-
-  AscensionMaterials(
-    this.ascMats1,
-    this.ascMats2,
-    this.ascMats3,
-    this.ascMats4,
-  );
-}
-
-class TalentMaterials {
-  final String talentMats1;
-  final String talentMats2;
-  final String talentMats3;
-  final String talentMats4;
-
-  TalentMaterials(
-    this.talentMats1,
-    this.talentMats2,
-    this.talentMats3,
-    this.talentMats4,
-  );
 }
 
 class TalentNormalModel {

@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../components/artifact/artifact_widget.dart';
 
-class ArtifactRecommend extends StatelessWidget {
-  const ArtifactRecommend({Key? key, required this.artifactWidgetList})
+class ArtifactList extends StatelessWidget {
+  const ArtifactList({Key? key, required this.artifactWidgetList})
       : super(key: key);
   final List<ArtifactWidget> artifactWidgetList;
 

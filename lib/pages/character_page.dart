@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:genshin_builds/pages/reusable/constellation.dart';
-import 'package:genshin_builds/pages/reusable/passives.dart';
-import 'package:genshin_builds/pages/reusable/talent_normal.dart';
 
-import '../../models/character_model.dart';
-import 'character_gacha_spash.dart';
-import 'character_info.dart';
-import 'talent_skill.dart';
+import '../character_data/character_model.dart';
+import 'widgets/character_gacha_spash.dart';
+import 'widgets/character_info.dart';
+import 'widgets/constellation.dart';
+import 'widgets/passives.dart';
+import 'widgets/talent_normal.dart';
+import 'widgets/talent_skill.dart';
 
 class CharacterPage extends StatelessWidget {
   const CharacterPage({Key? key, required this.characterModel})
@@ -16,7 +16,12 @@ class CharacterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _theme = Theme.of(context);
+    var _chapterTextStyle = TextStyle(
+      color: Colors.white,
+      fontSize: 20.sp,
+      fontWeight: FontWeight.w500,
+    );
+
     return SafeArea(
       child: Scaffold(
         // backgroundColor: darkBG,
@@ -31,20 +36,26 @@ class CharacterPage extends StatelessWidget {
                 CharacterInfo(
                   characterModel: characterModel,
                 ),
-                SizedBox(height: 20.h),
+                SizedBox(height: 15.h),
+                const Divider(),
                 Text(
                   "Description",
-                  style: _theme.textTheme.headlineMedium,
+                  style: _chapterTextStyle,
                 ),
                 SizedBox(height: 10.h),
                 Text(
                   characterModel.description,
-                  style: _theme.textTheme.bodyLarge,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
                 SizedBox(height: 10.h),
+                const Divider(),
                 Text(
                   "Talents",
-                  style: _theme.textTheme.headlineMedium,
+                  style: _chapterTextStyle,
                 ),
                 SizedBox(height: 10.h),
                 TalentNormal(
@@ -78,10 +89,11 @@ class CharacterPage extends StatelessWidget {
                   color: characterModel.color,
                   skillDesc: characterModel.talent3.description,
                 ),
-                SizedBox(height: 20.h),
+                SizedBox(height: 15.h),
+                const Divider(),
                 Text(
                   "Passives",
-                  style: _theme.textTheme.headlineMedium,
+                  style: _chapterTextStyle,
                 ),
                 SizedBox(height: 10.h),
                 Passives(
@@ -113,10 +125,11 @@ class CharacterPage extends StatelessWidget {
                     passiveDesc: characterModel.passive4!.description,
                   ),
                 ],
-                SizedBox(height: 20.h),
+                SizedBox(height: 15.h),
+                const Divider(),
                 Text(
                   "Constellations",
-                  style: _theme.textTheme.headlineMedium,
+                  style: _chapterTextStyle,
                 ),
                 SizedBox(height: 10.h),
                 Constellation(
@@ -160,20 +173,26 @@ class CharacterPage extends StatelessWidget {
                   color: characterModel.color,
                   constellationDesc: characterModel.constellation6.description,
                 ),
-                SizedBox(height: 20.h),
+                SizedBox(height: 15.h),
+                const Divider(),
                 Text(
                   "Builds",
-                  style: _theme.textTheme.headlineMedium,
+                  style: _chapterTextStyle,
                 ),
                 SizedBox(height: 10.h),
-                characterModel.builds!,
-                SizedBox(height: 20.h),
+                for (var build in characterModel.builds) ...[
+                  build,
+                ],
+                SizedBox(height: 15.h),
+                const Divider(),
                 Text(
                   "Team Compositions",
-                  style: _theme.textTheme.headlineMedium,
+                  style: _chapterTextStyle,
                 ),
                 SizedBox(height: 10.h),
-                characterModel.teamComposition!,
+                for (var team in characterModel.teams) ...[
+                  team,
+                ],
               ],
             ),
           ),

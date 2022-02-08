@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../components/character_portrait/character_portrait_model.dart';
 import '../../components/character_portrait/character_portrait_widget.dart';
 
-class PartyTeam extends StatelessWidget {
-  const PartyTeam(
+class CharacterPortraitList extends StatelessWidget {
+  const CharacterPortraitList(
       {Key? key,
       required this.firstSlot,
       required this.secondSlot,

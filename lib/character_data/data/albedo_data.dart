@@ -1,31 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../components/artifact/artifact_data.dart';
+import '../../components/artifact/artifact_widget.dart';
+import '../../components/character_portrait/character_portrait_data.dart';
+import '../../components/character_portrait/character_portrait_list.dart';
+import '../../components/weapon/weapon_data.dart';
+import '../../components/weapon/weapon_model.dart';
+import '../../constants/colors.dart';
 
-import '../components/artifact/artifact_data.dart';
-import '../components/artifact/artifact_widget.dart';
-import '../components/character_portrait/character_portrait_data.dart';
-import '../components/weapon/weapon_data.dart';
-import '../components/weapon/weapon_widget.dart';
-import '../constants/colors.dart';
-
-import '../pages/reusable/artifact_recommend.dart';
-import '../pages/reusable/artifact_stat_recommend.dart';
-import '../pages/reusable/party_team.dart';
-import '../pages/reusable/talent_priority.dart';
-import '../pages/reusable/weapon_recommend.dart';
-import 'character_model.dart';
-
-var _bodyText1 = TextStyle(
-  fontSize: 14.sp,
-  fontWeight: FontWeight.w500,
-  color: Colors.white,
-);
-
-var _bodyText2 = TextStyle(
-  fontSize: 13.sp,
-  fontWeight: FontWeight.w400,
-  color: Colors.white,
-);
+import '../../pages/widgets/build.dart';
+import '../../pages/widgets/team_composition.dart';
+import '../character_model.dart';
 
 var albedo = CharacterModel(
   gachaSplashArt: 'albedo_gacha_splash.png',
@@ -200,89 +183,88 @@ var albedo = CharacterModel(
       ),
     ],
   ),
-  builds: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Text(
-        "Off-field DPS",
-        style: _bodyText1.copyWith(fontSize: 16.sp),
-      ),
-      const TalentPriority(
-        talent1: 'albedo_elemental_skill.png',
-        talent2: 'albedo_elemental_burst.png',
-        talent3: 'sword_type.png',
-        color: geoBG,
-      ),
-      Text(
-        "Weapon",
-        style: _bodyText1.copyWith(fontSize: 16.sp),
-      ),
-      SizedBox(height: 5.h),
-      Text(
-        "1:2 ratio or 60/120 CRIT RATE/DMG",
-        style: _bodyText2.copyWith(fontWeight: FontWeight.w600),
-      ),
-      WeaponRecommend(
-        weaponWidgetList: [
-          WeaponWidget(weaponModel: cinnabarSpindle),
-          WeaponWidget(weaponModel: primordialJadeCutter),
-          WeaponWidget(weaponModel: summitShaper),
-          WeaponWidget(weaponModel: harbingerOfDawn),
-        ],
-      ),
-      Text(
-        "Artifact",
-        style: _bodyText1.copyWith(fontSize: 16.sp),
-      ),
-      const ArtifactStatRecommend(
+  builds: <Build>[
+    Build(
+      buildName: 'Off-field DPS',
+      color: geoBG,
+      talent: [
+        TalentQueue(name: 'albedo_elemental_skill.png'),
+        TalentQueue(name: 'albedo_elemental_burst.png'),
+        TalentQueue(name: 'sword_type.png', isNormalAtk: true),
+      ],
+      ratio: '1:2 ratio or 60/120 CRIT RATE/DMG',
+      weapons: <WeaponModel>[
+        cinnabarSpindle,
+        primordialJadeCutter,
+        summitShaper,
+        harbingerOfDawn,
+      ],
+      artifactStat: ArtifactStat(
         sand: 'DEF%',
-        goblet: 'DEF% / Geo DMG Bonus',
-        circlet: 'CRIT RATE / CRIT DMG / DEF%',
+        goblet: 'Geo DMG Bonus / DEF%',
+        circlet: 'CRIT RATE/DMG / DEF%',
+        substatPrio: 'CRIT > DEF% > DEF',
       ),
-      Text(
-        "Substat Priority: CRIT > DEF% > DEF",
-        style: _bodyText2.copyWith(fontWeight: FontWeight.w600),
-      ),
-      ArtifactRecommend(
-        artifactWidgetList: [
-          ArtifactWidget(artifactModel: huskOfOpulentDreams, isFullset: true),
-          ArtifactWidget(artifactModel: huskOfOpulentDreams, isFullset: false),
-          ArtifactWidget(artifactModel: archaicPetra, isFullset: false),
-          ArtifactWidget(artifactModel: noblesseOblige, isFullset: false),
-        ],
-      ),
-    ],
-  ),
-  teamComposition: Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      Text(
-        "Double Geo Team",
-        style: _bodyText1.copyWith(fontSize: 16.sp),
-      ),
-      PartyTeam(
-        firstSlot: xiaoPortrait,
-        secondSlot: zhongliPortrait,
-        thirdSlot: jeanPortrait,
-        fourthSlot: albedoPortrait,
-      ),
-      PartyTeam(
-        firstSlot: hutaoPortrait,
-        secondSlot: zhongliPortrait,
-        thirdSlot: xingqiuPortrait,
-        fourthSlot: albedoPortrait,
-      ),
-      SizedBox(height: 10.h),
-      Text(
-        "Mono Geo Team",
-        style: _bodyText1.copyWith(fontSize: 16.sp),
-      ),
-      PartyTeam(
-        firstSlot: ittoPortrait,
-        secondSlot: zhongliPortrait,
-        thirdSlot: gorouPortrait,
-        fourthSlot: albedoPortrait,
-      ),
-    ],
-  ),
+      artifacts: <ArtifactWidget>[
+        ArtifactWidget(artifactModel: huskOfOpulentDreams, isFullset: true),
+        ArtifactWidget(artifactModel: huskOfOpulentDreams, isFullset: false),
+        ArtifactWidget(artifactModel: archaicPetra, isFullset: false),
+        ArtifactWidget(artifactModel: noblesseOblige, isFullset: false),
+      ],
+    ),
+    // Build(
+    //   buildName: 'Support',
+    //   keyCons: 2,
+    //   color: geoBG,
+    //   talent: [
+    //     TalentQueue(name: 'albedo_elemental_burst.png'),
+    //     TalentQueue(name: 'albedo_elemental_skill.png'),
+    //     TalentQueue(name: 'sword_type.png', isNormalAtk: true),
+    //   ],
+    //   weapons: <WeaponModel>[
+    //     freedomSworn,
+    //   ],
+    //   artifactStat: ArtifactStat(
+    //     sand: 'Energy Recharge%',
+    //     goblet: 'Geo DMG Bonus ',
+    //     circlet: 'CRIT RATE/DMG',
+    //     substatPrio: 'ATK% > DEF% > ER%',
+    //     recommendedER: '160% - 200%',
+    //     recommendedEM: '200',
+    //   ),
+    //   artifacts: <ArtifactWidget>[
+    //     ArtifactWidget(artifactModel: noblesseOblige, isFullset: true),
+    //   ],
+    // ),
+  ],
+  teams: <TeamComposition>[
+    TeamComposition(
+      teamName: 'Double Geo Team',
+      teams: [
+        CharacterPortraitList(
+          firstSlot: xiaoPortrait,
+          secondSlot: zhongliPortrait,
+          thirdSlot: jeanPortrait,
+          fourthSlot: albedoPortrait,
+        ),
+        CharacterPortraitList(
+          firstSlot: hutaoPortrait,
+          secondSlot: zhongliPortrait,
+          thirdSlot: xingqiuPortrait,
+          fourthSlot: albedoPortrait,
+        ),
+      ],
+    ),
+    TeamComposition(
+      teamName: 'Mono Geo Team',
+      teams: [
+        CharacterPortraitList(
+          firstSlot: ittoPortrait,
+          secondSlot: zhongliPortrait,
+          thirdSlot: gorouPortrait,
+          fourthSlot: albedoPortrait,
+        ),
+      ],
+    ),
+  ],
 );

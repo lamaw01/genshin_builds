@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../components/weapon/weapon_widget.dart';
 
-class WeaponRecommend extends StatelessWidget {
-  const WeaponRecommend({Key? key, required this.weaponWidgetList})
+class WeaponList extends StatelessWidget {
+  const WeaponList({Key? key, required this.weaponWidgetList})
       : super(key: key);
   final List<WeaponWidget> weaponWidgetList;
 

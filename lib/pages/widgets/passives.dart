@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../constants/assets.dart';
-import '../../models/character_model.dart';
+import '../../character_data/character_model.dart';
+import '../../constants/asset_path.dart';
 
 class Passives extends StatelessWidget {
   const Passives({
@@ -26,8 +26,8 @@ class Passives extends StatelessWidget {
           children: [
             Image.asset(
               tallentPath + talentImage,
-              width: 50.r,
-              height: 50.r,
+              width: 45.r,
+              height: 45.r,
               color: color,
             ),
             SizedBox(width: 5.w),

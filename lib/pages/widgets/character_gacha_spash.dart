@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:genshin_builds/constants/assets.dart';
+import 'package:genshin_builds/constants/asset_path.dart';
 import 'package:genshin_builds/routes/go.dart';
 
 class CharacterGachaSplash extends StatelessWidget {

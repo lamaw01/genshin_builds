@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:genshin_builds/constants/assets.dart';
-import 'package:genshin_builds/constants/colors.dart';
-import 'package:genshin_builds/functions/global_function.dart';
 
+import '../../constants/asset_path.dart';
+import '../../constants/colors.dart';
+import '../../functions/global_function.dart';
 import 'weapon_model.dart';
 
 class WeaponWidget extends StatelessWidget {
@@ -12,7 +12,6 @@ class WeaponWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _theme = Theme.of(context);
     return Container(
       padding: EdgeInsets.all(8.0.r),
       decoration: BoxDecoration(
@@ -37,10 +36,12 @@ class WeaponWidget extends StatelessWidget {
                     children: [
                       Text(
                         weaponModel.name,
-                        style: _theme.textTheme.bodyLarge!.copyWith(
+                        style: TextStyle(
                           color: GlobalFunction.weaponRarity(
                             weaponModel.rarity,
                           ),
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                       SizedBox(width: 5.h),
@@ -58,7 +59,11 @@ class WeaponWidget extends StatelessWidget {
                   ),
                   Text(
                     weaponModel.stats,
-                    style: _theme.textTheme.bodyMedium,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13.sp,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ],
               ),
@@ -67,7 +72,11 @@ class WeaponWidget extends StatelessWidget {
           SizedBox(height: 5.h),
           Text(
             weaponModel.effect,
-            style: _theme.textTheme.bodyMedium,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 13.sp,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ],
       ),

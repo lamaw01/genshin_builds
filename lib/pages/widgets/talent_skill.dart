@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../constants/assets.dart';
-import '../../models/character_model.dart';
+import '../../character_data/character_model.dart';
+import '../../constants/asset_path.dart';
 
-class Constellation extends StatelessWidget {
-  const Constellation({
+class TalentSkill extends StatelessWidget {
+  const TalentSkill({
     Key? key,
     required this.talentImage,
     required this.talentName,
     required this.color,
-    required this.constellationDesc,
+    required this.skillDesc,
   }) : super(key: key);
   final String talentImage;
   final String talentName;
   final Color color;
-  final List<TalentText> constellationDesc;
+  final List<TalentText> skillDesc;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +26,8 @@ class Constellation extends StatelessWidget {
           children: [
             Image.asset(
               tallentPath + talentImage,
-              width: 50.r,
-              height: 50.r,
+              width: 45.r,
+              height: 45.r,
               color: color,
             ),
             SizedBox(width: 5.w),
@@ -42,11 +42,11 @@ class Constellation extends StatelessWidget {
           ],
         ),
         SizedBox(height: 5.h),
-        for (var textConstellation in constellationDesc) ...[
-          if (textConstellation.isHighlight) ...[
+        for (var textSkill in skillDesc) ...[
+          if (textSkill.isHighlight) ...[
             SizedBox(height: 5.h),
             Text(
-              textConstellation.talentText,
+              textSkill.talentText,
               style: TextStyle(
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w500,
@@ -56,7 +56,7 @@ class Constellation extends StatelessWidget {
             SizedBox(height: 5.h),
           ] else ...[
             Text(
-              textConstellation.talentText,
+              textSkill.talentText,
               style: TextStyle(
                 fontSize: 13.sp,
                 fontWeight: FontWeight.w400,

@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import "package:genshin_builds/constants/assets.dart";
-import "package:genshin_builds/constants/colors.dart";
 
+import '../../constants/asset_path.dart';
+import '../../constants/colors.dart';
 import 'artifact_model.dart';
 
 class ArtifactWidget extends StatelessWidget {
@@ -14,7 +14,6 @@ class ArtifactWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _theme = Theme.of(context);
     return Container(
       padding: EdgeInsets.all(8.0.r),
       decoration: BoxDecoration(
@@ -37,20 +36,29 @@ class ArtifactWidget extends StatelessWidget {
                 children: [
                   Text(
                     artifactModel.name,
-                    style: _theme.textTheme.bodyLarge!.copyWith(
+                    style: TextStyle(
                       color: Colors.orange,
                       fontSize: 14.sp,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   if (isFullset == false) ...[
                     Text(
                       "2 (PC)",
-                      style: _theme.textTheme.bodyMedium,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 13.sp,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ] else ...[
                     Text(
                       "4 (PC)",
-                      style: _theme.textTheme.bodyMedium,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 13.sp,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ],
                 ],
@@ -60,13 +68,21 @@ class ArtifactWidget extends StatelessWidget {
           SizedBox(height: 5.h),
           Text(
             "(2) " + artifactModel.twoPcEffect,
-            style: _theme.textTheme.bodyMedium,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 13.sp,
+              fontWeight: FontWeight.w600,
+            ),
           ),
           if (isFullset == true) ...[
             SizedBox(height: 5.h),
             Text(
               "(4) " + artifactModel.fourPcEffect,
-              style: _theme.textTheme.bodyMedium,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 13.sp,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ]
         ],

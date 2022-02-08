@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../constants/assets.dart';
+import '../../constants/asset_path.dart';
 
 class TalentNormal extends StatelessWidget {
   const TalentNormal({
@@ -29,8 +29,8 @@ class TalentNormal extends StatelessWidget {
           children: [
             Image.asset(
               weaponTypePath + talentImage,
-              width: 50.r,
-              height: 50.r,
+              width: 45.r,
+              height: 45.r,
               color: color,
             ),
             SizedBox(width: 5.w),

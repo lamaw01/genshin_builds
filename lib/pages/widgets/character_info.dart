@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../constants/assets.dart';
+import '../../character_data/character_model.dart';
+import '../../constants/asset_path.dart';
 import '../../functions/global_function.dart';
-import '../../models/character_model.dart';
 
 class CharacterInfo extends StatelessWidget {
   const CharacterInfo({Key? key, required this.characterModel})
@@ -12,16 +12,30 @@ class CharacterInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _theme = Theme.of(context);
+    final _textStyle = TextStyle(
+      color: Colors.white,
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w500,
+      letterSpacing: 0.5,
+    );
+
     return Column(
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 10.h),
             Text(
               characterModel.name,
-              style: _theme.textTheme.titleLarge,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22.sp,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.2,
+                fontFamily: 'zh',
+              ),
             ),
+            SizedBox(height: 2.5.h),
             Row(
               children: [
                 for (int i = 0; i < characterModel.rarity; i++)
@@ -34,11 +48,12 @@ class CharacterInfo extends StatelessWidget {
             ),
           ],
         ),
+        SizedBox(height: 5.h),
         Row(
           children: [
             Text(
               "Element: ",
-              style: _theme.textTheme.headlineSmall,
+              style: _textStyle,
             ),
             Image.asset(
               elementPath + GlobalFunction.elementType(characterModel.element)!,
@@ -51,11 +66,11 @@ class CharacterInfo extends StatelessWidget {
           children: [
             Text(
               "Region: ",
-              style: _theme.textTheme.headlineSmall,
+              style: _textStyle,
             ),
             Text(
               characterModel.region,
-              style: _theme.textTheme.headlineSmall,
+              style: _textStyle,
             ),
           ],
         ),
@@ -63,11 +78,11 @@ class CharacterInfo extends StatelessWidget {
           children: [
             Text(
               "Weapon type: ",
-              style: _theme.textTheme.headlineSmall,
+              style: _textStyle,
             ),
             Text(
               characterModel.weaponType,
-              style: _theme.textTheme.headlineSmall,
+              style: _textStyle,
             ),
           ],
         ),
@@ -75,11 +90,11 @@ class CharacterInfo extends StatelessWidget {
           children: [
             Text(
               "Role: ",
-              style: _theme.textTheme.headlineSmall,
+              style: _textStyle,
             ),
             Text(
               characterModel.role,
-              style: _theme.textTheme.headlineSmall,
+              style: _textStyle,
             ),
           ],
         ),
@@ -87,11 +102,11 @@ class CharacterInfo extends StatelessWidget {
           children: [
             Text(
               "Birthday: ",
-              style: _theme.textTheme.headlineSmall,
+              style: _textStyle,
             ),
             Text(
               characterModel.birthday,
-              style: _theme.textTheme.headlineSmall,
+              style: _textStyle,
             ),
           ],
         ),
