@@ -1,5 +1,6 @@
 import 'character_model.dart';
 import 'data/albedo_data.dart';
+import 'data/ayaka_data.dart';
 
 class CharacterCards {
   String name;
@@ -39,8 +40,8 @@ final characterList = <CharacterCards>[
     name: "Ayaka",
     image: "ayaka_gacha_card.png",
     element: "Cryo",
-    // isDone: true,
-    // characterModel: ayaka,
+    isDone: true,
+    characterModel: ayaka,
   ),
   CharacterCards(
     name: "Barbara",

@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:genshin_builds/constants/asset_path.dart';
 import 'package:genshin_builds/routes/go.dart';
 
-class CharacterGachaSplash extends StatelessWidget {
-  const CharacterGachaSplash({Key? key, required this.image}) : super(key: key);
+class SplashArt extends StatelessWidget {
+  const SplashArt({Key? key, required this.image}) : super(key: key);
   final String image;
 
   @override

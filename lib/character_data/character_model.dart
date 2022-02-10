@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../components/material/material_model.dart';
+import '../components/material/material_list.dart';
 import '../pages/widgets/build.dart';
+import '../pages/widgets/constellation.dart';
+import '../pages/widgets/passives.dart';
 import '../pages/widgets/table_stats.dart';
+import '../pages/widgets/talent_normal.dart';
+import '../pages/widgets/talent_skill.dart';
 import '../pages/widgets/team_composition.dart';
 
 class CharacterModel {
@@ -17,31 +21,30 @@ class CharacterModel {
   final String birthday;
   final String description;
   final Color color;
-  final List<MaterialModel> ascensionMat;
-  final List<MaterialModel> talentMat;
+  final MaterialList materials;
 
-  final TalentNormalModel talent1;
-  final TalentSkillModel talent2;
-  final TalentSkillModel? talent2_5;
-  final TalentSkillModel talent3;
+  final TalentNormal talent1;
+  final TalentSkill talent2;
+  final TalentSkill? talent2_5;
+  final TalentSkill talent3;
 
-  final PassiveModel passive1;
-  final PassiveModel passive2;
-  final PassiveModel passive3;
-  final PassiveModel? passive4;
+  final Passives passive1;
+  final Passives passive2;
+  final Passives passive3;
+  final Passives? passive4;
 
-  final ConstellationModel constellation1;
-  final ConstellationModel constellation2;
-  final ConstellationModel constellation3;
-  final ConstellationModel constellation4;
-  final ConstellationModel constellation5;
-  final ConstellationModel constellation6;
+  final Constellation constellation1;
+  final Constellation constellation2;
+  final Constellation constellation3;
+  final Constellation constellation4;
+  final Constellation constellation5;
+  final Constellation constellation6;
 
   final List<Build> builds;
   final List<TeamComposition> teams;
   final TableStats stats;
 
-  CharacterModel({
+  const CharacterModel({
     required this.gachaSplashArt,
     required this.gachaSplashCard,
     required this.name,
@@ -69,37 +72,8 @@ class CharacterModel {
     required this.constellation6,
     required this.builds,
     required this.teams,
-    required this.ascensionMat,
-    required this.talentMat,
+    required this.materials,
     required this.stats,
-  });
-}
-
-class TalentNormalModel {
-  final String talentImage;
-  final String talentName;
-  final List<String> normalAttackDesc;
-  final List<String> chargedlAttackDesc;
-  final List<String> plungelAttackDesc;
-
-  TalentNormalModel({
-    required this.talentImage,
-    required this.talentName,
-    required this.normalAttackDesc,
-    required this.chargedlAttackDesc,
-    required this.plungelAttackDesc,
-  });
-}
-
-class TalentSkillModel {
-  final String talentImage;
-  final String talentName;
-  final List<TalentText> description;
-
-  TalentSkillModel({
-    required this.talentImage,
-    required this.talentName,
-    required this.description,
   });
 }
 
@@ -107,29 +81,5 @@ class TalentText {
   final String talentText;
   final bool isHighlight;
 
-  TalentText({required this.talentText, this.isHighlight = false});
-}
-
-class PassiveModel {
-  final String talentImage;
-  final String talentName;
-  final List<TalentText> description;
-
-  PassiveModel({
-    required this.talentImage,
-    required this.talentName,
-    required this.description,
-  });
-}
-
-class ConstellationModel {
-  final String talentImage;
-  final String talentName;
-  final List<TalentText> description;
-
-  ConstellationModel({
-    required this.talentImage,
-    required this.talentName,
-    required this.description,
-  });
+  const TalentText({required this.talentText, this.isHighlight = false});
 }

@@ -364,3 +364,12 @@ final wolfsGravestone = WeaponModel(
   effect:
       "Increases ATK by 20%. On hit, attacks against opponents with less than 30% HP increase all party members' ATK by 40% for 12s. Can only occur once every 30s.",
 );
+
+final skywardBlade = WeaponModel(
+  image: 'skyward_blade.png',
+  name: 'Skyward Blade',
+  rarity: 5,
+  stats: 'BASE 608 substat ER 55.1%',
+  effect:
+      'Crit Rate increased by 4%. Gains Skypiercing Might upon using Elemental Burst: Increases Movement SPD by 10%, increases ATK SPD by 10%, and Normal and Charged hits deal additional DMG equal to 20% of ATK. Skypiercing Might lasts for 12s.',
+);

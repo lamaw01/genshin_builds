@@ -15,6 +15,10 @@ class MaterialWidget extends StatelessWidget {
     return Tooltip(
       triggerMode: TooltipTriggerMode.tap,
       message: materialModel.name,
+      textStyle: TextStyle(
+        fontSize: 12.sp,
+        color: Colors.black,
+      ),
       child: Container(
         padding: EdgeInsets.all(5.0.r),
         decoration: BoxDecoration(

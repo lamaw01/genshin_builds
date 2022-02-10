@@ -34,3 +34,33 @@ final crownOfInsight = MaterialModel(
   name: 'Crown of Insight',
   image: 'crown_of_insight.png',
 );
+
+final shivadaJadeGemstone = MaterialModel(
+  name: 'Shivada Jade Gemstone',
+  image: 'shivada_jade_gemstone.png',
+);
+
+final sakuraBloom = MaterialModel(
+  name: 'Sakura Bloom',
+  image: 'sakura_bloom.png',
+);
+
+final famedHandguard = MaterialModel(
+  name: 'Famed Handguard',
+  image: 'famed_handguard.png',
+);
+
+final perpetualHeart = MaterialModel(
+  name: 'Perpetual Heart',
+  image: 'perpetual_heart.png',
+);
+
+final philosophiesOfElegance = MaterialModel(
+  name: 'Philosophies of Elegance',
+  image: 'philosophies_of_elegance.png',
+);
+
+final bloodjadeBranch = MaterialModel(
+  name: 'Bloodjade Branch',
+  image: 'bloodjade_branch.png',
+);

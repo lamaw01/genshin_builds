@@ -5,9 +5,8 @@ import '../../character_data/character_model.dart';
 import '../../constants/asset_path.dart';
 import '../../functions/global_function.dart';
 
-class CharacterInfo extends StatelessWidget {
-  const CharacterInfo({Key? key, required this.characterModel})
-      : super(key: key);
+class Info extends StatelessWidget {
+  const Info({Key? key, required this.characterModel}) : super(key: key);
   final CharacterModel characterModel;
 
   @override

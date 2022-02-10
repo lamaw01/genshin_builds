@@ -17,6 +17,10 @@ class CharacterPortraitWidget extends StatelessWidget {
     return Tooltip(
       triggerMode: TooltipTriggerMode.tap,
       message: characterPortraitModel.name,
+      textStyle: TextStyle(
+        fontSize: 12.sp,
+        color: Colors.black,
+      ),
       child: Stack(
         fit: StackFit.loose,
         alignment: Alignment.center,
