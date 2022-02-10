@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:genshin_builds/components/material/material_list.dart';
+import 'package:genshin_builds/components/material/material_widget.dart';
 
 import '../character_data/character_model.dart';
 import 'widgets/character_gacha_spash.dart';
@@ -193,6 +195,36 @@ class CharacterPage extends StatelessWidget {
                 for (var team in characterModel.teams) ...[
                   team,
                 ],
+                SizedBox(height: 15.h),
+                const Divider(),
+                Text(
+                  "Materials",
+                  style: _chapterTextStyle,
+                ),
+                MaterialList(
+                  ascenionMaterials: [
+                    for (var ascMaterial in characterModel.ascensionMat) ...[
+                      MaterialWidget(
+                        materialModel: ascMaterial,
+                      ),
+                    ],
+                  ],
+                  talentMaterials: [
+                    for (var talMaterial in characterModel.talentMat) ...[
+                      MaterialWidget(
+                        materialModel: talMaterial,
+                      ),
+                    ],
+                  ],
+                ),
+                SizedBox(height: 15.h),
+                const Divider(),
+                Text(
+                  "Stats",
+                  style: _chapterTextStyle,
+                ),
+                SizedBox(height: 10.h),
+                characterModel.stats
               ],
             ),
           ),

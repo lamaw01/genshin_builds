@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../components/material/material_model.dart';
 import '../pages/widgets/build.dart';
+import '../pages/widgets/table_stats.dart';
 import '../pages/widgets/team_composition.dart';
 
 class CharacterModel {
@@ -15,6 +17,8 @@ class CharacterModel {
   final String birthday;
   final String description;
   final Color color;
+  final List<MaterialModel> ascensionMat;
+  final List<MaterialModel> talentMat;
 
   final TalentNormalModel talent1;
   final TalentSkillModel talent2;
@@ -35,6 +39,7 @@ class CharacterModel {
 
   final List<Build> builds;
   final List<TeamComposition> teams;
+  final TableStats stats;
 
   CharacterModel({
     required this.gachaSplashArt,
@@ -64,6 +69,9 @@ class CharacterModel {
     required this.constellation6,
     required this.builds,
     required this.teams,
+    required this.ascensionMat,
+    required this.talentMat,
+    required this.stats,
   });
 }
 

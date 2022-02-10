@@ -2,11 +2,14 @@ import '../../components/artifact/artifact_data.dart';
 import '../../components/artifact/artifact_widget.dart';
 import '../../components/character_portrait/character_portrait_data.dart';
 import '../../components/character_portrait/character_portrait_list.dart';
+import '../../components/material/material_data.dart';
+import '../../components/material/material_model.dart';
 import '../../components/weapon/weapon_data.dart';
 import '../../components/weapon/weapon_model.dart';
 import '../../constants/colors.dart';
 
 import '../../pages/widgets/build.dart';
+import '../../pages/widgets/table_stats.dart';
 import '../../pages/widgets/team_composition.dart';
 import '../character_model.dart';
 
@@ -267,4 +270,36 @@ var albedo = CharacterModel(
       ],
     ),
   ],
+  talentMat: <MaterialModel>[
+    prithivaTopazGemstone,
+    basaltPillar,
+    cecilia,
+    forbiddenCurseScroll
+  ],
+  ascensionMat: <MaterialModel>[
+    philosophiesOfBallad,
+    forbiddenCurseScroll,
+    tuskOfMonocerosCaeli,
+    crownOfInsight
+  ],
+  stats: const TableStats(
+    isHaveBonus: true,
+    bonusStat: 'Geo DMG Bonus',
+    data: <List<String>>[
+      <String>["0", "1", "1030", "20", "68", "5%", "50%", "0%"],
+      <String>["0", "20", "2671", "51", "177", "5%", "50%", "0%"],
+      <String>["1", "20", "3554", "67", "235", "5%", "50%", "0%"],
+      <String>["1", "40", "5317", "101", "101", "5%", "50%", "0%"],
+      <String>["2", "40", "5944", "113", "394", "5%", "50%", "7.2%"],
+      <String>["2", "50", "6839", "130", "453", "5%", "50%", "7.2%"],
+      <String>["3", "50", "7675", "146", "508", "5%", "50%", "14.4%"],
+      <String>["3", "60", "8579", "163", "568", "5%", "50%", "14.4%"],
+      <String>["4", "60", "9207", "175", "610", "5%", "50%", "14.4%"],
+      <String>["4", "70", "10119", "192", "670", "5%", "50%", "14.4%"],
+      <String>["5", "70", "10746", "204", "712", "5%", "50%", "21.6%"],
+      <String>["5", "80", "11669", "222", "773", "5%", "50%", "21.6%"],
+      <String>["6", "80", "12296", "233", "815", "5%", "50%", "28.8%"],
+      <String>["6", "90", "13226", "251", "876", "5%", "50%", "28.8%"],
+    ],
+  ),
 );
