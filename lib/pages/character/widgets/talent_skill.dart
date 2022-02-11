@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../character_data/character_model.dart';
-import '../../constants/asset_path.dart';
+import '../../../character_data/character_model.dart';
+import '../../../constants/asset_path.dart';
 
 class TalentSkill extends StatelessWidget {
   const TalentSkill({

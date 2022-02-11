@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../character_data/character_model.dart';
-import '../../constants/asset_path.dart';
-import '../../functions/global_function.dart';
+import '../../../character_data/character_model.dart';
+import '../../../constants/asset_path.dart';
+import '../../../functions/global_function.dart';
 
 class Info extends StatelessWidget {
   const Info({Key? key, required this.characterModel}) : super(key: key);

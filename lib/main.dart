@@ -33,6 +33,10 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: darkBG,
             brightness: Brightness.dark,
             primarySwatch: Colors.teal,
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+            bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+              selectedItemColor: Colors.blue,
+            ),
           ),
           initialRoute: '/',
           onGenerateRoute: RouteGenerator.generateRoute,

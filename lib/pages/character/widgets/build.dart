@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../components/artifact/artifact_list.dart';
-import '../../components/artifact/artifact_widget.dart';
-import '../../components/weapon/weapon_list.dart';
-import '../../components/weapon/weapon_model.dart';
-import '../../components/weapon/weapon_widget.dart';
-import '../../constants/asset_path.dart';
+import '../../../components/artifact/artifact_list.dart';
+import '../../../components/artifact/artifact_widget.dart';
+import '../../../components/weapon/weapon_list.dart';
+import '../../../components/weapon/weapon_model.dart';
+import '../../../components/weapon/weapon_widget.dart';
+import '../../../constants/asset_path.dart';
 
 class TalentQueue {
   final String name;

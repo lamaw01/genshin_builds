@@ -1,10 +1,15 @@
 import 'weapon_model.dart';
 
+//Weapon type - Sword, Claymore, Bow, Polearm, Catalyst
+
 final akuoumaru = WeaponModel(
   image: 'akuoumaru.png',
   name: 'Akuoumaru',
   rarity: 4,
   stats: 'BASE 510 substat ATK 27.6%',
+  weaponType: 'Claymore',
+  base: 510,
+  subStat: 'ATK 27.6%',
   effect:
       "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.12%. A maximum of 40% increased Elemental Burst DMG can be achieved this way.",
 );
@@ -14,6 +19,9 @@ final amenomaKageuchi = WeaponModel(
   name: 'Amenoma Kageuchi',
   rarity: 4,
   stats: 'BASE 454 substat ATK 55.1%',
+  weaponType: 'Sword',
+  base: 454,
+  subStat: 'ATK 55.1%',
   effect:
       "After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates 6 Energy for each seed consumed.",
 );
@@ -23,6 +31,9 @@ final blackcliffLongsword = WeaponModel(
   name: 'Blackcliff Longsword',
   rarity: 4,
   stats: 'BASE 565 substat CRIT DMG 36.8%',
+  weaponType: 'Sword',
+  base: 565,
+  subStat: 'CRIT DMG 36.8%',
   effect:
       'After defeating an opponent, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
 );
@@ -32,6 +43,9 @@ final blackcliffPole = WeaponModel(
   name: 'Blackcliff Pole',
   rarity: 4,
   stats: 'BASE 510 substat CRIT DMG 55.1%',
+  weaponType: 'Sword',
+  base: 565,
+  subStat: 'CRIT DMG 36.8%',
   effect:
       'After defeating an opponent, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
 );
@@ -41,6 +55,9 @@ final blackcliffSlasher = WeaponModel(
   name: 'Blackcliff Slasher',
   rarity: 4,
   stats: 'BASE 510 substat CRIT DMG 55.1%',
+  weaponType: 'Claymore',
+  base: 510,
+  subStat: 'CRIT DMG 55.1%',
   effect:
       'After defeating an opponent, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
 );
@@ -50,6 +67,9 @@ final cinnabarSpindle = WeaponModel(
   name: 'Cinnabar Spindle',
   rarity: 4,
   stats: 'BASE 454 subsat DEF 69.0%',
+  weaponType: 'Sword',
+  base: 454,
+  subStat: 'DEF 69.0%',
   effect:
       'Elemental Skill DMG is increased by 40% of DEF. The effect will be triggered no more than once every 1.5s and will be cleared 0.1s after the Elemental Skill deals DMG.',
 );
@@ -59,8 +79,23 @@ final darkIronSword = WeaponModel(
   name: 'Dark Iron Sword',
   rarity: 3,
   stats: 'BASE 401 substat EM 141',
+  weaponType: 'Sword',
+  base: 401,
+  subStat: 'EM 141',
   effect:
       'Upon causing an Overloaded, Superconduct, Electro-Charged, or an Electro-infused Swirl reaction, ATK is increased by 20% for 12s.',
+);
+
+final engulfingLightning = WeaponModel(
+  image: 'engulfing_lightning.png',
+  name: 'Engulfing Lightning',
+  rarity: 5,
+  stats: 'BASE 608 substat ER 55.1%',
+  weaponType: 'Polearm',
+  base: 608,
+  subStat: 'ER 55.1%',
+  effect:
+      'ATK increased by 28% of Energy Recharge over the base 100%. You can gain a maximum bonus of 80% ATK. Gain 30% Energy Recharge for 12s after using an Elemental Burst.',
 );
 
 final deathmatch = WeaponModel(
@@ -78,15 +113,6 @@ final dragonsBane = WeaponModel(
   rarity: 4,
   stats: 'BASE 454 substat EM 221',
   effect: 'Increases DMG against opponents affected by Hydro or Pyro by 20%.',
-);
-
-final engulfingLightning = WeaponModel(
-  image: 'engulfing_lightning.png',
-  name: 'Engulfing Lightning',
-  rarity: 5,
-  stats: 'BASE 608 substat ER 55.1%',
-  effect:
-      'ATK increased by 28% of Energy Recharge over the base 100%. You can gain a maximum bonus of 80% ATK. Gain 30% Energy Recharge for 12s after using an Elemental Burst.',
 );
 
 final everlastingMoonglow = WeaponModel(

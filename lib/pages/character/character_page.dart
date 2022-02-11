@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../character_data/character_model.dart';
+import '../../character_data/character_model.dart';
 import 'widgets/info.dart';
 import 'widgets/spash_art.dart';
 

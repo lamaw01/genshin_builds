@@ -18,7 +18,7 @@ class CharacterCards {
   });
 }
 
-final characterList = <CharacterCards>[
+final charactersList = <CharacterCards>[
   CharacterCards(
     name: "Albedo",
     image: "albedo_gacha_card.png",

@@ -1,5 +1,4 @@
 import '../exports.dart';
-import '../character_model.dart';
 
 final ayaka = CharacterModel(
   gachaSplashArt: 'ayaka_gacha_splash.png',

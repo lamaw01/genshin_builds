@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../character_data/character_model.dart';
-import '../../constants/asset_path.dart';
+import '../../../character_data/character_model.dart';
+import '../../../constants/asset_path.dart';
 
-class Passives extends StatelessWidget {
-  const Passives({
+class Constellation extends StatelessWidget {
+  const Constellation({
     Key? key,
     required this.talentImage,
     required this.talentName,
     required this.color,
-    required this.passiveDesc,
+    required this.constellationDesc,
   }) : super(key: key);
   final String talentImage;
   final String talentName;
   final Color color;
-  final List<TalentText> passiveDesc;
+  final List<TalentText> constellationDesc;
 
   @override
   Widget build(BuildContext context) {
@@ -42,11 +42,11 @@ class Passives extends StatelessWidget {
           ],
         ),
         SizedBox(height: 5.h),
-        for (var textPassive in passiveDesc) ...[
-          if (textPassive.isHighlight) ...[
+        for (var textConstellation in constellationDesc) ...[
+          if (textConstellation.isHighlight) ...[
             SizedBox(height: 5.h),
             Text(
-              textPassive.talentText,
+              textConstellation.talentText,
               style: TextStyle(
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w500,
@@ -56,7 +56,7 @@ class Passives extends StatelessWidget {
             SizedBox(height: 5.h),
           ] else ...[
             Text(
-              textPassive.talentText,
+              textConstellation.talentText,
               style: TextStyle(
                 fontSize: 13.sp,
                 fontWeight: FontWeight.w400,

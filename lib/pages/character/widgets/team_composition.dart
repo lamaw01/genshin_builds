@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../components/character_portrait/character_portrait_list.dart';
+import '../../../components/character_portrait/character_portrait_list.dart';
 
 class TeamComposition extends StatelessWidget {
   const TeamComposition({

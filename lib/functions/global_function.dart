@@ -51,4 +51,21 @@ class GlobalFunction {
         return Colors.redAccent;
     }
   }
+
+  static String? weaponType(String type) {
+    switch (type) {
+      case 'Claymore':
+        return 'claymore_type.png';
+      case 'Bow':
+        return 'bow_type.png';
+      case 'Sword':
+        return 'sword_type.png';
+      case 'Polearm':
+        return 'polearm_type.png';
+      case 'Catalyst':
+        return 'claymore_type.png';
+      default:
+        return null;
+    }
+  }
 }
