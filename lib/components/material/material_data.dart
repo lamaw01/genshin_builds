@@ -64,3 +64,13 @@ final bloodjadeBranch = MaterialModel(
   name: 'Bloodjade Branch',
   image: 'bloodjade_branch.png',
 );
+
+final goldenBranchOfADistantSea = MaterialModel(
+  name: 'Golden Branch of a Distant Sea',
+  image: 'golden_branch_of_a_distant_sea.png',
+);
+
+final concealedTalon = MaterialModel(
+  name: 'Concealed Talon',
+  image: 'concealed_talon.png',
+);

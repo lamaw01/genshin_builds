@@ -1,6 +1,11 @@
+import '../character_portrait/character_portrait_data.dart';
+import '../character_portrait/character_portrait_model.dart';
+import '../material/material_data.dart';
+import '../material/material_model.dart';
 import 'weapon_model.dart';
 
 //Weapon type - Sword, Claymore, Bow, Polearm, Catalyst
+//Acquired - Gacha, NPC, Craftable, Limited Time Event, Drop
 
 final akuoumaru = WeaponModel(
   image: 'akuoumaru.png',
@@ -10,8 +15,28 @@ final akuoumaru = WeaponModel(
   weaponType: 'Claymore',
   base: 510,
   subStat: 'ATK 27.6%',
+  acquired: 'Gacha',
+  description:
+      'The beloved sword of the legendary "Akuou." The blade is huge and majestic, but is surprisingly easy to wield.',
   effect:
       "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.12%. A maximum of 40% increased Elemental Burst DMG can be achieved this way.",
+  users: <CharacterPortraitModel>[
+    beidouPortrait,
+    eulaPortrait,
+  ],
+  materials: <MaterialModel>[
+    goldenBranchOfADistantSea,
+    concealedTalon,
+    famedHandguard,
+  ],
+  effectName: 'Watatsumi Wavewalker',
+  effectScaling: <String>[
+    "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.12%. A maximum of 40% increased Elemental Burst DMG can be achieved this way.",
+    "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.15%. A maximum of 50% increased Elemental Burst DMG can be achieved this way.",
+    "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.18%. A maximum of 60% increased Elemental Burst DMG can be achieved this way.",
+    "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.21%. A maximum of 70% increased Elemental Burst DMG can be achieved this way.",
+    "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.24%. A maximum of 80% increased Elemental Burst DMG can be achieved this way.",
+  ],
 );
 
 final amenomaKageuchi = WeaponModel(
@@ -22,8 +47,25 @@ final amenomaKageuchi = WeaponModel(
   weaponType: 'Sword',
   base: 454,
   subStat: 'ATK 55.1%',
+  acquired: 'Craftable',
+  description:
+      'A blade custom made for a famed samurai who could strike down a tengu warrior, known for their incredible agility, in midair.',
   effect:
       "After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates 6 Energy for each seed consumed.",
+  users: <CharacterPortraitModel>[
+    ayakaPortrait,
+    jeanPortrait,
+    kaeyaPortrait,
+  ],
+  materials: <MaterialModel>[],
+  effectName: 'Iwakura Succession',
+  effectScaling: <String>[
+    'After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates 6 Energy for each seed consumed.',
+    'After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates 7.5 Energy for each seed consumed.',
+    'After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates 9 Energy for each seed consumed.',
+    'After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates 10.5 Energy for each seed consumed.',
+    'After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates 12 Energy for each seed consumed.',
+  ],
 );
 
 final blackcliffLongsword = WeaponModel(
@@ -34,8 +76,25 @@ final blackcliffLongsword = WeaponModel(
   weaponType: 'Sword',
   base: 565,
   subStat: 'CRIT DMG 36.8%',
+  acquired: 'Shop',
+  description:
+      'A sword made of blackstone. It has a dark crimson glow on its black blade.',
   effect:
       'After defeating an opponent, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+  users: <CharacterPortraitModel>[
+    ayakaPortrait,
+    bennettPortrait,
+    kaeyaPortrait,
+  ],
+  materials: <MaterialModel>[],
+  effectName: 'Press the Advantage',
+  effectScaling: <String>[
+    'After defeating an opponent, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 15% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 18% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 21% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+  ],
 );
 
 final blackcliffPole = WeaponModel(
@@ -46,8 +105,25 @@ final blackcliffPole = WeaponModel(
   weaponType: 'Sword',
   base: 565,
   subStat: 'CRIT DMG 36.8%',
+  acquired: 'Shop',
+  description:
+      'A weapon made of blackstone and aerosiderite. There is a dark crimson glow on its cold black sheen.',
   effect:
       'After defeating an opponent, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+  users: <CharacterPortraitModel>[
+    xiaoPortrait,
+    hutaoPortrait,
+    xianglingPortrait,
+  ],
+  materials: <MaterialModel>[],
+  effectName: 'Press the Advantage',
+  effectScaling: <String>[
+    'After defeating an opponent, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 15% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 18% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 21% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+  ],
 );
 
 final blackcliffSlasher = WeaponModel(
@@ -58,8 +134,24 @@ final blackcliffSlasher = WeaponModel(
   weaponType: 'Claymore',
   base: 510,
   subStat: 'CRIT DMG 55.1%',
+  acquired: 'Shop',
+  description:
+      'An extremely sturdy greatsword from the Blackcliff Forge. It has a dark crimson color from the blade to the pommel.',
   effect:
       'After defeating an opponent, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+  users: <CharacterPortraitModel>[
+    beidouPortrait,
+    eulaPortrait,
+  ],
+  materials: <MaterialModel>[],
+  effectName: 'Press the Advantage',
+  effectScaling: <String>[
+    'After defeating an opponent, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 15% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 18% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 21% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+    'After defeating an opponent, ATK is increased by 24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+  ],
 );
 
 final cinnabarSpindle = WeaponModel(
@@ -70,20 +162,46 @@ final cinnabarSpindle = WeaponModel(
   weaponType: 'Sword',
   base: 454,
   subStat: 'DEF 69.0%',
+  acquired: 'Limited Time Event',
+  description:
+      'A sword made from materials that do not belong in this world. The power within might even be able to withstand the corruption of a venom that could corrode a mighty dragon.',
   effect:
       'Elemental Skill DMG is increased by 40% of DEF. The effect will be triggered no more than once every 1.5s and will be cleared 0.1s after the Elemental Skill deals DMG.',
+  users: <CharacterPortraitModel>[
+    albedoPortrait,
+  ],
+  materials: <MaterialModel>[],
+  effectName: 'Spotless Heart',
+  effectScaling: <String>[
+    'Elemental Skill DMG is increased by 40% of DEF. The effect will be triggered no more than once every 1.5s and will be cleared 0.1s after the Elemental Skill deals DMG.',
+    'Elemental Skill DMG is increased by 50% of DEF. The effect will be triggered no more than once every 1.5s and will be cleared 0.1s after the Elemental Skill deals DMG.',
+    'Elemental Skill DMG is increased by 60% of DEF. The effect will be triggered no more than once every 1.5s and will be cleared 0.1s after the Elemental Skill deals DMG.',
+    'Elemental Skill DMG is increased by 70% of DEF. The effect will be triggered no more than once every 1.5s and will be cleared 0.1s after the Elemental Skill deals DMG.',
+    'Elemental Skill DMG is increased by 80% of DEF. The effect will be triggered no more than once every 1.5s and will be cleared 0.1s after the Elemental Skill deals DMG.',
+  ],
 );
 
 final darkIronSword = WeaponModel(
   image: 'dark_iron_sword.png',
   name: 'Dark Iron Sword',
   rarity: 3,
-  stats: 'BASE 401 substat EM 141',
+  stats: 'BASE 401 substat Elemental Mastery 141',
   weaponType: 'Sword',
   base: 401,
-  subStat: 'EM 141',
+  subStat: 'Elemental Mastery 141',
+  acquired: 'NPC',
+  description:
+      'A perfectly ordinary iron sword, just slightly darker than most.',
   effect:
       'Upon causing an Overloaded, Superconduct, Electro-Charged, or an Electro-infused Swirl reaction, ATK is increased by 20% for 12s.',
+  users: <CharacterPortraitModel>[
+    kazuhaPortrait,
+  ],
+  materials: <MaterialModel>[],
+  effectName: 'Overloaded',
+  effectScaling: <String>[
+    'Upon causing an Overloaded, Superconduct, Electro-Charged, or an Electro-infused Swirl reaction, ATK is increased by 20% for 12s.'
+  ],
 );
 
 final engulfingLightning = WeaponModel(
@@ -93,10 +211,55 @@ final engulfingLightning = WeaponModel(
   stats: 'BASE 608 substat ER 55.1%',
   weaponType: 'Polearm',
   base: 608,
-  subStat: 'ER 55.1%',
+  subStat: 'Energy Recharge 55.1%',
+  acquired: 'Gacha',
+  description:
+      'A naginata used to "cut grass." Any army that stands before this weapon will probably be likewise cut down...',
   effect:
       'ATK increased by 28% of Energy Recharge over the base 100%. You can gain a maximum bonus of 80% ATK. Gain 30% Energy Recharge for 12s after using an Elemental Burst.',
+  users: <CharacterPortraitModel>[
+    raidenShogunPortrait,
+    xianglingPortrait,
+  ],
+  materials: <MaterialModel>[],
+  effectName: 'Timeless Dream: Eternal Stove',
+  effectScaling: <String>[
+    'ATK increased by 28% of Energy Recharge over the base 100%. You can gain a maximum bonus of 80% ATK. Gain 30% Energy Recharge for 12s after using an Elemental Burst.',
+    'ATK increased by 35% of Energy Recharge over the base 100%. You can gain a maximum bonus of 90% ATK. Gain 35% Energy Recharge for 12s after using an Elemental Burst.',
+    'ATK increased by 42% of Energy Recharge over the base 100%. You can gain a maximum bonus of 100% ATK. Gain 40% Energy Recharge for 12s after using an Elemental Burst.',
+    'ATK increased by 49% of Energy Recharge over the base 100%. You can gain a maximum bonus of 110% ATK. Gain 45% Energy Recharge for 12s after using an Elemental Burst.',
+    'ATK increased by 56% of Energy Recharge over the base 100%. You can gain a maximum bonus of 120% ATK. Gain 50% Energy Recharge for 12s after using an Elemental Burst.',
+  ],
 );
+
+final songOfBrokenPines = WeaponModel(
+  image: 'song_of_broken_pines.png',
+  name: 'Song of Broken Pines',
+  rarity: 5,
+  stats: 'BASE 741 substat Physical DMG Bonus 20.7%',
+  weaponType: 'Claymore',
+  base: 741,
+  subStat: 'Physical DMG Bonus 20.7%',
+  acquired: 'Gacha',
+  description:
+      'A greatsword as light as the sigh of grass in the breeze, yet as merciless to the corrupt as a typhoon.',
+  effect:
+      'When you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn" increases Normal ATK SPD by 12% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the "Millennial Movement", buffs of the same type will not stack.',
+  users: <CharacterPortraitModel>[
+    eulaPortrait,
+  ],
+  materials: <MaterialModel>[],
+  effectName: "Rebel's Banner Hymn",
+  effectScaling: <String>[
+    'A part of the "Millennial Movement" that wanders amidst the winds. Increases ATK by 16%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s. When you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn" increases Normal ATK SPD by 12% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the "Millennial Movement", buffs of the same type will not stack.',
+    'A part of the "Millennial Movement" that wanders amidst the winds. Increases ATK by 20%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s. When you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn" increases Normal ATK SPD by 15% and increases ATK by 25%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the "Millennial Movement", buffs of the same type will not stack.',
+    'A part of the "Millennial Movement" that wanders amidst the winds. Increases ATK by 24%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s. When you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn" increases Normal ATK SPD by 18% and increases ATK by 30%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the "Millennial Movement", buffs of the same type will not stack.',
+    'A part of the "Millennial Movement" that wanders amidst the winds. Increases ATK by 28%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s. When you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn" increases Normal ATK SPD by 21% and increases ATK by 35%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the "Millennial Movement", buffs of the same type will not stack.',
+    'A part of the "Millennial Movement" that wanders amidst the winds. Increases ATK by 32%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s. When you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn" increases Normal ATK SPD by 24% and increases ATK by 40%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the "Millennial Movement", buffs of the same type will not stack.',
+  ],
+);
+
+//----------------------------//
 
 final deathmatch = WeaponModel(
   image: 'deathmatch.png',
@@ -301,15 +464,6 @@ final snowTombedStarsilver = WeaponModel(
   stats: 'BASE 565 substat Physical DMG Bonus 34.5%',
   effect:
       'Hitting an opponent with Normal and Charged Attacks has a 60~100% chance of forming and dropping an Everfrost Icicle above them, dealing 80% AoE ATK DMG. Opponents affected by Cryo are dealt 200% ATK DMG instead by the icicle. Can only occur once every 10s.',
-);
-
-final songOfBrokenPines = WeaponModel(
-  image: 'song_of_broken_pines.png',
-  name: 'Song of Broken Pines',
-  rarity: 5,
-  stats: 'BASE 741 substat Physical DMG Bonus 20.7%',
-  effect:
-      'When you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn" increases Normal ATK SPD by 12% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the "Millennial Movement", buffs of the same type will not stack.',
 );
 
 final staffOfHoma = WeaponModel(

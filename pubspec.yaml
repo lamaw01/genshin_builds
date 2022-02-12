@@ -41,6 +41,14 @@ dependencies:
 
   flutter_styled_toast: ^2.0.0
 
+  carousel_slider: ^4.0.0
+
+  transparent_image: ^2.0.0
+
+  extended_image: ^6.0.1
+
+  visibility_detector: ^0.2.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

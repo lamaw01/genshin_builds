@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class Go {
   //Push
-  static void to(
+  static Future<dynamic> to(
     BuildContext context,
     String page, {
     Object? arguments,
-  }) {
-    Navigator.pushNamed(context, page, arguments: arguments);
+  }) async {
+    return Navigator.pushNamed(context, page, arguments: arguments);
   }
 
   //Push off
@@ -20,12 +20,13 @@ class Go {
   }
 
   //Push off all
-  static void offAll(BuildContext context, String page) {
-    Navigator.pushNamedAndRemoveUntil(context, page, (_) => false);
+  static void offAll(BuildContext context, String page, {Object? arguments}) {
+    Navigator.pushNamedAndRemoveUntil(context, page, (_) => false,
+        arguments: arguments);
   }
 
   //Pop
-  static void pop(BuildContext context) {
-    Navigator.pop(context);
+  static void pop(context, {Object? result}) {
+    return Navigator.pop(context, result);
   }
 }

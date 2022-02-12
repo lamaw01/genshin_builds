@@ -10,4 +10,5 @@ List<WeaponModel> weaponsList = [
   cinnabarSpindle,
   darkIronSword,
   engulfingLightning,
+  songOfBrokenPines,
 ];

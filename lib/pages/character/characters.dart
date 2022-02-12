@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 import '../../character_data/character_cards.dart';
 import '../../character_data/exports.dart';
@@ -15,25 +16,28 @@ class MyCharacters extends StatefulWidget {
   State<MyCharacters> createState() => _MyCharactersState();
 }
 
-class _MyCharactersState extends State<MyCharacters> {
-  List<CharacterCards> characterList = charactersList;
-  List<CharacterCards> filteredcharacterList = [];
-  final _searchController = TextEditingController();
+class _MyCharactersState extends State<MyCharacters>
+    with AutomaticKeepAliveClientMixin<MyCharacters> {
+  final List<CharacterCards> _characterList = charactersList;
+  List<CharacterCards> _filteredcharacterList = [];
   bool _isSearching = false;
+  final _searchController = TextEditingController();
 
   void search(String data) {
-    if (_searchController.text.isNotEmpty) {
-      setState(() {
-        _isSearching = true;
-      });
-    } else {
-      setState(() {
-        _isSearching = false;
-      });
-    }
-    filteredcharacterList = characterList
+    setState(() {
+      _searchController.text.isNotEmpty
+          ? _isSearching = true
+          : _isSearching = false;
+    });
+    _filteredcharacterList = _characterList
         .where((characters) => characters.name.toLowerCase().contains(data))
         .toList(growable: false);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    // WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {});
   }
 
   @override
@@ -43,15 +47,14 @@ class _MyCharactersState extends State<MyCharacters> {
   }
 
   @override
+  // ignore: must_call_super
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            padding: EdgeInsets.all(5.0.r),
-            margin: EdgeInsets.all(5.0.r),
+    return CustomScrollView(
+      cacheExtent: MediaQuery.of(context).size.height,
+      slivers: <Widget>[
+        SliverPadding(
+          padding: EdgeInsets.fromLTRB(10.r, 10.r, 10.r, 5.r),
+          sliver: SliverToBoxAdapter(
             child: TextField(
               controller: _searchController,
               style: TextStyle(
@@ -63,11 +66,8 @@ class _MyCharactersState extends State<MyCharacters> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: const Color(0xFFF2F2F2),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(4.r)),
-                  borderSide: const BorderSide(
-                    width: 1,
-                  ),
+                border: const OutlineInputBorder(
+                  gapPadding: 0.0,
                 ),
                 hintText: "Search",
                 hintStyle: TextStyle(
@@ -75,38 +75,51 @@ class _MyCharactersState extends State<MyCharacters> {
                   color: Colors.black54,
                   fontWeight: FontWeight.w500,
                 ),
+                contentPadding: EdgeInsets.all(8.0.r),
               ),
               onChanged: search,
             ),
           ),
-          Center(
-            child: Wrap(spacing: 8.0.w, runSpacing: 8.0.h, children: [
-              if (_isSearching) ...[
-                for (int i = 0; i < filteredcharacterList.length; i++) ...[
-                  CharacterIcon(
-                    name: filteredcharacterList[i].name,
-                    image: filteredcharacterList[i].image,
-                    element: filteredcharacterList[i].element,
-                    character: filteredcharacterList[i],
-                  ),
-                ],
-              ] else ...[
-                for (int i = 0; i < characterList.length; i++) ...[
-                  CharacterIcon(
-                    name: characterList[i].name,
-                    image: characterList[i].image,
-                    element: characterList[i].element,
-                    character: characterList[i],
-                  ),
-                ],
-              ]
-            ]),
+        ),
+        SliverPadding(
+          padding: EdgeInsets.fromLTRB(10.r, 5.r, 10.r, 5.r),
+          sliver: SliverGrid(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+              mainAxisSpacing: 5.0.r,
+              crossAxisSpacing: 5.0.r,
+              mainAxisExtent: 325.h,
+            ),
+            delegate: SliverChildBuilderDelegate(
+              (ctx, i) {
+                if (_isSearching) {
+                  return CharacterIcon(
+                    name: _filteredcharacterList[i].name,
+                    image: _filteredcharacterList[i].image,
+                    element: _filteredcharacterList[i].element,
+                    character: _filteredcharacterList[i],
+                  );
+                } else {
+                  return CharacterIcon(
+                    name: _characterList[i].name,
+                    image: _characterList[i].image,
+                    element: _characterList[i].element,
+                    character: _characterList[i],
+                  );
+                }
+              },
+              childCount: _isSearching
+                  ? _filteredcharacterList.length
+                  : _characterList.length,
+            ),
           ),
-          SizedBox(height: 8.h),
-        ],
-      ),
+        ),
+      ],
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
 
 class CharacterIcon extends StatelessWidget {
@@ -125,7 +138,7 @@ class CharacterIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
+      onTap: () async {
         if (character.isDone) {
           Go.to(
             context,
@@ -154,21 +167,14 @@ class CharacterIcon extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Image(
+            FadeInImage(
+              height: 325.h,
+              width: double.maxFinite,
+              fit: BoxFit.fitWidth,
+              placeholder: MemoryImage(kTransparentImage),
               image: AssetImage(
                 characterPath + image,
               ),
-              height: 325.h,
-              width: 125.w,
-              fit: BoxFit.fitWidth,
-              loadingBuilder: (BuildContext context, Widget child,
-                  ImageChunkEvent? loadingProgress) {
-                if (loadingProgress == null) return child;
-                return SizedBox(
-                  height: 300.h,
-                  width: 125.w,
-                );
-              },
             ),
             Positioned(
               top: 1,

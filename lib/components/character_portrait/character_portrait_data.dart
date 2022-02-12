@@ -25,7 +25,7 @@ final barbaraPortrait = CharacterPortraitModel(
 );
 
 final beidouPortrait = CharacterPortraitModel(
-  name: 'Barbara',
+  name: 'Beidou',
   image: 'beidou.png',
   element: 'Electro',
 );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:genshin_builds/constants/colors.dart';
 
+import 'constants/colors.dart';
 import 'routes/route_generator.dart';
 
 Future<void> main() async {
@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
+          // showPerformanceOverlay: true,
           title: 'Genshin Builds',
           locale: const Locale('en', 'US'),
           theme: ThemeData(
