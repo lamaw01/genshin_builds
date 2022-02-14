@@ -194,11 +194,12 @@ class CharacterIcon extends StatelessWidget {
               child: Text(
                 name,
                 style: TextStyle(
-                  fontSize: 13.sp,
+                  fontSize: 14.sp,
                   color: Colors.white,
                   backgroundColor: Colors.black,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                   fontFamily: 'zh',
+                  letterSpacing: -0.25,
                 ),
               ),
             ),

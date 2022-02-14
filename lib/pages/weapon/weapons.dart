@@ -27,7 +27,7 @@ class _MyWeaponsState extends State<MyWeapons>
         crossAxisCount: 2,
         mainAxisSpacing: 10.r,
         crossAxisSpacing: 10.r,
-        // mainAxisExtent: 400.h,
+        mainAxisExtent: 225.h,
       ),
       itemCount: weaponsList.length,
       itemBuilder: (ctx, index) {
@@ -63,15 +63,20 @@ class _MyWeaponsState extends State<MyWeapons>
                       ),
                     ),
                     SizedBox(height: 5.0.h),
-                    Text(
-                      weaponsList[index].name,
-                      style: TextStyle(
-                        fontSize: 13.sp,
-                        fontWeight: FontWeight.w500,
-                        color: GlobalFunction.weaponRarity(
-                            weaponsList[index].rarity),
-                        fontFamily: 'zh',
-                        overflow: TextOverflow.ellipsis,
+                    Container(
+                      width: double.maxFinite,
+                      padding: EdgeInsets.symmetric(horizontal: 5.r),
+                      child: Text(
+                        weaponsList[index].name,
+                        style: TextStyle(
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.w500,
+                          color: GlobalFunction.weaponRarity(
+                              weaponsList[index].rarity),
+                          fontFamily: 'zh',
+                          letterSpacing: -0.25,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                     SizedBox(height: 2.5.h),
@@ -82,7 +87,7 @@ class _MyWeaponsState extends State<MyWeapons>
                           Icon(
                             Icons.star,
                             color: Colors.orangeAccent,
-                            size: 15.0.r,
+                            size: 18.0.r,
                           )
                       ],
                     ),
@@ -93,41 +98,30 @@ class _MyWeaponsState extends State<MyWeapons>
                         Text(
                           'Base: ',
                           style: TextStyle(
-                            fontSize: 13.sp,
+                            fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
                         Text(
                           weaponsList[index].base.toString(),
                           style: TextStyle(
-                            fontSize: 13.sp,
+                            fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Text(
-                          'Sub. Stat: ',
-                          style: TextStyle(
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w400,
-                          ),
+                    Container(
+                      width: double.maxFinite,
+                      padding: EdgeInsets.symmetric(horizontal: 5.r),
+                      child: Text(
+                        'Sub. Stat: ${weaponsList[index].subStat!}',
+                        style: TextStyle(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w400,
                         ),
-                        Flexible(
-                          child: Text(
-                            weaponsList[index].subStat!,
-                            style: TextStyle(
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.w400,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ),
-                      ],
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ],
                 ),

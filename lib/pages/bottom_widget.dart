@@ -42,6 +42,11 @@ class _BottomWidgetState extends State<BottomWidget> {
             });
           },
         ),
+        // body: IndexedStack(
+        //   children: _screens,
+        //   index: _currentIndex,
+        // ),
+        // body: _screens[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: darkBG,
           elevation: 0.0,

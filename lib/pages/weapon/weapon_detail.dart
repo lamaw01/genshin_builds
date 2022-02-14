@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:genshin_builds/routes/go.dart';
 
 import '../../components/weapon/weapon_model.dart';
@@ -243,12 +242,41 @@ class WeaponDetail extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    SizedBox(height: 5.0.h),
-                    WeaponEffectCarousel(
-                      effects: weaponModel.effectScaling!,
-                      effectName: weaponModel.effectName!,
-                      rarity: weaponModel.rarity,
-                    ),
+                    for (int i = 1;
+                        i < weaponModel.effectScaling!.length + 1;
+                        i++) ...[
+                      SizedBox(height: 10.0.h),
+                      Text(
+                        'Refinement ' + i.toString(),
+                        style: TextStyle(
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 5.0.h),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            weaponModel.effectName!,
+                            style: TextStyle(
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w600,
+                              color: GlobalFunction.weaponRarity(
+                                  weaponModel.rarity),
+                            ),
+                          ),
+                          Text(
+                            weaponModel.effectScaling![i - 1],
+                            style: TextStyle(
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w400,
+                              overflow: TextOverflow.clip,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ],
                 ),
               ),
@@ -256,116 +284,6 @@ class WeaponDetail extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class WeaponEffectCarousel extends StatefulWidget {
-  const WeaponEffectCarousel(
-      {Key? key,
-      required this.effects,
-      required this.effectName,
-      required this.rarity})
-      : super(key: key);
-  final List<String> effects;
-  final String effectName;
-  final int rarity;
-
-  @override
-  _WeaponEffectCarouselState createState() => _WeaponEffectCarouselState();
-}
-
-class _WeaponEffectCarouselState extends State<WeaponEffectCarousel> {
-  int _current = 0;
-  final CarouselController _controller = CarouselController();
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CarouselSlider(
-          items: <Widget>[
-            for (var effect in widget.effects)
-              Center(
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        widget.effectName,
-                        style: TextStyle(
-                          fontSize: 15.sp,
-                          fontWeight: FontWeight.w600,
-                          color: GlobalFunction.weaponRarity(widget.rarity),
-                        ),
-                      ),
-                      SizedBox(height: 2.5.h),
-                      Text(
-                        effect,
-                        style: TextStyle(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w400,
-                          overflow: TextOverflow.clip,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-          ],
-          carouselController: _controller,
-          options: CarouselOptions(
-            // aspectRatio: 16 / 9,
-            height: 125.0.h,
-            viewportFraction: 1.0,
-            initialPage: 0,
-            enableInfiniteScroll: false,
-            autoPlay: false,
-            enlargeCenterPage: true,
-            onPageChanged: (index, reason) {
-              setState(() {
-                _current = index;
-              });
-            },
-          ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: widget.effects.asMap().entries.map((entry) {
-            // ignore: unused_local_variable
-            int _refinement = entry.key + 1;
-            return GestureDetector(
-              onTap: () => _controller.animateToPage(
-                entry.key,
-                curve: Curves.fastOutSlowIn,
-                duration: const Duration(milliseconds: 800),
-              ),
-              child: Container(
-                width: 15.0.r,
-                height: 15.0.r,
-                margin:
-                    EdgeInsets.symmetric(vertical: 5.0.r, horizontal: 5.0.r),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white
-                      .withOpacity(_current == entry.key ? 0.9 : 0.4),
-                ),
-                // child: Center(
-                //   child: Text(
-                //     _refinement.toString(),
-                //     style: TextStyle(
-                //       fontSize: 12.sp,
-                //       fontWeight: FontWeight.bold,
-                //       color: Colors.black,
-                //     ),
-                //   ),
-                // ),
-              ),
-            );
-          }).toList(),
-        ),
-      ],
     );
   }
 }

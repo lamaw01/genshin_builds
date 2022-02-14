@@ -52,6 +52,19 @@ class GlobalFunction {
     }
   }
 
+  static Color artifactRarity(int rarity) {
+    switch (rarity) {
+      case 5:
+        return Colors.orangeAccent;
+      case 4:
+        return Colors.purpleAccent;
+      case 3:
+        return Colors.blueAccent;
+      default:
+        return Colors.redAccent;
+    }
+  }
+
   static String? weaponType(String type) {
     switch (type) {
       case 'Claymore':

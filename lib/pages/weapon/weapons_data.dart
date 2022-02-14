@@ -1,7 +1,7 @@
 import '../../components/weapon/weapon_data.dart';
 import '../../components/weapon/weapon_model.dart';
 
-List<WeaponModel> weaponsList = [
+var weaponsList = <WeaponModel>[
   akuoumaru,
   amenomaKageuchi,
   blackcliffLongsword,
