@@ -58,9 +58,8 @@ class Passives extends StatelessWidget {
             Text(
               textPassive.talentText,
               style: TextStyle(
-                fontSize: 13.sp,
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Colors.white,
               ),
             ),
           ],

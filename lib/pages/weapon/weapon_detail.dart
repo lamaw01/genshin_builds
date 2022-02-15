@@ -164,6 +164,7 @@ class WeaponDetail extends StatelessWidget {
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 10.0.h),
                     const Divider(),
@@ -176,16 +177,25 @@ class WeaponDetail extends StatelessWidget {
                     ),
                     SizedBox(height: 10.0.h),
                     SizedBox(
-                      width: 300.w,
+                      width: 325.w,
                       child: Center(
                         child: Wrap(
                           spacing: 8.0.w,
                           runSpacing: 8.0.h,
                           children: [
                             for (var user in weaponModel.users!) ...[
-                              Tooltip(
-                                triggerMode: TooltipTriggerMode.tap,
-                                message: user.name,
+                              GestureDetector(
+                                onTap: () {
+                                  if (GlobalFunction.characterData(user.name) !=
+                                      null) {
+                                    Go.to(
+                                      context,
+                                      '/character_page',
+                                      arguments: GlobalFunction.characterData(
+                                          user.name),
+                                    );
+                                  }
+                                },
                                 child: CircleAvatar(
                                   radius: 35.r,
                                   backgroundColor: darkBGLighter,
@@ -217,15 +227,11 @@ class WeaponDetail extends StatelessWidget {
                           runSpacing: 8.0.h,
                           children: [
                             for (var materials in weaponModel.materials!) ...[
-                              Tooltip(
-                                triggerMode: TooltipTriggerMode.tap,
-                                message: materials.name,
-                                child: CircleAvatar(
-                                  radius: 30.r,
-                                  backgroundColor: darkBGLighter,
-                                  backgroundImage: AssetImage(
-                                    materialPath + materials.image,
-                                  ),
+                              CircleAvatar(
+                                radius: 30.r,
+                                backgroundColor: darkBGLighter,
+                                backgroundImage: AssetImage(
+                                  materialPath + materials.image,
                                 ),
                               ),
                             ],
@@ -261,7 +267,7 @@ class WeaponDetail extends StatelessWidget {
                             weaponModel.effectName!,
                             style: TextStyle(
                               fontSize: 15.sp,
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.w500,
                               color: GlobalFunction.weaponRarity(
                                   weaponModel.rarity),
                             ),
@@ -271,7 +277,6 @@ class WeaponDetail extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 14.sp,
                               fontWeight: FontWeight.w400,
-                              overflow: TextOverflow.clip,
                             ),
                           ),
                         ],

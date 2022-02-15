@@ -58,9 +58,8 @@ class TalentSkill extends StatelessWidget {
             Text(
               textSkill.talentText,
               style: TextStyle(
-                fontSize: 13.sp,
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w400,
-                color: Colors.white,
               ),
             ),
           ],

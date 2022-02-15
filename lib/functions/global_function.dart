@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:genshin_builds/constants/colors.dart';
+
+import '../character_data/character_model.dart';
+import '../character_data/data/albedo_data.dart';
+import '../character_data/data/ayaka_data.dart';
+import '../constants/colors.dart';
 
 class GlobalFunction {
   static String? elementType(String element) {
@@ -77,6 +81,17 @@ class GlobalFunction {
         return 'polearm_type.png';
       case 'Catalyst':
         return 'claymore_type.png';
+      default:
+        return null;
+    }
+  }
+
+  static CharacterModel? characterData(String name) {
+    switch (name) {
+      case 'Albedo':
+        return albedo;
+      case 'Ayaka':
+        return ayaka;
       default:
         return null;
     }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../components/material/material_list.dart';
 import '../pages/character/widgets/build.dart';
 import '../pages/character/widgets/constellation.dart';

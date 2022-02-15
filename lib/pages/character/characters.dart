@@ -92,21 +92,11 @@ class _MyCharactersState extends State<MyCharacters>
             ),
             delegate: SliverChildBuilderDelegate(
               (ctx, i) {
-                if (_isSearching) {
-                  return CharacterIcon(
-                    name: _filteredcharacterList[i].name,
-                    image: _filteredcharacterList[i].image,
-                    element: _filteredcharacterList[i].element,
-                    character: _filteredcharacterList[i],
-                  );
-                } else {
-                  return CharacterIcon(
-                    name: _characterList[i].name,
-                    image: _characterList[i].image,
-                    element: _characterList[i].element,
-                    character: _characterList[i],
-                  );
-                }
+                return CharacterIcon(
+                  character: _isSearching
+                      ? _filteredcharacterList[i]
+                      : _characterList[i],
+                );
               },
               childCount: _isSearching
                   ? _filteredcharacterList.length
@@ -125,14 +115,14 @@ class _MyCharactersState extends State<MyCharacters>
 class CharacterIcon extends StatelessWidget {
   const CharacterIcon(
       {Key? key,
-      required this.name,
-      required this.image,
-      required this.element,
+      // required this.name,
+      // required this.image,
+      // required this.element,
       required this.character})
       : super(key: key);
-  final String name;
-  final String image;
-  final String element;
+  // final String name;
+  // final String image;
+  // final String element;
   final CharacterCards character;
 
   @override
@@ -162,7 +152,7 @@ class CharacterIcon extends StatelessWidget {
       },
       child: Ink(
         decoration: BoxDecoration(
-          color: GlobalFunction.backGround(element),
+          color: GlobalFunction.backGround(character.element),
         ),
         child: Stack(
           alignment: Alignment.center,
@@ -173,7 +163,7 @@ class CharacterIcon extends StatelessWidget {
               fit: BoxFit.fitWidth,
               placeholder: MemoryImage(kTransparentImage),
               image: AssetImage(
-                characterPath + image,
+                characterPath + character.image,
               ),
             ),
             Positioned(
@@ -183,7 +173,7 @@ class CharacterIcon extends StatelessWidget {
                 backgroundColor: darkBGLighter,
                 radius: 12.r,
                 child: Image.asset(
-                  elementPath + GlobalFunction.elementType(element)!,
+                  elementPath + GlobalFunction.elementType(character.element)!,
                   width: 20.0.r,
                   height: 20.0.r,
                 ),
@@ -192,7 +182,7 @@ class CharacterIcon extends StatelessWidget {
             Positioned(
               bottom: 5.0,
               child: Text(
-                name,
+                character.element,
                 style: TextStyle(
                   fontSize: 14.sp,
                   color: Colors.white,

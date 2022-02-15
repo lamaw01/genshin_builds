@@ -67,6 +67,7 @@ class CharacterPage extends StatelessWidget {
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w500,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 10.h),
                     const Divider(),

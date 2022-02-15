@@ -57,9 +57,8 @@ class TalentNormal extends StatelessWidget {
           Text(
             textNormal,
             style: TextStyle(
-              fontSize: 13.sp,
+              fontSize: 14.sp,
               fontWeight: FontWeight.w400,
-              color: Colors.white,
             ),
           ),
         ],
@@ -76,9 +75,8 @@ class TalentNormal extends StatelessWidget {
           Text(
             textCharged,
             style: TextStyle(
-              fontSize: 13.sp,
+              fontSize: 14.sp,
               fontWeight: FontWeight.w400,
-              color: Colors.white,
             ),
           ),
         ],
@@ -95,9 +93,8 @@ class TalentNormal extends StatelessWidget {
           Text(
             textPlunge,
             style: TextStyle(
-              fontSize: 13.sp,
+              fontSize: 14.sp,
               fontWeight: FontWeight.w400,
-              color: Colors.white,
             ),
           ),
         ],

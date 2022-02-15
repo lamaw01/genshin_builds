@@ -114,6 +114,12 @@ final monaPortrait = CharacterPortraitModel(
   element: 'Hydro',
 );
 
+final ningguangPortrait = CharacterPortraitModel(
+  name: 'Ningguang',
+  image: 'ningguang.png',
+  element: 'Geo',
+);
+
 final noellePortrait = CharacterPortraitModel(
   name: 'Noelle',
   image: 'noelle.png',
@@ -123,6 +129,12 @@ final noellePortrait = CharacterPortraitModel(
 final raidenShogunPortrait = CharacterPortraitModel(
   name: 'Raiden Shogun',
   image: 'raiden_shogun.png',
+  element: 'Electro',
+);
+
+final razorPortrait = CharacterPortraitModel(
+  name: 'Razor',
+  image: 'razor.png',
   element: 'Electro',
 );
 

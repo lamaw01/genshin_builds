@@ -247,6 +247,7 @@ final songOfBrokenPines = WeaponModel(
       'When you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Banner-Hymn" effect for 12s. "Millennial Movement: Banner-Hymn" increases Normal ATK SPD by 12% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the "Millennial Movement", buffs of the same type will not stack.',
   users: <CharacterPortraitModel>[
     eulaPortrait,
+    razorPortrait,
   ],
   materials: <MaterialModel>[],
   effectName: "Rebel's Banner Hymn",

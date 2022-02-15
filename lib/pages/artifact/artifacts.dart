@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:genshin_builds/components/artifact/artifact_model.dart';
+import 'package:genshin_builds/routes/go.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 import '../../constants/asset_path.dart';
@@ -24,6 +25,7 @@ class _MyArtifactsState extends State<MyArtifacts>
       slivers: [
         SliverToBoxAdapter(
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ListOfArtifact(listArtifact: artifactList1),
               ListOfArtifact(listArtifact: artifactList2, boolFirstList: false),
@@ -62,7 +64,13 @@ class ListOfArtifact extends StatelessWidget {
           return Column(
             children: [
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Go.to(
+                    context,
+                    '/artifact_detail',
+                    arguments: listArtifact[index],
+                  );
+                },
                 child: Ink(
                   padding: const EdgeInsets.all(5.0),
                   decoration: BoxDecoration(
@@ -72,12 +80,15 @@ class ListOfArtifact extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      FadeInImage(
-                        width: 90.0.r,
-                        height: 90.0.r,
-                        placeholder: MemoryImage(kTransparentImage),
-                        image: AssetImage(
-                          artifactPath + listArtifact[index].image,
+                      Hero(
+                        tag: listArtifact[index].name,
+                        child: FadeInImage(
+                          width: 90.0.r,
+                          height: 90.0.r,
+                          placeholder: MemoryImage(kTransparentImage),
+                          image: AssetImage(
+                            artifactPath + listArtifact[index].image,
+                          ),
                         ),
                       ),
                       SizedBox(height: 5.0.h),
