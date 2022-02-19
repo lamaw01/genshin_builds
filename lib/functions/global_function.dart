@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
+import '../character_data/character_data.dart';
 import '../character_data/character_model.dart';
-import '../character_data/data/albedo_data.dart';
-import '../character_data/data/ayaka_data.dart';
 import '../constants/colors.dart';
 
 class GlobalFunction {
@@ -20,11 +18,12 @@ class GlobalFunction {
         return "anemo.png";
       case 'Hydro':
         return "hydro.png";
+      default:
+        return null;
     }
-    return null;
   }
 
-  static Color backGround(String element) {
+  static Color? backGround(String element) {
     switch (element) {
       case 'Geo':
         return geoBG;
@@ -39,11 +38,11 @@ class GlobalFunction {
       case 'Hydro':
         return hydroBG;
       default:
-        return darkBGLighter;
+        return null;
     }
   }
 
-  static Color weaponRarity(int rarity) {
+  static Color? weaponRarity(int rarity) {
     switch (rarity) {
       case 5:
         return Colors.yellowAccent;
@@ -52,11 +51,11 @@ class GlobalFunction {
       case 3:
         return Colors.blueAccent;
       default:
-        return Colors.redAccent;
+        return null;
     }
   }
 
-  static Color artifactRarity(int rarity) {
+  static Color? artifactRarity(int rarity) {
     switch (rarity) {
       case 5:
         return Colors.orangeAccent;
@@ -65,7 +64,7 @@ class GlobalFunction {
       case 3:
         return Colors.blueAccent;
       default:
-        return Colors.redAccent;
+        return null;
     }
   }
 
@@ -87,13 +86,11 @@ class GlobalFunction {
   }
 
   static CharacterModel? characterData(String name) {
-    switch (name) {
-      case 'Albedo':
-        return albedo;
-      case 'Ayaka':
-        return ayaka;
-      default:
-        return null;
+    try {
+      return listCharacterData.singleWhere(
+          (element) => element.name.toLowerCase() == name.toLowerCase());
+    } catch (e) {
+      return null;
     }
   }
 }

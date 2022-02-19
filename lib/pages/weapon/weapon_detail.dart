@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:genshin_builds/routes/go.dart';
 
 import '../../components/weapon/weapon_model.dart';
@@ -193,6 +194,19 @@ class WeaponDetail extends StatelessWidget {
                                       '/character_page',
                                       arguments: GlobalFunction.characterData(
                                           user.name),
+                                    );
+                                  } else {
+                                    showToast(
+                                      'Coming soon',
+                                      context: context,
+                                      animation: StyledToastAnimation.scale,
+                                      reverseAnimation:
+                                          StyledToastAnimation.fade,
+                                      position: StyledToastPosition.center,
+                                      animDuration: const Duration(seconds: 1),
+                                      duration: const Duration(seconds: 2),
+                                      curve: Curves.elasticOut,
+                                      reverseCurve: Curves.linear,
                                     );
                                   }
                                 },

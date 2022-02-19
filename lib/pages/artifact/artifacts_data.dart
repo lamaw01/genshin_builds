@@ -1,7 +1,7 @@
 import '../../components/artifact/artifact_data.dart';
 import '../../components/artifact/artifact_model.dart';
 
-var artifactList1 = <ArtifactModel>[
+var artifactList = <ArtifactModel>[
   archaicPetra,
   blizzardStrayer,
   bloodstainedChivalry,
@@ -10,9 +10,6 @@ var artifactList1 = <ArtifactModel>[
   gladiatorsFinale,
   huskOfOpulentDreams,
   noblesseOblige,
-];
-
-var artifactList2 = <ArtifactModel>[
   oceanHuedClam,
   paleFlame,
   shimenawasReminiscence,

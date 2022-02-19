@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import '../../components/artifact/artifact_model.dart';
 import '../../constants/asset_path.dart';
 import '../../constants/colors.dart';
@@ -13,9 +14,9 @@ class ArtifactDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: CustomScrollView(
+    return SafeArea(
+      child: Scaffold(
+        body: CustomScrollView(
           slivers: [
             SliverAppBar(
               backgroundColor: darkBG,
@@ -139,6 +140,19 @@ class ArtifactDetail extends StatelessWidget {
                                       '/character_page',
                                       arguments: GlobalFunction.characterData(
                                           user.name),
+                                    );
+                                  } else {
+                                    showToast(
+                                      'Coming soon',
+                                      context: context,
+                                      animation: StyledToastAnimation.scale,
+                                      reverseAnimation:
+                                          StyledToastAnimation.fade,
+                                      position: StyledToastPosition.center,
+                                      animDuration: const Duration(seconds: 1),
+                                      duration: const Duration(seconds: 2),
+                                      curve: Curves.elasticOut,
+                                      reverseCurve: Curves.linear,
                                     );
                                   }
                                 },

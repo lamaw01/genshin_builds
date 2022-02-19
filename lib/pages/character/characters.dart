@@ -113,16 +113,7 @@ class _MyCharactersState extends State<MyCharacters>
 }
 
 class CharacterIcon extends StatelessWidget {
-  const CharacterIcon(
-      {Key? key,
-      // required this.name,
-      // required this.image,
-      // required this.element,
-      required this.character})
-      : super(key: key);
-  // final String name;
-  // final String image;
-  // final String element;
+  const CharacterIcon({Key? key, required this.character}) : super(key: key);
   final CharacterCards character;
 
   @override
@@ -181,15 +172,20 @@ class CharacterIcon extends StatelessWidget {
             ),
             Positioned(
               bottom: 5.0,
-              child: Text(
-                character.element,
-                style: TextStyle(
-                  fontSize: 14.sp,
-                  color: Colors.white,
-                  backgroundColor: Colors.black,
-                  fontWeight: FontWeight.w500,
-                  fontFamily: 'zh',
-                  letterSpacing: -0.25,
+              child: SizedBox(
+                width: 120.w,
+                child: Text(
+                  character.name,
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    color: Colors.white,
+                    backgroundColor: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'zh',
+                    letterSpacing: -0.25,
+                    overflow: TextOverflow.fade,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
               ),
             ),

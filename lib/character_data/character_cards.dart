@@ -37,7 +37,7 @@ final charactersList = <CharacterCards>[
     element: "Pyro",
   ),
   CharacterCards(
-    name: "Ayaka",
+    name: "Kamisato Ayaka",
     image: "ayaka_gacha_card.png",
     element: "Cryo",
     isDone: true,
@@ -124,7 +124,7 @@ final charactersList = <CharacterCards>[
     element: "Pyro",
   ),
   CharacterCards(
-    name: "Kokomi",
+    name: "Sangonomiya Kokomi",
     image: "kokomi_gacha_card.png",
     element: "Hydro",
   ),

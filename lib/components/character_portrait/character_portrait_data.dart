@@ -13,7 +13,7 @@ final amberPortrait = CharacterPortraitModel(
 );
 
 final ayakaPortrait = CharacterPortraitModel(
-  name: 'Ayaka',
+  name: 'Kamisato Ayaka',
   image: 'ayaka.png',
   element: 'Cryo',
 );
