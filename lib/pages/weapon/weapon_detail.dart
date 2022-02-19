@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
-import 'package:genshin_builds/routes/go.dart';
 
-import '../../components/weapon/weapon_model.dart';
+import '../../models/weapon_model.dart';
 import '../../constants/asset_path.dart';
 import '../../constants/colors.dart';
 import '../../functions/global_function.dart';
+import '../../routes/go.dart';
 
 class WeaponDetail extends StatelessWidget {
   const WeaponDetail({Key? key, required this.weaponModel}) : super(key: key);
@@ -240,12 +240,20 @@ class WeaponDetail extends StatelessWidget {
                           spacing: 8.0.w,
                           runSpacing: 8.0.h,
                           children: [
-                            for (var materials in weaponModel.materials!) ...[
-                              CircleAvatar(
-                                radius: 30.r,
-                                backgroundColor: darkBGLighter,
-                                backgroundImage: AssetImage(
-                                  materialPath + materials.image,
+                            for (var material in weaponModel.materials!) ...[
+                              Tooltip(
+                                triggerMode: TooltipTriggerMode.tap,
+                                message: material.name,
+                                textStyle: TextStyle(
+                                  fontSize: 14.sp,
+                                  color: Colors.black,
+                                ),
+                                child: CircleAvatar(
+                                  radius: 30.r,
+                                  backgroundColor: darkBGLighter,
+                                  backgroundImage: AssetImage(
+                                    materialPath + material.image,
+                                  ),
                                 ),
                               ),
                             ],

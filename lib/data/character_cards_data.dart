@@ -1,244 +1,228 @@
-import 'character_model.dart';
-import 'data/albedo_data.dart';
-import 'data/ayaka_data.dart';
+import '../models/character_card_model.dart';
+import '../data/characters/albedo_data.dart';
+import '../data/characters/ayaka_data.dart';
 
-class CharacterCards {
-  String name;
-  String image;
-  String element;
-  bool isDone;
-  CharacterModel? characterModel;
-
-  CharacterCards({
-    required this.name,
-    required this.image,
-    required this.element,
-    this.isDone = false,
-    this.characterModel,
-  });
-}
-
-final charactersList = <CharacterCards>[
-  CharacterCards(
+final charactersList = <CharacterCardModel>[
+  CharacterCardModel(
     name: "Albedo",
     image: "albedo_gacha_card.png",
     element: "Geo",
     isDone: true,
     characterModel: albedo,
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Aloy",
     image: "aloy_gacha_card.png",
     element: "Cryo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Amber",
     image: "amber_gacha_card.png",
     element: "Pyro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Kamisato Ayaka",
     image: "ayaka_gacha_card.png",
     element: "Cryo",
     isDone: true,
     characterModel: ayaka,
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Barbara",
     image: "barbara_gacha_card.png",
     element: "Hydro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Beidou",
     image: "beidou_gacha_card.png",
     element: "Electro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Bennett",
     image: "bennett_gacha_card.png",
     element: "Pyro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Chongyun",
     image: "chongyun_gacha_card.png",
     element: "Cryo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Diluc",
     image: "diluc_gacha_card.png",
     element: "Pyro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Diona",
     image: "diona_gacha_card.png",
     element: "Cryo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Eula",
     image: "eula_gacha_card.png",
     element: "Cryo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Fischl",
     image: "fischl_gacha_card.png",
     element: "Electro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Ganyu",
     image: "ganyu_gacha_card.png",
     element: "Cryo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Gorou",
     image: "gorou_gacha_card.png",
     element: "Geo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Hu Tao",
     image: "hutao_gacha_card.png",
     element: "Pyro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Jean",
     image: "jean_gacha_card.png",
     element: "Anemo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Kaeya",
     image: "kaeya_gacha_card.png",
     element: "Cryo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Kazuha",
     image: "kazuha_gacha_card.png",
     element: "Anemo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Keqing",
     image: "keqing_gacha_card.png",
     element: "Electro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Klee",
     image: "klee_gacha_card.png",
     element: "Pyro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Sangonomiya Kokomi",
     image: "kokomi_gacha_card.png",
     element: "Hydro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Sara",
     image: "sara_gacha_card.png",
     element: "Electro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Lisa",
     image: "lisa_gacha_card.png",
     element: "Electro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Mona",
     image: "mona_gacha_card.png",
     element: "Hydro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Nigguang",
     image: "ningguang_gacha_card.png",
     element: "Geo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Noelle",
     image: "noelle_gacha_card.png",
     element: "Geo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Qiqi",
     image: "qiqi_gacha_card.png",
     element: "Cryo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Raiden Shogun",
     image: "raiden_shougun_gacha_card.png",
     element: "Electro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Razor",
     image: "razor_gacha_card.png",
     element: "Electro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Rosaria",
     image: "rosaria_gacha_card.png",
     element: "Cryo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Sayu",
     image: "sayu_gacha_card.png",
     element: "Anemo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Shenhe",
     image: "shenhe_gacha_card.png",
     element: "Cryo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Sucrose",
     image: "sucrose_gacha_card.png",
     element: "Anemo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Tartaglia",
     image: "tartaglia_gacha_card.png",
     element: "Hydro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Thoma",
     image: "thoma_gacha_card.png",
     element: "Pyro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Venti",
     image: "venti_gacha_card.png",
     element: "Anemo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Xiangling",
     image: "xiangling_gacha_card.png",
     element: "Pyro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Xiao",
     image: "xiao_gacha_card.png",
     element: "Anemo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Xingqiu",
     image: "xingqiu_gacha_card.png",
     element: "Hydro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Xinyan",
     image: "xinyan_gacha_card.png",
     element: "Pyro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Yanfei",
     image: "yanfei_gacha_card.png",
     element: "Pyro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Yoimiya",
     image: "yoimiya_gacha_card.png",
     element: "Pyro",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Yunjin",
     image: "yunjin_gacha_card.png",
     element: "Geo",
   ),
-  CharacterCards(
+  CharacterCardModel(
     name: "Zhongli",
     image: "zhongli_gacha_card.png",
     element: "Geo",

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:genshin_builds/components/weapon/weapon_model.dart';
-import 'package:genshin_builds/pages/weapon/weapons_data.dart';
-import 'package:genshin_builds/routes/go.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 import '../../constants/asset_path.dart';
 import '../../constants/colors.dart';
+import '../../data/weapon_data.dart';
 import '../../functions/global_function.dart';
+import '../../models/weapon_model.dart';
+import '../../routes/go.dart';
 
 class MyWeapons extends StatefulWidget {
   const MyWeapons({Key? key}) : super(key: key);

@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants/asset_path.dart';
 import '../../constants/colors.dart';
 import '../../routes/go.dart';
-import 'artifact_model.dart';
+import '../../models/artifact_model.dart';
 
 class ArtifactWidget extends StatelessWidget {
   const ArtifactWidget(

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import '../components/character_page/build.dart';
+import '../components/character_page/constellation.dart';
+import '../components/character_page/passives.dart';
+import '../components/character_page/table_stats.dart';
+import '../components/character_page/talent_normal.dart';
+import '../components/character_page/talent_skill.dart';
+import '../components/character_page/team_composition.dart';
 import '../components/material/material_list.dart';
-import '../pages/character/widgets/build.dart';
-import '../pages/character/widgets/constellation.dart';
-import '../pages/character/widgets/passives.dart';
-import '../pages/character/widgets/table_stats.dart';
-import '../pages/character/widgets/talent_normal.dart';
-import '../pages/character/widgets/talent_skill.dart';
-import '../pages/character/widgets/team_composition.dart';
 
 class CharacterModel {
   final String gachaSplashArt;

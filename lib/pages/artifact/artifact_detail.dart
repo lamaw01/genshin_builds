@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
-import '../../components/artifact/artifact_model.dart';
+
+import '../../models/artifact_model.dart';
 import '../../constants/asset_path.dart';
 import '../../constants/colors.dart';
 import '../../functions/global_function.dart';

@@ -6,14 +6,14 @@ import 'artifact/artifacts.dart';
 import 'character/characters.dart';
 import 'weapon/weapons.dart';
 
-class BottomWidget extends StatefulWidget {
-  const BottomWidget({Key? key}) : super(key: key);
+class BottomNavWidget extends StatefulWidget {
+  const BottomNavWidget({Key? key}) : super(key: key);
 
   @override
-  State<BottomWidget> createState() => _BottomWidgetState();
+  State<BottomNavWidget> createState() => _BottomNavWidgetState();
 }
 
-class _BottomWidgetState extends State<BottomWidget> {
+class _BottomNavWidgetState extends State<BottomNavWidget> {
   final _controller = PageController();
   int _currentIndex = 0;
 
@@ -42,11 +42,6 @@ class _BottomWidgetState extends State<BottomWidget> {
             });
           },
         ),
-        // body: IndexedStack(
-        //   children: _screens,
-        //   index: _currentIndex,
-        // ),
-        // body: _screens[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: darkBG,
           elevation: 0.0,

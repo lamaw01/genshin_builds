@@ -1,8 +1,20 @@
-import '../character_portrait/character_portrait_data.dart';
-import '../character_portrait/character_portrait_model.dart';
-import '../material/material_data.dart';
-import '../material/material_model.dart';
-import 'weapon_model.dart';
+import 'character_portrait_data.dart';
+import '../models/character_portrait_model.dart';
+import 'material_data.dart';
+import '../models/material_model.dart';
+import '../models/weapon_model.dart';
+
+final weaponsList = <WeaponModel>[
+  akuoumaru,
+  amenomaKageuchi,
+  blackcliffLongsword,
+  blackcliffPole,
+  blackcliffSlasher,
+  cinnabarSpindle,
+  darkIronSword,
+  engulfingLightning,
+  songOfBrokenPines,
+];
 
 //Weapon type - Sword, Claymore, Bow, Polearm, Catalyst
 //Acquired - Gacha, NPC, Craftable, Limited Time Event, Drop

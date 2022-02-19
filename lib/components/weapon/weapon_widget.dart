@@ -5,7 +5,7 @@ import 'package:genshin_builds/routes/go.dart';
 import '../../constants/asset_path.dart';
 import '../../constants/colors.dart';
 import '../../functions/global_function.dart';
-import 'weapon_model.dart';
+import '../../models/weapon_model.dart';
 
 class WeaponWidget extends StatelessWidget {
   const WeaponWidget({Key? key, required this.weaponModel}) : super(key: key);

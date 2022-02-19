@@ -1,4 +1,4 @@
-import '../exports.dart';
+import 'exports.dart';
 
 final albedo = CharacterModel(
   gachaSplashArt: 'albedo_gacha_splash.png',

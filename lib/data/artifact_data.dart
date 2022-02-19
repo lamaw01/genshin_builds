@@ -1,6 +1,25 @@
-import '../character_portrait/character_portrait_data.dart';
-import '../character_portrait/character_portrait_model.dart';
-import 'artifact_model.dart';
+import 'character_portrait_data.dart';
+import '../models/character_portrait_model.dart';
+import '../models/artifact_model.dart';
+
+final artifactList = <ArtifactModel>[
+  archaicPetra,
+  blizzardStrayer,
+  bloodstainedChivalry,
+  crimsonWitchOfFlames,
+  emblemOfSeveredFate,
+  gladiatorsFinale,
+  huskOfOpulentDreams,
+  noblesseOblige,
+  oceanHuedClam,
+  paleFlame,
+  shimenawasReminiscence,
+  tenacityOfTheMillelith,
+  thunderingFury,
+  thunderSoother,
+  viridescentVenerer,
+  wanderersTroupe,
+];
 
 final archaicPetra = ArtifactModel(
   image: 'archaic_petra.png',

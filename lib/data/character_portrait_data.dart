@@ -1,4 +1,4 @@
-import 'character_portrait_model.dart';
+import '../models/character_portrait_model.dart';
 
 final albedoPortrait = CharacterPortraitModel(
   name: 'Albedo',

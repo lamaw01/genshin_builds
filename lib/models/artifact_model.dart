@@ -1,4 +1,4 @@
-import '../character_portrait/character_portrait_model.dart';
+import 'character_portrait_model.dart';
 
 class ArtifactModel {
   final String image;

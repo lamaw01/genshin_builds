@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:genshin_builds/components/artifact/artifact_model.dart';
-import 'package:genshin_builds/routes/go.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 import '../../constants/asset_path.dart';
 import '../../constants/colors.dart';
+import '../../data/artifact_data.dart';
 import '../../functions/global_function.dart';
-import 'artifacts_data.dart';
+import '../../models/artifact_model.dart';
+import '../../routes/go.dart';
 
 class MyArtifacts extends StatefulWidget {
   const MyArtifacts({Key? key}) : super(key: key);

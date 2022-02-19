@@ -1,5 +1,5 @@
-import '../character_portrait/character_portrait_model.dart';
-import '../material/material_model.dart';
+import 'character_portrait_model.dart';
+import 'material_model.dart';
 
 class WeaponModel {
   final String image;

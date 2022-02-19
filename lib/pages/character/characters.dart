@@ -3,10 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-import '../../character_data/character_cards.dart';
-import '../../character_data/exports.dart';
 import '../../constants/asset_path.dart';
+import '../../constants/colors.dart';
+import '../../data/character_cards_data.dart';
 import '../../functions/global_function.dart';
+import '../../models/character_card_model.dart';
 import '../../routes/go.dart';
 
 class MyCharacters extends StatefulWidget {
@@ -18,8 +19,8 @@ class MyCharacters extends StatefulWidget {
 
 class _MyCharactersState extends State<MyCharacters>
     with AutomaticKeepAliveClientMixin<MyCharacters> {
-  final List<CharacterCards> _characterList = charactersList;
-  List<CharacterCards> _filteredcharacterList = [];
+  final List<CharacterCardModel> _characterList = charactersList;
+  List<CharacterCardModel> _filteredcharacterList = [];
   bool _isSearching = false;
   final _searchController = TextEditingController();
 
@@ -114,7 +115,7 @@ class _MyCharactersState extends State<MyCharacters>
 
 class CharacterIcon extends StatelessWidget {
   const CharacterIcon({Key? key, required this.character}) : super(key: key);
-  final CharacterCards character;
+  final CharacterCardModel character;
 
   @override
   Widget build(BuildContext context) {

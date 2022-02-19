@@ -1,4 +1,4 @@
-import 'material_model.dart';
+import '../models/material_model.dart';
 
 final basaltPillar = MaterialModel(
   name: 'Basalt Pillar',

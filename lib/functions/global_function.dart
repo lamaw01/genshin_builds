@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../character_data/character_data.dart';
-import '../character_data/character_model.dart';
+import '../data/character_data.dart';
+import '../models/character_model.dart';
 import '../constants/colors.dart';
 
 class GlobalFunction {
@@ -87,7 +87,7 @@ class GlobalFunction {
 
   static CharacterModel? characterData(String name) {
     try {
-      return listCharacterData.singleWhere(
+      return characterList.singleWhere(
           (element) => element.name.toLowerCase() == name.toLowerCase());
     } catch (e) {
       return null;

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../character_data/character_model.dart';
-import '../components/artifact/artifact_model.dart';
-import '../components/weapon/weapon_model.dart';
 import '../constants/colors.dart';
+import '../models/artifact_model.dart';
+import '../models/character_model.dart';
+import '../models/weapon_model.dart';
 import '../pages/artifact/artifact_detail.dart';
-import '../pages/bottom_widget.dart';
+import '../pages/bottom_nav_widget.dart';
 import '../pages/character/character_page.dart';
 import '../pages/weapon/weapon_detail.dart';
 
@@ -15,7 +15,7 @@ class RouteGenerator {
 
     switch (settings.name) {
       case '/':
-        return MaterialPageRoute(builder: (_) => const BottomWidget());
+        return MaterialPageRoute(builder: (_) => const BottomNavWidget());
       case '/character_page':
         return MaterialPageRoute(builder: (_) {
           var arg = args as CharacterModel;

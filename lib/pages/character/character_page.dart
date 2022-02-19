@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-import '../../character_data/character_model.dart';
+import '../../components/character_page/info.dart';
+import '../../models/character_model.dart';
 import '../../constants/asset_path.dart';
 import '../../constants/colors.dart';
 import '../../routes/go.dart';
-import 'widgets/info.dart';
 
 class CharacterPage extends StatelessWidget {
   const CharacterPage({Key? key, required this.characterModel})
