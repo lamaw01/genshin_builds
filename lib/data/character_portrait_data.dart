@@ -12,7 +12,7 @@ final amberPortrait = CharacterPortraitModel(
   element: 'Pyro',
 );
 
-final ayakaPortrait = CharacterPortraitModel(
+final kamisatoAyakaPortrait = CharacterPortraitModel(
   name: 'Kamisato Ayaka',
   image: 'ayaka.png',
   element: 'Cryo',
@@ -33,6 +33,18 @@ final beidouPortrait = CharacterPortraitModel(
 final bennettPortrait = CharacterPortraitModel(
   name: 'Bennett',
   image: 'bennett.png',
+  element: 'Pyro',
+);
+
+final chongyunPortrait = CharacterPortraitModel(
+  name: 'Chongyun',
+  image: 'chongyun.png',
+  element: 'Pyro',
+);
+
+final dilucPortrait = CharacterPortraitModel(
+  name: 'Diluc',
+  image: 'diluc.png',
   element: 'Pyro',
 );
 
@@ -72,8 +84,8 @@ final hutaoPortrait = CharacterPortraitModel(
   element: 'Pyro',
 );
 
-final ittoPortrait = CharacterPortraitModel(
-  name: 'Itto',
+final aratakiIttoPortrait = CharacterPortraitModel(
+  name: 'Arataki Itto',
   image: 'itto.png',
   element: 'Geo',
 );
@@ -90,14 +102,26 @@ final kaeyaPortrait = CharacterPortraitModel(
   element: 'Cryo',
 );
 
-final kazuhaPortrait = CharacterPortraitModel(
-  name: 'Kaeya',
+final kaedeharaKazuhaPortrait = CharacterPortraitModel(
+  name: 'Kaedehara Kazuha',
   image: 'kazuha.png',
   element: 'Anemo',
 );
 
-final kokomiPortrait = CharacterPortraitModel(
-  name: 'Kokomi',
+final keqingPortrait = CharacterPortraitModel(
+  name: 'Keqing',
+  image: 'keqing.png',
+  element: 'Electro',
+);
+
+final kleePortrait = CharacterPortraitModel(
+  name: 'Klee',
+  image: 'klee.png',
+  element: 'Pyro',
+);
+
+final sangonomiyaKokomiPortrait = CharacterPortraitModel(
+  name: 'Sangonomiya Kokomi',
   image: 'kokomi.png',
   element: 'Hydro',
 );
@@ -126,6 +150,12 @@ final noellePortrait = CharacterPortraitModel(
   element: 'Geo',
 );
 
+final qiqiPortrait = CharacterPortraitModel(
+  name: 'Qiqi',
+  image: 'qiqi.png',
+  element: 'Cryo',
+);
+
 final raidenShogunPortrait = CharacterPortraitModel(
   name: 'Raiden Shogun',
   image: 'raiden_shogun.png',
@@ -144,15 +174,33 @@ final rosariaPortrait = CharacterPortraitModel(
   element: 'Cryo',
 );
 
-final saraPortrait = CharacterPortraitModel(
-  name: 'Sara',
+final sayuPortrait = CharacterPortraitModel(
+  name: 'Sayu',
+  image: 'sayu.png',
+  element: 'Cryo',
+);
+
+final kujouSaraPortrait = CharacterPortraitModel(
+  name: 'Kujou Sara',
   image: 'sara.png',
   element: 'Electro',
+);
+
+final shenhePortrait = CharacterPortraitModel(
+  name: 'Shenhe',
+  image: 'shenhe.png',
+  element: 'Cryo',
 );
 
 final sucrosePortrait = CharacterPortraitModel(
   name: 'Sucrose',
   image: 'sucrose.png',
+  element: 'Anemo',
+);
+
+final tartagliaPortrait = CharacterPortraitModel(
+  name: 'Tartaglia',
+  image: 'tartaglia.png',
   element: 'Anemo',
 );
 
@@ -186,6 +234,12 @@ final xingqiuPortrait = CharacterPortraitModel(
   element: 'Hydro',
 );
 
+final xinyanPortrait = CharacterPortraitModel(
+  name: 'Xinyan',
+  image: 'xinyan.png',
+  element: 'Pyro',
+);
+
 final yanfeiPortrait = CharacterPortraitModel(
   name: 'Yanfei',
   image: 'yanfei.png',
@@ -196,6 +250,12 @@ final yoimiyaPortrait = CharacterPortraitModel(
   name: 'Yoimiya',
   image: 'yoimiya.png',
   element: 'Pyro',
+);
+
+final yunjinPortrait = CharacterPortraitModel(
+  name: 'Yun Jin',
+  image: 'yunjin.png',
+  element: 'Geo',
 );
 
 final zhongliPortrait = CharacterPortraitModel(

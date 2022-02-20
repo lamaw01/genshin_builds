@@ -19,38 +19,35 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MediaQuery(
-      data: MediaQueryData.fromWindow(WidgetsBinding.instance!.window),
-      child: ScreenUtilInit(
-        designSize: const Size(411, 683), //pixel 5.0"
-        minTextAdapt: true,
-        splitScreenMode: true,
-        builder: () => MaterialApp(
-          debugShowCheckedModeBanner: false,
-          // showPerformanceOverlay: true,
-          title: 'Genshin Builds',
-          locale: const Locale('en', 'US'),
-          theme: ThemeData(
-            scaffoldBackgroundColor: darkBG,
-            brightness: Brightness.dark,
-            primarySwatch: Colors.teal,
-            visualDensity: VisualDensity.adaptivePlatformDensity,
-            bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-              selectedItemColor: Colors.blue,
-            ),
+    return ScreenUtilInit(
+      designSize: const Size(411, 683), //pixel 5.0"
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: () => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        // showPerformanceOverlay: true,
+        title: 'Genshin Builds',
+        locale: const Locale('en', 'US'),
+        theme: ThemeData(
+          scaffoldBackgroundColor: darkBG,
+          brightness: Brightness.dark,
+          primarySwatch: Colors.teal,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+            selectedItemColor: Colors.blue,
           ),
-          initialRoute: '/',
-          onGenerateRoute: RouteGenerator.generateRoute,
-          themeMode: ThemeMode.dark,
-          builder: (context, widget) {
-            ScreenUtil.setContext(context);
-            return MediaQuery(
-              //Setting font does not change with system font size
-              data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-              child: widget!,
-            );
-          },
         ),
+        initialRoute: '/',
+        onGenerateRoute: RouteGenerator.generateRoute,
+        themeMode: ThemeMode.dark,
+        builder: (context, widget) {
+          ScreenUtil.setContext(context);
+          return MediaQuery(
+            //Setting font does not change with system font size
+            data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+            child: widget!,
+          );
+        },
       ),
     );
   }

@@ -65,7 +65,7 @@ final amenomaKageuchi = WeaponModel(
   effect:
       "After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates 6 Energy for each seed consumed.",
   users: <CharacterPortraitModel>[
-    ayakaPortrait,
+    kamisatoAyakaPortrait,
     jeanPortrait,
     kaeyaPortrait,
   ],
@@ -94,7 +94,7 @@ final blackcliffLongsword = WeaponModel(
   effect:
       'After defeating an opponent, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
   users: <CharacterPortraitModel>[
-    ayakaPortrait,
+    kamisatoAyakaPortrait,
     bennettPortrait,
     kaeyaPortrait,
   ],
@@ -207,7 +207,7 @@ final darkIronSword = WeaponModel(
   effect:
       'Upon causing an Overloaded, Superconduct, Electro-Charged, or an Electro-infused Swirl reaction, ATK is increased by 20% for 12s.',
   users: <CharacterPortraitModel>[
-    kazuhaPortrait,
+    kaedeharaKazuhaPortrait,
   ],
   materials: <MaterialModel>[],
   effectName: 'Overloaded',

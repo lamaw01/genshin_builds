@@ -228,19 +228,19 @@ final ayaka = CharacterModel(
       teamName: 'Freeze Team',
       teams: <CharacterPortraitList>[
         CharacterPortraitList(
-          firstSlot: ayakaPortrait,
-          secondSlot: kokomiPortrait,
+          firstSlot: kamisatoAyakaPortrait,
+          secondSlot: sangonomiyaKokomiPortrait,
           thirdSlot: rosariaPortrait,
-          fourthSlot: kazuhaPortrait,
+          fourthSlot: kaedeharaKazuhaPortrait,
         ),
         CharacterPortraitList(
-          firstSlot: ayakaPortrait,
+          firstSlot: kamisatoAyakaPortrait,
           secondSlot: xingqiuPortrait,
           thirdSlot: dionaPortrait,
-          fourthSlot: kazuhaPortrait,
+          fourthSlot: kaedeharaKazuhaPortrait,
         ),
         CharacterPortraitList(
-          firstSlot: ayakaPortrait,
+          firstSlot: kamisatoAyakaPortrait,
           secondSlot: barbaraPortrait,
           thirdSlot: kaeyaPortrait,
           fourthSlot: sucrosePortrait,

@@ -31,7 +31,7 @@ class ArtifactWidget extends StatelessWidget {
             Row(
               children: [
                 Image.asset(
-                  artifactPath + artifactModel.image,
+                  artifactPath + artifactModel.parts![0],
                   width: 45.r,
                   height: 45.0.r,
                 ),

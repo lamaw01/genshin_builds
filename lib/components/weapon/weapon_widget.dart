@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:genshin_builds/routes/go.dart';
 
 import '../../constants/asset_path.dart';
@@ -17,6 +18,18 @@ class WeaponWidget extends StatelessWidget {
       onTap: () {
         if (weaponModel.weaponType != null) {
           Go.to(context, '/weapon_detail', arguments: weaponModel);
+        } else {
+          showToast(
+            'Coming soon',
+            context: context,
+            animation: StyledToastAnimation.scale,
+            reverseAnimation: StyledToastAnimation.fade,
+            position: StyledToastPosition.center,
+            animDuration: const Duration(seconds: 1),
+            duration: const Duration(seconds: 2),
+            curve: Curves.elasticOut,
+            reverseCurve: Curves.linear,
+          );
         }
       },
       child: Ink(

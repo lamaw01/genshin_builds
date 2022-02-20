@@ -21,11 +21,9 @@ final charactersList = <CharacterCardModel>[
     element: "Pyro",
   ),
   CharacterCardModel(
-    name: "Kamisato Ayaka",
-    image: "ayaka_gacha_card.png",
-    element: "Cryo",
-    isDone: true,
-    characterModel: ayaka,
+    name: "Arataki Itto",
+    image: "itto_gacha_card.png",
+    element: "Geo",
   ),
   CharacterCardModel(
     name: "Barbara",
@@ -93,6 +91,13 @@ final charactersList = <CharacterCardModel>[
     element: "Cryo",
   ),
   CharacterCardModel(
+    name: "Kamisato Ayaka",
+    image: "ayaka_gacha_card.png",
+    element: "Cryo",
+    isDone: true,
+    characterModel: ayaka,
+  ),
+  CharacterCardModel(
     name: "Kazuha",
     image: "kazuha_gacha_card.png",
     element: "Anemo",
@@ -113,7 +118,7 @@ final charactersList = <CharacterCardModel>[
     element: "Hydro",
   ),
   CharacterCardModel(
-    name: "Sara",
+    name: "Kujou Sara",
     image: "sara_gacha_card.png",
     element: "Electro",
   ),
@@ -218,7 +223,7 @@ final charactersList = <CharacterCardModel>[
     element: "Pyro",
   ),
   CharacterCardModel(
-    name: "Yunjin",
+    name: "Yun Jin",
     image: "yunjin_gacha_card.png",
     element: "Geo",
   ),

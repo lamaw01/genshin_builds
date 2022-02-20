@@ -38,6 +38,7 @@ class _MyWeaponsState extends State<MyWeapons>
   // ignore: must_call_super
   Widget build(BuildContext context) {
     return CustomScrollView(
+      cacheExtent: MediaQuery.of(context).size.height,
       slivers: [
         SliverPadding(
           padding: EdgeInsets.fromLTRB(10.r, 10.r, 10.r, 5.r),
@@ -117,6 +118,7 @@ class WeaponIcon extends StatelessWidget {
               '/weapon_detail',
               arguments: weaponModel,
             );
+            FocusScope.of(context).unfocus();
           },
           child: Ink(
             padding: const EdgeInsets.all(5.0),

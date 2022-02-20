@@ -1,6 +1,8 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 import '../../models/artifact_model.dart';
 import '../../constants/asset_path.dart';
@@ -38,14 +40,7 @@ class ArtifactDetail extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Hero(
-                      tag: artifactModel.name,
-                      child: Image.asset(
-                        artifactPath + artifactModel.image,
-                        width: 175.0.r,
-                        height: 175.0.r,
-                      ),
-                    ),
+                    ArtifactPiecesCarousel(artifactModel: artifactModel),
                     SizedBox(height: 10.0.h),
                     const Divider(),
                     Text(
@@ -177,6 +172,95 @@ class ArtifactDetail extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class ArtifactPiecesCarousel extends StatefulWidget {
+  const ArtifactPiecesCarousel({
+    Key? key,
+    required this.artifactModel,
+  }) : super(key: key);
+  final ArtifactModel artifactModel;
+
+  @override
+  _ArtifactPiecesCarouselState createState() => _ArtifactPiecesCarouselState();
+}
+
+class _ArtifactPiecesCarouselState extends State<ArtifactPiecesCarousel> {
+  int _current = 0;
+  final CarouselController _controller = CarouselController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        CarouselSlider(
+          items: <Widget>[
+            for (int i = 0; i < widget.artifactModel.parts!.length; i++) ...[
+              if (i == 0) ...[
+                Hero(
+                  tag: widget.artifactModel.name,
+                  child: FadeInImage(
+                    width: 175.0.r,
+                    height: 175.0.r,
+                    placeholder: MemoryImage(kTransparentImage),
+                    image: AssetImage(
+                      artifactPath + widget.artifactModel.parts![i],
+                    ),
+                  ),
+                ),
+              ] else ...[
+                FadeInImage(
+                  width: 175.0.r,
+                  height: 175.0.r,
+                  placeholder: MemoryImage(kTransparentImage),
+                  image: AssetImage(
+                    artifactPath + widget.artifactModel.parts![i],
+                  ),
+                ),
+              ],
+            ],
+          ],
+          carouselController: _controller,
+          options: CarouselOptions(
+            height: 175.0.r,
+            viewportFraction: 1.0,
+            initialPage: 0,
+            enableInfiniteScroll: false,
+            autoPlay: true,
+            enlargeCenterPage: true,
+            onPageChanged: (index, reason) {
+              setState(() {
+                _current = index;
+              });
+            },
+          ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: widget.artifactModel.parts!.asMap().entries.map((entry) {
+            return GestureDetector(
+              onTap: () => _controller.animateToPage(
+                entry.key,
+                curve: Curves.fastOutSlowIn,
+                duration: const Duration(milliseconds: 800),
+              ),
+              child: Container(
+                width: 15.0.r,
+                height: 15.0.r,
+                margin:
+                    EdgeInsets.symmetric(vertical: 5.0.r, horizontal: 5.0.r),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.white
+                      .withOpacity(_current == entry.key ? 0.9 : 0.4),
+                ),
+              ),
+            );
+          }).toList(),
+        ),
+      ],
     );
   }
 }

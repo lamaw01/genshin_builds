@@ -134,6 +134,7 @@ class ListOfArtifact extends StatelessWidget {
                     '/artifact_detail',
                     arguments: listArtifact[index],
                   );
+                  FocusScope.of(context).unfocus();
                 },
                 child: Ink(
                   padding: const EdgeInsets.all(5.0),
@@ -151,7 +152,7 @@ class ListOfArtifact extends StatelessWidget {
                           height: 90.0.r,
                           placeholder: MemoryImage(kTransparentImage),
                           image: AssetImage(
-                            artifactPath + listArtifact[index].image,
+                            artifactPath + listArtifact[index].parts![0],
                           ),
                         ),
                       ),

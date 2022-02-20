@@ -8,10 +8,21 @@ import '../../constants/asset_path.dart';
 import '../../constants/colors.dart';
 import '../../routes/go.dart';
 
-class CharacterPage extends StatelessWidget {
+class CharacterPage extends StatefulWidget {
   const CharacterPage({Key? key, required this.characterModel})
       : super(key: key);
   final CharacterModel characterModel;
+
+  @override
+  State<CharacterPage> createState() => _CharacterPageState();
+}
+
+class _CharacterPageState extends State<CharacterPage> {
+  @override
+  void dispose() {
+    super.dispose();
+    imageCache!.clear();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +35,7 @@ class CharacterPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: CustomScrollView(
+          cacheExtent: MediaQuery.of(context).size.height,
           slivers: <Widget>[
             SliverAppBar(
               backgroundColor: darkBG,
@@ -49,10 +61,10 @@ class CharacterPage extends StatelessWidget {
                       fit: BoxFit.fitWidth,
                       placeholder: MemoryImage(kTransparentImage),
                       image: AssetImage(
-                        characterPath + characterModel.gachaSplashArt,
+                        characterPath + widget.characterModel.gachaSplashArt,
                       ),
                     ),
-                    Info(characterModel: characterModel),
+                    Info(characterModel: widget.characterModel),
                     SizedBox(height: 15.h),
                     const Divider(),
                     Text(
@@ -61,7 +73,7 @@ class CharacterPage extends StatelessWidget {
                     ),
                     SizedBox(height: 10.h),
                     Text(
-                      characterModel.description,
+                      widget.characterModel.description,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14.sp,
@@ -76,15 +88,15 @@ class CharacterPage extends StatelessWidget {
                       style: _chapterTextStyle,
                     ),
                     SizedBox(height: 10.h),
-                    characterModel.talent1,
+                    widget.characterModel.talent1,
                     SizedBox(height: 10.h),
-                    characterModel.talent2,
+                    widget.characterModel.talent2,
                     SizedBox(height: 10.h),
-                    if (characterModel.talent2_5 != null) ...[
-                      characterModel.talent2_5!,
+                    if (widget.characterModel.talent2_5 != null) ...[
+                      widget.characterModel.talent2_5!,
                       SizedBox(height: 10.h),
                     ],
-                    characterModel.talent3,
+                    widget.characterModel.talent3,
                     SizedBox(height: 15.h),
                     const Divider(),
                     Text(
@@ -92,14 +104,14 @@ class CharacterPage extends StatelessWidget {
                       style: _chapterTextStyle,
                     ),
                     SizedBox(height: 10.h),
-                    characterModel.passive1,
+                    widget.characterModel.passive1,
                     SizedBox(height: 10.h),
-                    characterModel.passive2,
+                    widget.characterModel.passive2,
                     SizedBox(height: 10.h),
-                    characterModel.passive3,
-                    if (characterModel.passive4 != null) ...[
+                    widget.characterModel.passive3,
+                    if (widget.characterModel.passive4 != null) ...[
                       SizedBox(height: 10.h),
-                      characterModel.passive1,
+                      widget.characterModel.passive1,
                     ],
                     SizedBox(height: 15.h),
                     const Divider(),
@@ -108,17 +120,17 @@ class CharacterPage extends StatelessWidget {
                       style: _chapterTextStyle,
                     ),
                     SizedBox(height: 10.h),
-                    characterModel.constellation1,
+                    widget.characterModel.constellation1,
                     SizedBox(height: 10.h),
-                    characterModel.constellation2,
+                    widget.characterModel.constellation2,
                     SizedBox(height: 10.h),
-                    characterModel.constellation3,
+                    widget.characterModel.constellation3,
                     SizedBox(height: 10.h),
-                    characterModel.constellation4,
+                    widget.characterModel.constellation4,
                     SizedBox(height: 10.h),
-                    characterModel.constellation5,
+                    widget.characterModel.constellation5,
                     SizedBox(height: 10.h),
-                    characterModel.constellation6,
+                    widget.characterModel.constellation6,
                     SizedBox(height: 15.h),
                     const Divider(),
                     Text(
@@ -126,7 +138,7 @@ class CharacterPage extends StatelessWidget {
                       style: _chapterTextStyle,
                     ),
                     SizedBox(height: 10.h),
-                    for (var build in characterModel.builds) ...[
+                    for (var build in widget.characterModel.builds) ...[
                       build,
                     ],
                     SizedBox(height: 15.h),
@@ -136,7 +148,7 @@ class CharacterPage extends StatelessWidget {
                       style: _chapterTextStyle,
                     ),
                     SizedBox(height: 10.h),
-                    for (var team in characterModel.teams) ...[
+                    for (var team in widget.characterModel.teams) ...[
                       team,
                     ],
                     SizedBox(height: 15.h),
@@ -145,7 +157,7 @@ class CharacterPage extends StatelessWidget {
                       "Materials",
                       style: _chapterTextStyle,
                     ),
-                    characterModel.materials,
+                    widget.characterModel.materials,
                     SizedBox(height: 15.h),
                     const Divider(),
                     Text(
@@ -153,7 +165,7 @@ class CharacterPage extends StatelessWidget {
                       style: _chapterTextStyle,
                     ),
                     SizedBox(height: 10.h),
-                    characterModel.stats
+                    widget.characterModel.stats
                   ],
                 ),
               ),

@@ -237,7 +237,7 @@ final albedo = CharacterModel(
       teamName: 'Mono Geo Team',
       teams: [
         CharacterPortraitList(
-          firstSlot: ittoPortrait,
+          firstSlot: aratakiIttoPortrait,
           secondSlot: zhongliPortrait,
           thirdSlot: gorouPortrait,
           fourthSlot: albedoPortrait,

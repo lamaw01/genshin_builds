@@ -172,7 +172,7 @@ class Build extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
-              artifactPiece + 'artifact_sand.png',
+              artifactPath + 'gladiators_longing.png',
               width: 25.r,
               height: 25.0.r,
             ),
@@ -192,7 +192,7 @@ class Build extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
-              artifactPiece + 'artifact_goblet.png',
+              artifactPath + 'gladiators_intoxication.png',
               width: 25.r,
               height: 25.0.r,
             ),
@@ -212,7 +212,7 @@ class Build extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
-              artifactPiece + 'artifact_circlet.png',
+              artifactPath + 'gladiators_triumphus.png',
               width: 25.r,
               height: 25.0.r,
             ),
