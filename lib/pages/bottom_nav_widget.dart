@@ -1,7 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../constants/colors.dart';
 import 'artifact/artifacts.dart';
 import 'character/characters.dart';
 import 'weapon/weapons.dart';
@@ -43,7 +42,6 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
           },
         ),
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: darkBG,
           elevation: 0.0,
           type: BottomNavigationBarType.fixed,
           selectedFontSize: 12.sp,

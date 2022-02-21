@@ -6,7 +6,6 @@ import 'package:transparent_image/transparent_image.dart';
 
 import '../../models/artifact_model.dart';
 import '../../constants/asset_path.dart';
-import '../../constants/colors.dart';
 import '../../functions/global_function.dart';
 import '../../routes/go.dart';
 
@@ -22,7 +21,6 @@ class ArtifactDetail extends StatelessWidget {
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
-              backgroundColor: darkBG,
               leading: IconButton(
                 onPressed: () {
                   Go.pop(context);
@@ -122,9 +120,9 @@ class ArtifactDetail extends StatelessWidget {
                       width: 325.w,
                       child: Center(
                         child: Wrap(
-                          alignment: WrapAlignment.center,
                           spacing: 8.0.w,
                           runSpacing: 8.0.h,
+                          alignment: WrapAlignment.center,
                           children: [
                             for (var user in artifactModel.users!) ...[
                               GestureDetector(
@@ -153,8 +151,9 @@ class ArtifactDetail extends StatelessWidget {
                                   }
                                 },
                                 child: CircleAvatar(
-                                  radius: 35.r,
-                                  backgroundColor: darkBGLighter,
+                                  radius: 32.r,
+                                  backgroundColor:
+                                      Theme.of(context).backgroundColor,
                                   backgroundImage: AssetImage(
                                     characterPath + user.image,
                                   ),

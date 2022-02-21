@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 import '../../constants/asset_path.dart';
-import '../../constants/colors.dart';
 import '../../data/artifact_data.dart';
 import '../../functions/global_function.dart';
 import '../../models/artifact_model.dart';
@@ -139,7 +138,7 @@ class ListOfArtifact extends StatelessWidget {
                 child: Ink(
                   padding: const EdgeInsets.all(5.0),
                   decoration: BoxDecoration(
-                    color: darkBGLighter,
+                    color: Theme.of(context).backgroundColor,
                     borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Column(

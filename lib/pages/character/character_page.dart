@@ -5,7 +5,6 @@ import 'package:transparent_image/transparent_image.dart';
 import '../../components/character_page/info.dart';
 import '../../models/character_model.dart';
 import '../../constants/asset_path.dart';
-import '../../constants/colors.dart';
 import '../../routes/go.dart';
 
 class CharacterPage extends StatefulWidget {
@@ -38,7 +37,6 @@ class _CharacterPageState extends State<CharacterPage> {
           cacheExtent: MediaQuery.of(context).size.height,
           slivers: <Widget>[
             SliverAppBar(
-              backgroundColor: darkBG,
               leading: IconButton(
                 onPressed: () {
                   Go.pop(context);

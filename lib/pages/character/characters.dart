@@ -4,7 +4,6 @@ import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 import '../../constants/asset_path.dart';
-import '../../constants/colors.dart';
 import '../../data/character_cards_data.dart';
 import '../../functions/global_function.dart';
 import '../../models/character_card_model.dart';
@@ -162,7 +161,7 @@ class CharacterIcon extends StatelessWidget {
               top: 1,
               right: 1,
               child: CircleAvatar(
-                backgroundColor: darkBGLighter,
+                backgroundColor: Theme.of(context).backgroundColor,
                 radius: 12.r,
                 child: Image.asset(
                   elementPath + GlobalFunction.elementType(character.element)!,

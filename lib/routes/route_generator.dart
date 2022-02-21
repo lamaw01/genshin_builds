@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
 import '../models/artifact_model.dart';
 import '../models/character_model.dart';
 import '../models/weapon_model.dart';
@@ -35,7 +34,6 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => Scaffold(
             appBar: AppBar(
-              backgroundColor: darkBG,
               title: const Text('Page Not Found'),
             ),
           ),

@@ -79,7 +79,7 @@ class GlobalFunction {
       case 'Polearm':
         return 'polearm_type.png';
       case 'Catalyst':
-        return 'claymore_type.png';
+        return 'catalyst_type.png';
       default:
         return null;
     }

@@ -1,6 +1,6 @@
 import 'exports.dart';
 
-final ayaka = CharacterModel(
+final kamisatoAyaka = CharacterModel(
   gachaSplashArt: 'ayaka_gacha_splash.png',
   gachaSplashCard: 'ayaka_gacha_card.png',
   name: 'Kamisato Ayaka',
@@ -15,8 +15,8 @@ final ayaka = CharacterModel(
   color: cryoBG,
   talent1: const TalentNormal(
     color: cryoBG,
-    talentImage: 'sword_type.png',
-    talentName: 'Normal Attack: Kamisato Art - Kabuki',
+    image: 'sword_type.png',
+    name: 'Normal Attack: Kamisato Art - Kabuki',
     normalAttackDesc: <String>[
       'Performs up to 5 rapid strikes.',
     ],
@@ -28,10 +28,10 @@ final ayaka = CharacterModel(
     ],
   ),
   talent2: const TalentSkill(
-    talentImage: 'ayaka_elemental_skill.png',
-    talentName: 'Kamisato Art: Hyouka',
+    image: 'ayaka_elemental_skill.png',
+    name: 'Kamisato Art: Hyouka',
     color: cryoBG,
-    skillDesc: <TalentText>[
+    description: <TalentText>[
       TalentText(
         talentText:
             'Summons blooming ice to launch nearby opponents, dealing AoE Cryo DMG.',
@@ -39,10 +39,10 @@ final ayaka = CharacterModel(
     ],
   ),
   talent2_5: const TalentSkill(
-    talentImage: 'ayaka_alternate_sprint.png',
-    talentName: 'Kamisato Art: Senho',
+    image: 'ayaka_alternate_sprint.png',
+    name: 'Kamisato Art: Senho',
     color: cryoBG,
-    skillDesc: <TalentText>[
+    description: <TalentText>[
       TalentText(
         talentText:
             'Ayaka consumes Stamina and cloaks herself in a frozen fog that moves with her.',
@@ -64,10 +64,10 @@ final ayaka = CharacterModel(
     ],
   ),
   talent3: const TalentSkill(
-    talentImage: 'ayaka_elemental_burst.png',
-    talentName: 'Kamisato Art: Soumetsu',
+    image: 'ayaka_elemental_burst.png',
+    name: 'Kamisato Art: Soumetsu',
     color: cryoBG,
-    skillDesc: <TalentText>[
+    description: <TalentText>[
       TalentText(
         talentText:
             'Summons forth a snowstorm with flawless poise, unleashing a Frostflake Seki no To that moves forward continuously.',
@@ -87,10 +87,10 @@ final ayaka = CharacterModel(
     ],
   ),
   passive1: const Passives(
-    talentImage: 'ayaka_passive_1.png',
-    talentName: 'Amatsumi Kunitsumi Sanctification',
+    image: 'ayaka_passive_1.png',
+    name: 'Amatsumi Kunitsumi Sanctification',
     color: cryoBG,
-    passiveDesc: <TalentText>[
+    description: <TalentText>[
       TalentText(
         talentText:
             "After using Kamisato Art: Hyouka, Kamisato Ayaka's Normal and Charged attacks deal 30% increased DMG for 6s",
@@ -98,10 +98,10 @@ final ayaka = CharacterModel(
     ],
   ),
   passive2: const Passives(
-    talentImage: 'ayaka_passive_2.png',
-    talentName: 'Kanten Senmyou Blessing',
+    image: 'ayaka_passive_2.png',
+    name: 'Kanten Senmyou Blessing',
     color: cryoBG,
-    passiveDesc: <TalentText>[
+    description: <TalentText>[
       TalentText(
         talentText:
             'When the Cryo application at the end of Kamisato Art: Senho hits an opponent, Kamisato Ayaka gains the following effects:',
@@ -115,10 +115,10 @@ final ayaka = CharacterModel(
     ],
   ),
   passive3: const Passives(
-    talentImage: 'ayaka_passive_3.png',
-    talentName: 'Fruits of Shinsa',
+    image: 'ayaka_passive_3.png',
+    name: 'Fruits of Shinsa',
     color: cryoBG,
-    passiveDesc: <TalentText>[
+    description: <TalentText>[
       TalentText(
         talentText:
             'When Ayaka crafts Weapon Ascension Materials, she has a 10% chance to receive double the product.',
@@ -126,10 +126,10 @@ final ayaka = CharacterModel(
     ],
   ),
   constellation1: const Constellation(
-    talentImage: 'ayaka_constellation_1.png',
-    talentName: 'Snowswept Sakura',
+    image: 'ayaka_constellation_1.png',
+    name: 'Snowswept Sakura',
     color: cryoBG,
-    constellationDesc: [
+    description: [
       TalentText(
         talentText:
             "When Kamisato Ayaka's Normal or Charged Attacks deal Cryo DMG to opponents, it has a 50% chance of decreasing the CD of Kamisato Art: Hyouka by 0.3s. This effect can occur once every 0.1s.",
@@ -137,10 +137,10 @@ final ayaka = CharacterModel(
     ],
   ),
   constellation2: const Constellation(
-    talentImage: 'ayaka_constellation_2.png',
-    talentName: 'Blizzard Blade Seki no To',
+    image: 'ayaka_constellation_2.png',
+    name: 'Blizzard Blade Seki no To',
     color: cryoBG,
-    constellationDesc: [
+    description: [
       TalentText(
         talentText:
             "When casting Kamisato Art: Soumetsu, unleashes 2 smaller additional Frostflake Seki no To, each dealing 20% of the original storm's DMG.",
@@ -148,10 +148,10 @@ final ayaka = CharacterModel(
     ],
   ),
   constellation3: const Constellation(
-    talentImage: 'ayaka_constellation_3.png',
-    talentName: 'Frostbloom Kamifubuki',
+    image: 'ayaka_constellation_3.png',
+    name: 'Frostbloom Kamifubuki',
     color: cryoBG,
-    constellationDesc: [
+    description: [
       TalentText(
         talentText:
             'Increases the Level of Kamisato Art: Soumetsu by 3. Maximum upgrade level is 15.',
@@ -159,10 +159,10 @@ final ayaka = CharacterModel(
     ],
   ),
   constellation4: const Constellation(
-    talentImage: 'ayaka_constellation_4.png',
-    talentName: 'Ebb and Flow',
+    image: 'ayaka_constellation_4.png',
+    name: 'Ebb and Flow',
     color: cryoBG,
-    constellationDesc: [
+    description: [
       TalentText(
         talentText:
             "Opponents damaged by Kamisato Art: Soumetsu's Frostflake Seki no To will have their DEF decreased by 30% for 6s.",
@@ -170,10 +170,10 @@ final ayaka = CharacterModel(
     ],
   ),
   constellation5: const Constellation(
-    talentImage: 'ayaka_constellation_5.png',
-    talentName: 'Blossom Cloud Irutsuki',
+    image: 'ayaka_constellation_5.png',
+    name: 'Blossom Cloud Irutsuki',
     color: cryoBG,
-    constellationDesc: [
+    description: [
       TalentText(
         talentText:
             'Increases the Level of Kamisato Art: Hyouka by 3. Maximum upgrade level is 15.',
@@ -181,10 +181,10 @@ final ayaka = CharacterModel(
     ],
   ),
   constellation6: const Constellation(
-    talentImage: 'ayaka_constellation_6.png',
-    talentName: 'Dance of Suigetsu',
+    image: 'ayaka_constellation_6.png',
+    name: 'Dance of Suigetsu',
     color: cryoBG,
-    constellationDesc: [
+    description: [
       TalentText(
         talentText:
             "Kamisato Ayaka gains Usurahi Butou every 10s, increasing her Charged Attack DMG by 298%. This buff will be cleared 0.5s after Ayaka's Charged ATK hits an opponent, after which the timer for this ability will restart.",

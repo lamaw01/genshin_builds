@@ -6,15 +6,15 @@ import '../../../constants/asset_path.dart';
 class TalentNormal extends StatelessWidget {
   const TalentNormal({
     Key? key,
-    required this.talentImage,
-    required this.talentName,
+    required this.image,
+    required this.name,
     required this.color,
     required this.normalAttackDesc,
     required this.chargedlAttackDesc,
     required this.plungelAttackDesc,
   }) : super(key: key);
-  final String talentImage;
-  final String talentName;
+  final String image;
+  final String name;
   final Color color;
   final List<String> normalAttackDesc;
   final List<String> chargedlAttackDesc;
@@ -28,14 +28,14 @@ class TalentNormal extends StatelessWidget {
         Row(
           children: [
             Image.asset(
-              weaponTypePath + talentImage,
+              weaponTypePath + image,
               width: 45.r,
               height: 45.r,
               color: color,
             ),
             SizedBox(width: 5.w),
             Text(
-              talentName,
+              name,
               style: TextStyle(
                 color: color,
                 fontSize: 15.sp,

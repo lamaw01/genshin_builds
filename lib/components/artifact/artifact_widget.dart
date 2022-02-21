@@ -2,7 +2,6 @@ import "package:flutter/material.dart";
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/asset_path.dart';
-import '../../constants/colors.dart';
 import '../../routes/go.dart';
 import '../../models/artifact_model.dart';
 
@@ -23,7 +22,7 @@ class ArtifactWidget extends StatelessWidget {
         padding: EdgeInsets.all(8.0.r),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0.r),
-          color: darkBGLighter,
+          color: Theme.of(context).backgroundColor,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

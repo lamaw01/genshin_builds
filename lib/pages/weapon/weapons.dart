@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 import '../../constants/asset_path.dart';
-import '../../constants/colors.dart';
 import '../../data/weapon_data.dart';
 import '../../functions/global_function.dart';
 import '../../models/weapon_model.dart';
@@ -18,7 +17,7 @@ class MyWeapons extends StatefulWidget {
 
 class _MyWeaponsState extends State<MyWeapons>
     with AutomaticKeepAliveClientMixin<MyWeapons> {
-  final List<WeaponModel> _weaponsList = weaponsList;
+  final List<WeaponModel> _weaponsList = weaponList;
   List<WeaponModel> _filteredweaponsList = [];
   bool _isSearching = false;
   final _searchController = TextEditingController();
@@ -123,7 +122,7 @@ class WeaponIcon extends StatelessWidget {
           child: Ink(
             padding: const EdgeInsets.all(5.0),
             decoration: BoxDecoration(
-              color: darkBGLighter,
+              color: Theme.of(context).backgroundColor,
               borderRadius: BorderRadius.circular(10.r),
             ),
             child: Column(
@@ -160,7 +159,7 @@ class WeaponIcon extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    for (int i = 0; i < weaponsList[i].rarity; i++)
+                    for (int i = 0; i < weaponModel.rarity; i++)
                       Icon(
                         Icons.star,
                         color: Colors.orangeAccent,
@@ -192,7 +191,7 @@ class WeaponIcon extends StatelessWidget {
                   width: double.maxFinite,
                   padding: EdgeInsets.symmetric(horizontal: 5.r),
                   child: Text(
-                    'Sub. Stat: ${weaponModel.subStat!}',
+                    'Sub. Stat: ${weaponModel.subStat}',
                     style: TextStyle(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w400,
@@ -208,8 +207,7 @@ class WeaponIcon extends StatelessWidget {
           top: 8.0,
           left: 8.0,
           child: Image.asset(
-            weaponTypePath +
-                GlobalFunction.weaponType(weaponModel.weaponType!)!,
+            weaponTypePath + GlobalFunction.weaponType(weaponModel.weaponType)!,
             width: 30.0.r,
             height: 30.0.r,
           ),

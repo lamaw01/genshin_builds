@@ -4,7 +4,6 @@ import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 
 import '../../models/weapon_model.dart';
 import '../../constants/asset_path.dart';
-import '../../constants/colors.dart';
 import '../../functions/global_function.dart';
 import '../../routes/go.dart';
 
@@ -19,7 +18,6 @@ class WeaponDetail extends StatelessWidget {
         body: CustomScrollView(
           slivers: <Widget>[
             SliverAppBar(
-              backgroundColor: darkBG,
               leading: IconButton(
                 onPressed: () {
                   Go.pop(context);
@@ -81,7 +79,7 @@ class WeaponDetail extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          weaponModel.weaponType!,
+                          weaponModel.weaponType,
                           style: TextStyle(
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w500,
@@ -121,7 +119,7 @@ class WeaponDetail extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          weaponModel.subStat!,
+                          weaponModel.subStat,
                           style: TextStyle(
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w500,
@@ -141,7 +139,7 @@ class WeaponDetail extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          weaponModel.acquired!,
+                          weaponModel.acquired,
                           style: TextStyle(
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w500,
@@ -160,7 +158,7 @@ class WeaponDetail extends StatelessWidget {
                     ),
                     SizedBox(height: 5.0.h),
                     Text(
-                      weaponModel.description!,
+                      weaponModel.description,
                       style: TextStyle(
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
@@ -183,8 +181,9 @@ class WeaponDetail extends StatelessWidget {
                         child: Wrap(
                           spacing: 8.0.w,
                           runSpacing: 8.0.h,
+                          alignment: WrapAlignment.center,
                           children: [
-                            for (var user in weaponModel.users!) ...[
+                            for (var user in weaponModel.users) ...[
                               GestureDetector(
                                 onTap: () {
                                   if (GlobalFunction.characterData(user.name) !=
@@ -211,8 +210,9 @@ class WeaponDetail extends StatelessWidget {
                                   }
                                 },
                                 child: CircleAvatar(
-                                  radius: 35.r,
-                                  backgroundColor: darkBGLighter,
+                                  radius: 32.r,
+                                  backgroundColor:
+                                      Theme.of(context).backgroundColor,
                                   backgroundImage: AssetImage(
                                     characterPath + user.image,
                                   ),
@@ -240,7 +240,7 @@ class WeaponDetail extends StatelessWidget {
                           spacing: 8.0.w,
                           runSpacing: 8.0.h,
                           children: [
-                            for (var material in weaponModel.materials!) ...[
+                            for (var material in weaponModel.materials) ...[
                               Tooltip(
                                 triggerMode: TooltipTriggerMode.tap,
                                 message: material.name,
@@ -249,8 +249,9 @@ class WeaponDetail extends StatelessWidget {
                                   color: Colors.black,
                                 ),
                                 child: CircleAvatar(
-                                  radius: 30.r,
-                                  backgroundColor: darkBGLighter,
+                                  radius: 32.r,
+                                  backgroundColor:
+                                      Theme.of(context).backgroundColor,
                                   backgroundImage: AssetImage(
                                     materialPath + material.image,
                                   ),
@@ -271,7 +272,7 @@ class WeaponDetail extends StatelessWidget {
                       ),
                     ),
                     for (int i = 1;
-                        i < weaponModel.effectScaling!.length + 1;
+                        i < weaponModel.effectScaling.length + 1;
                         i++) ...[
                       SizedBox(height: 10.0.h),
                       Text(
@@ -286,7 +287,7 @@ class WeaponDetail extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            weaponModel.effectName!,
+                            weaponModel.effectName,
                             style: TextStyle(
                               fontSize: 15.sp,
                               fontWeight: FontWeight.w500,
@@ -295,7 +296,7 @@ class WeaponDetail extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            weaponModel.effectScaling![i - 1],
+                            weaponModel.effectScaling[i - 1],
                             style: TextStyle(
                               fontSize: 14.sp,
                               fontWeight: FontWeight.w400,

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:genshin_builds/routes/go.dart';
 
 import '../../constants/asset_path.dart';
-import '../../constants/colors.dart';
 import '../../functions/global_function.dart';
 import '../../models/weapon_model.dart';
 
@@ -16,27 +14,13 @@ class WeaponWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        if (weaponModel.weaponType != null) {
-          Go.to(context, '/weapon_detail', arguments: weaponModel);
-        } else {
-          showToast(
-            'Coming soon',
-            context: context,
-            animation: StyledToastAnimation.scale,
-            reverseAnimation: StyledToastAnimation.fade,
-            position: StyledToastPosition.center,
-            animDuration: const Duration(seconds: 1),
-            duration: const Duration(seconds: 2),
-            curve: Curves.elasticOut,
-            reverseCurve: Curves.linear,
-          );
-        }
+        Go.to(context, '/weapon_detail', arguments: weaponModel);
       },
       child: Ink(
         padding: EdgeInsets.all(8.0.r),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0.r),
-          color: darkBGLighter,
+          color: Theme.of(context).backgroundColor,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,7 +62,7 @@ class WeaponWidget extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      weaponModel.stats,
+                      'Base ${weaponModel.base.toString()} substat ${weaponModel.subStat}',
                       style: TextStyle(
                         fontSize: 13.sp,
                         fontWeight: FontWeight.w600,
@@ -90,7 +74,7 @@ class WeaponWidget extends StatelessWidget {
             ),
             SizedBox(height: 5.h),
             Text(
-              weaponModel.effect,
+              weaponModel.effectScaling[0],
               style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400,

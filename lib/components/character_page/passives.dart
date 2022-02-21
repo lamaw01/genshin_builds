@@ -7,15 +7,15 @@ import '../../../constants/asset_path.dart';
 class Passives extends StatelessWidget {
   const Passives({
     Key? key,
-    required this.talentImage,
-    required this.talentName,
+    required this.image,
+    required this.name,
     required this.color,
-    required this.passiveDesc,
+    required this.description,
   }) : super(key: key);
-  final String talentImage;
-  final String talentName;
+  final String image;
+  final String name;
   final Color color;
-  final List<TalentText> passiveDesc;
+  final List<TalentText> description;
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +25,14 @@ class Passives extends StatelessWidget {
         Row(
           children: [
             Image.asset(
-              tallentPath + talentImage,
+              tallentPath + image,
               width: 45.r,
               height: 45.r,
               color: color,
             ),
             SizedBox(width: 5.w),
             Text(
-              talentName,
+              name,
               style: TextStyle(
                 color: color,
                 fontSize: 15.sp,
@@ -42,7 +42,7 @@ class Passives extends StatelessWidget {
           ],
         ),
         SizedBox(height: 5.h),
-        for (var textPassive in passiveDesc) ...[
+        for (var textPassive in description) ...[
           if (textPassive.isHighlight) ...[
             SizedBox(height: 5.h),
             Text(

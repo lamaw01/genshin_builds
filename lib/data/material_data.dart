@@ -74,3 +74,118 @@ final concealedTalon = MaterialModel(
   name: 'Concealed Talon',
   image: 'concealed_talon.png',
 );
+
+final chaosOculus = MaterialModel(
+  name: 'Chaos Oculus',
+  image: 'chaos_oculus.png',
+);
+
+final divineBodyFromGuyun = MaterialModel(
+  name: 'Divine Body from Guyun',
+  image: 'divine_body_from_guyun.png',
+);
+
+final inspectorsSacrificialKnife = MaterialModel(
+  name: "Inspector's Sacrificial Knife",
+  image: 'inspectors_sacrificial_knife.png',
+);
+
+final weatheredArrowhead = MaterialModel(
+  name: 'Weathered Arrowhead',
+  image: 'weathered_arrowhead.png',
+);
+
+final mistVeiledPrimoElixir = MaterialModel(
+  name: 'Mist Veiled Primo Elixir',
+  image: 'mist_veiled_primo_elixir.png',
+);
+
+final mistGrassWick = MaterialModel(
+  name: 'Mist Grass Wick',
+  image: 'mist_grass_wick.png',
+);
+
+final lieutenantsInsignia = MaterialModel(
+  name: "Lieutenant's Insignia",
+  image: 'lieutenants_insignia.png',
+);
+
+final scatteredPieceOfDecarabiansDream = MaterialModel(
+  name: "Scattered Piece of Decarabian's Dream",
+  image: 'scattered_piece_of_decarabians_dream.png',
+);
+
+final chaosCore = MaterialModel(
+  name: 'Chaos Core',
+  image: 'chaos_core.png',
+);
+
+final ominousMask = MaterialModel(
+  name: 'Ominous Mask',
+  image: 'ominous_mask.png',
+);
+
+final maskOfTheKijin = MaterialModel(
+  name: 'Mask of the Kijin',
+  image: 'mask_of_the_kijin.png',
+);
+
+final dreamOfTheDandelionGladiator = MaterialModel(
+  name: 'Dream of the Dandelion Gladiator',
+  image: 'dream_of_the_dandelion_gladiator.png',
+);
+
+final borealWolfsNostalgia = MaterialModel(
+  name: "Boreal Wolf's Nostalgia",
+  image: 'boreal_wolfs_nostalgia.png',
+);
+
+final leyLineSprout = MaterialModel(
+  name: 'Ley Line Sprout',
+  image: 'ley_line_sprout.png',
+);
+
+final slimeConcentrate = MaterialModel(
+  name: 'Slime Concentrate',
+  image: 'slime_concentrate.png',
+);
+
+final goldenRavenInsignia = MaterialModel(
+  name: 'Golden Raven Insignia',
+  image: 'golden_raven_insignia.png',
+);
+
+final blackCrystalHorn = MaterialModel(
+  name: 'Black Crystal Horn',
+  image: 'black_crystal_horn.png',
+);
+
+final energyNectar = MaterialModel(
+  name: 'Energy Nectar',
+  image: 'energy_nectar.png',
+);
+
+final polarizingPrisms = MaterialModel(
+  name: 'Polarizing Prism',
+  image: 'polarizing_prism.png',
+);
+
+final spectralNucleus = MaterialModel(
+  name: 'Spectral Nucleus',
+  image: 'spectral_nucleus.png',
+);
+
+final chunkOfAerosiderite = MaterialModel(
+  name: 'Chunk of Aerosiderite',
+  image: 'chunk_of_aerosiderite.png',
+);
+
+final fossilizedBoneShard = MaterialModel(
+  name: 'Fossilized Bone Shard',
+  image: 'fossilized_bone_shard.png',
+);
+
+final s = MaterialModel(
+  name: 's',
+  image: 's.png',
+);

@@ -7,15 +7,15 @@ import '../../../constants/asset_path.dart';
 class Constellation extends StatelessWidget {
   const Constellation({
     Key? key,
-    required this.talentImage,
-    required this.talentName,
+    required this.image,
+    required this.name,
     required this.color,
-    required this.constellationDesc,
+    required this.description,
   }) : super(key: key);
-  final String talentImage;
-  final String talentName;
+  final String image;
+  final String name;
   final Color color;
-  final List<TalentText> constellationDesc;
+  final List<TalentText> description;
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +25,14 @@ class Constellation extends StatelessWidget {
         Row(
           children: [
             Image.asset(
-              tallentPath + talentImage,
+              tallentPath + image,
               width: 45.r,
               height: 45.r,
               color: color,
             ),
             SizedBox(width: 5.w),
             Text(
-              talentName,
+              name,
               style: TextStyle(
                 color: color,
                 fontSize: 15.sp,
@@ -42,7 +42,7 @@ class Constellation extends StatelessWidget {
           ],
         ),
         SizedBox(height: 5.h),
-        for (var textConstellation in constellationDesc) ...[
+        for (var textConstellation in description) ...[
           if (textConstellation.isHighlight) ...[
             SizedBox(height: 5.h),
             Text(

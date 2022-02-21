@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/asset_path.dart';
-import '../../constants/colors.dart';
 import '../../functions/global_function.dart';
 import '../../models/character_portrait_model.dart';
 
@@ -28,7 +27,7 @@ class CharacterPortraitWidget extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5.0.r),
-              color: darkBGLighter,
+              color: Theme.of(context).backgroundColor,
             ),
             child: Image.asset(
               characterPath + characterPortraitModel.image,
@@ -40,7 +39,7 @@ class CharacterPortraitWidget extends StatelessWidget {
             top: 1,
             right: 1,
             child: CircleAvatar(
-              backgroundColor: darkBGLighter,
+              backgroundColor: Theme.of(context).backgroundColor,
               radius: 9.r,
               child: Image.asset(
                 elementPath +

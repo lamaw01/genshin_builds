@@ -1,6 +1,6 @@
 import '../models/character_card_model.dart';
 import '../data/characters/albedo_data.dart';
-import '../data/characters/ayaka_data.dart';
+import 'characters/kamisato_ayaka_data.dart';
 
 final charactersList = <CharacterCardModel>[
   CharacterCardModel(
@@ -95,7 +95,7 @@ final charactersList = <CharacterCardModel>[
     image: "ayaka_gacha_card.png",
     element: "Cryo",
     isDone: true,
-    characterModel: ayaka,
+    characterModel: kamisatoAyaka,
   ),
   CharacterCardModel(
     name: "Kazuha",
