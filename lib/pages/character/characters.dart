@@ -160,14 +160,30 @@ class CharacterIcon extends StatelessWidget {
             Positioned(
               top: 1,
               right: 1,
-              child: CircleAvatar(
-                backgroundColor: Theme.of(context).backgroundColor,
-                radius: 12.r,
-                child: Image.asset(
-                  elementPath + GlobalFunction.elementType(character.element)!,
-                  width: 20.0.r,
-                  height: 20.0.r,
-                ),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    backgroundColor: Theme.of(context).backgroundColor,
+                    radius: 13.r,
+                    child: Image.asset(
+                      elementPath +
+                          GlobalFunction.elementType(character.element)!,
+                      width: 22.0.r,
+                      height: 22.0.r,
+                    ),
+                  ),
+                  SizedBox(height: 2.5.h),
+                  CircleAvatar(
+                    backgroundColor: Theme.of(context).backgroundColor,
+                    radius: 13.r,
+                    child: Image.asset(
+                      weaponTypePath +
+                          GlobalFunction.weaponType(character.weaponType)!,
+                      width: 22.0.r,
+                      height: 22.0.r,
+                    ),
+                  ),
+                ],
               ),
             ),
             Positioned(

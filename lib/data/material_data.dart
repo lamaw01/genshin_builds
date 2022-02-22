@@ -185,6 +185,12 @@ final fossilizedBoneShard = MaterialModel(
   image: 'fossilized_bone_shard.png',
 );
 
+//narukamis_valor
+final narukamisValor = MaterialModel(
+  name: "Narukami's Valor",
+  image: 'narukamis_valor.png',
+);
+
 final s = MaterialModel(
   name: 's',
   image: 's.png',

@@ -7,17 +7,17 @@ class GlobalFunction {
   static String? elementType(String element) {
     switch (element) {
       case 'Geo':
-        return "geo.png";
+        return 'geo.png';
       case 'Cryo':
-        return "cryo.png";
+        return 'cryo.png';
       case 'Electro':
-        return "electro.png";
+        return 'electro.png';
       case 'Pyro':
-        return "pyro.png";
+        return 'pyro.png';
       case 'Anemo':
-        return "anemo.png";
+        return 'anemo.png';
       case 'Hydro':
-        return "hydro.png";
+        return 'hydro.png';
       default:
         return null;
     }
