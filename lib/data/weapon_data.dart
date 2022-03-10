@@ -9,6 +9,7 @@ import '../models/weapon_model.dart';
 
 final weaponList = <WeaponModel>[
   akuoumaru,
+  amosBow,
   aquilaFavonia,
   amenomaKageuchi,
   blackcliffLongsword,
@@ -21,6 +22,7 @@ final weaponList = <WeaponModel>[
   deathmatch,
   dragonsBane,
   dragonspineSpear,
+  elegyForTheEnd,
   engulfingLightning,
   everlastingMoonglow,
   favoniusGreatsword,
@@ -31,13 +33,17 @@ final weaponList = <WeaponModel>[
   hakushinRing,
   harbingerOfDawn,
   ironSting,
+  kagurasVerity,
   katsuragikiriNagamasa,
   kitainCrossSpear,
   lithicBlade,
   lithicSpear,
   lionsRoar,
+  lostPrayerToTheSacredWinds,
   luxuriousSeaLord,
+  memoryOfDust,
   mistsplitterReforged,
+  polarStar,
   primordialJadeCutter,
   primordialJadeWingedSpear,
   prototypeAmber,
@@ -52,6 +58,8 @@ final weaponList = <WeaponModel>[
   sacrificialGreatsword,
   sacrificialSword,
   serpentSpine,
+  skywardAtlas,
+  skywardHarp,
   skywardBlade,
   skyriderGreatsword,
   skywardPride,
@@ -66,6 +74,7 @@ final weaponList = <WeaponModel>[
   theFlute,
   theUnforged,
   thrillingTalesOfDragonSlayers,
+  thunderingPulse,
   summitShaper,
   vortexVanquisher,
   wavebreakersFin,
@@ -100,6 +109,34 @@ final akuoumaru = WeaponModel(
     "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.18%. A maximum of 60% increased Elemental Burst DMG can be achieved this way.",
     "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.21%. A maximum of 70% increased Elemental Burst DMG can be achieved this way.",
     "For every point of the entire party's combined maximum Energy capacity, the Elemental Burst DMG of the character equipping this weapon is increased by 0.24%. A maximum of 80% increased Elemental Burst DMG can be achieved this way.",
+  ],
+);
+
+final amosBow = WeaponModel(
+  name: "Amos' Bow",
+  image: 'amos_bow.png',
+  rarity: 5,
+  weaponType: 'Bow',
+  acquired: 'Gacha',
+  base: 608,
+  subStat: 'ATK 49.6%',
+  description:
+      'An extremely ancient bow that has retained its power despite its original master being long gone. It draws power from everyone and everything in the world, and the further away you are from that which your heart desires, the more powerful it is.',
+  users: <CharacterPortraitModel>[
+    ganyuPortrait,
+  ],
+  materials: <MaterialModel>[
+    dreamOfTheDandelionGladiator,
+    chaosCore,
+    slimeConcentrate,
+  ],
+  effectName: 'Strong-Willed',
+  effectScaling: <String>[
+    'Increases Normal Attack and Charged Attack DMG by 12%. After a Normal or Charged Attack is fired, DMG dealt increases by a further 8% every 0.1 seconds the arrow is in the air for up to 5 times.',
+    'Increases Normal Attack and Charged Attack DMG by 15%. After a Normal or Charged Attack is fired, DMG dealt increases by a further 10% every 0.1 seconds the arrow is in the air for up to 5 times.',
+    'Increases Normal Attack and Charged Attack DMG by 18%. After a Normal or Charged Attack is fired, DMG dealt increases by a further 12% every 0.1 seconds the arrow is in the air for up to 5 times.',
+    'Increases Normal Attack and Charged Attack DMG by 21%. After a Normal or Charged Attack is fired, DMG dealt increases by a further 14% every 0.1 seconds the arrow is in the air for up to 5 times.',
+    'Increases Normal Attack and Charged Attack DMG by 24%. After a Normal or Charged Attack is fired, DMG dealt increases by a further 16% every 0.1 seconds the arrow is in the air for up to 5 times.',
   ],
 );
 
@@ -448,6 +485,40 @@ final dragonspineSpear = WeaponModel(
   ],
 );
 
+final elegyForTheEnd = WeaponModel(
+  name: 'Elegy for the End',
+  image: 'elegy_for_the_end.png',
+  rarity: 5,
+  weaponType: 'Bow',
+  acquired: 'Gacha',
+  base: 608,
+  subStat: 'Energy Recharge 55.1%',
+  description:
+      "A bow as lovely as any bard's lyre, its arrows pierce the heart like a lamenting sigh.",
+  users: <CharacterPortraitModel>[
+    amberPortrait,
+    fischlPortrait,
+    dionaPortrait,
+    ganyuPortrait,
+    gorouPortrait,
+    kujouSaraPortrait,
+    ventiPortrait,
+  ],
+  materials: <MaterialModel>[
+    borealWolfsNostalgia,
+    blackCrystalHorn,
+    lieutenantsInsignia,
+  ],
+  effectName: 'The Parting Refrain',
+  effectScaling: <String>[
+    'A part of the "Millennial Movement" that wanders amidst the winds. Increases Elemental Mastery by 60. When the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field. When you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Farewell Song" effect for 12s. "Millennial Movement: Farewell Song" increases Elemental Mastery by 100 and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s. Of the many effects of the "Millennial Movement," buffs of the same type will not stack.',
+    'A part of the "Millennial Movement" that wanders amidst the winds. Increases Elemental Mastery by 75. When the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field. When you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Farewell Song" effect for 12s. "Millennial Movement: Farewell Song" increases Elemental Mastery by 125 and increases ATK by 25%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s. Of the many effects of the "Millennial Movement," buffs of the same type will not stack.',
+    'A part of the "Millennial Movement" that wanders amidst the winds. Increases Elemental Mastery by 90. When the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field. When you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Farewell Song" effect for 12s. "Millennial Movement: Farewell Song" increases Elemental Mastery by 150 and increases ATK by 30%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s. Of the many effects of the "Millennial Movement," buffs of the same type will not stack.',
+    'A part of the "Millennial Movement" that wanders amidst the winds. Increases Elemental Mastery by 105. When the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field. When you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Farewell Song" effect for 12s. "Millennial Movement: Farewell Song" increases Elemental Mastery by 175 and increases ATK by 35%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s. Of the many effects of the "Millennial Movement," buffs of the same type will not stack.',
+    'A part of the "Millennial Movement" that wanders amidst the winds. Increases Elemental Mastery by 120. When the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field. When you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the "Millennial Movement: Farewell Song" effect for 12s. "Millennial Movement: Farewell Song" increases Elemental Mastery by 200 and increases ATK by 40%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s. Of the many effects of the "Millennial Movement," buffs of the same type will not stack.',
+  ],
+);
+
 final engulfingLightning = WeaponModel(
   name: 'Engulfing Lightning',
   image: 'engulfing_lightning.png',
@@ -754,6 +825,36 @@ final ironSting = WeaponModel(
   ],
 );
 
+final kagurasVerity = WeaponModel(
+  name: "Kagura's Verity",
+  image: 'kaguras_verity.png',
+  rarity: 5,
+  weaponType: 'Catalyst',
+  acquired: 'Gacha',
+  base: 608,
+  subStat: 'CRIT DMG 66.2%',
+  description:
+      'The bells used when performing the Kagura Dance, blessed by the Guuji herself. The scent of the Sacred Sakura tree lingers on it.',
+  users: <CharacterPortraitModel>[
+    kleePortrait,
+    ningguangPortrait,
+    yanfeiPortrait,
+  ],
+  materials: <MaterialModel>[
+    maskOfTheKijin,
+    concealedTalon,
+    spectralNucleus,
+  ],
+  effectName: 'Kagura Dance of the Sacred Sakura',
+  effectScaling: <String>[
+    'Gains the Kagura Dance effect when using an Elemental Skill, causing the Elemental Skill DMG of the character wielding this weapon to increase by 12% for 16s. Max 3 stacks. This character will gain 12% All Elemental DMG Bonus when they possess 3 stacks.',
+    'Gains the Kagura Dance effect when using an Elemental Skill, causing the Elemental Skill DMG of the character wielding this weapon to increase by 15% for 16s. Max 3 stacks. This character will gain 15% All Elemental DMG Bonus when they possess 3 stacks.',
+    'Gains the Kagura Dance effect when using an Elemental Skill, causing the Elemental Skill DMG of the character wielding this weapon to increase by 18% for 16s. Max 3 stacks. This character will gain 18% All Elemental DMG Bonus when they possess 3 stacks.',
+    'Gains the Kagura Dance effect when using an Elemental Skill, causing the Elemental Skill DMG of the character wielding this weapon to increase by 21% for 16s. Max 3 stacks. This character will gain 21% All Elemental DMG Bonus when they possess 3 stacks.',
+    'Gains the Kagura Dance effect when using an Elemental Skill, causing the Elemental Skill DMG of the character wielding this weapon to increase by 24% for 16s. Max 3 stacks. This character will gain 24% All Elemental DMG Bonus when they possess 3 stacks.',
+  ],
+);
+
 final katsuragikiriNagamasa = WeaponModel(
   name: 'Katsuragikiri Nagamasa',
   image: 'katsuragikiri_nagamasa.png',
@@ -903,6 +1004,36 @@ final lionsRoar = WeaponModel(
   ],
 );
 
+final lostPrayerToTheSacredWinds = WeaponModel(
+  name: 'Lost Prayer to the Sacred Winds',
+  image: 'lost_prayer_to_the_sacred_winds.png',
+  rarity: 5,
+  weaponType: 'Catalyst',
+  acquired: 'Gacha',
+  base: 608,
+  subStat: 'CRIT Rate 33.1%',
+  description:
+      'An educational tome written by anonymous early inhabitants who worshiped the wind. It has been blessed by the wind for its faithfulness and influence over the millennia.',
+  users: <CharacterPortraitModel>[
+    lisaPortrait,
+    ningguangPortrait,
+    yanfeiPortrait,
+  ],
+  materials: <MaterialModel>[
+    dreamOfTheDandelionGladiator,
+    chaosCore,
+    slimeConcentrate,
+  ],
+  effectName: 'Boundless Blessing',
+  effectScaling: <String>[
+    'Increases Movement SPD by 10%. When in battle, gain an 8% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.',
+    'Increases Movement SPD by 10%. When in battle, gain an 10% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.',
+    'Increases Movement SPD by 10%. When in battle, gain an 12% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.',
+    'Increases Movement SPD by 10%. When in battle, gain an 14% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.',
+    'Increases Movement SPD by 10%. When in battle, gain an 14% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.',
+  ],
+);
+
 final luxuriousSeaLord = WeaponModel(
   name: 'Luxurious Sea-Lord',
   image: 'luxurious_sea_lord.png',
@@ -935,6 +1066,34 @@ final luxuriousSeaLord = WeaponModel(
   ],
 );
 
+final memoryOfDust = WeaponModel(
+  name: 'Memory of Dust',
+  image: 'memory_of_dust.png',
+  rarity: 5,
+  weaponType: 'Catalyst',
+  acquired: 'Gacha',
+  base: 608,
+  subStat: 'ATK 49.6%',
+  description:
+      'A stone dumbbell containing distant memories. Its endless transformations reveal the power within.',
+  users: <CharacterPortraitModel>[
+    ningguangPortrait,
+  ],
+  materials: <MaterialModel>[
+    chunkOfAerosiderite,
+    fossilizedBoneShard,
+    ominousMask,
+  ],
+  effectName: 'Golden Majesty',
+  effectScaling: <String>[
+    'Increases Shield Strength by 20%. Scoring hits on opponents increases ATK by 4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+    'Increases Shield Strength by 25%. Scoring hits on opponents increases ATK by 5% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+    'Increases Shield Strength by 30%. Scoring hits on opponents increases ATK by 6% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+    'Increases Shield Strength by 35%. Scoring hits on opponents increases ATK by 7% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+    'Increases Shield Strength by 40%. Scoring hits on opponents increases ATK by 8% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+  ],
+);
+
 final mistsplitterReforged = WeaponModel(
   name: 'Mistsplitter Reforged',
   image: 'mistsplitter_reforged.png',
@@ -964,6 +1123,34 @@ final mistsplitterReforged = WeaponModel(
     "Gain a 18% Elemental DMG Bonus for every element and receive the might of Mistsplitter's Emblem. At stack levels 1/2/3, Mistsplitter's Emblem provides a 12/24/42% Elemental DMG Bonus for the character's Elemental Type. The character will obtain 1 stack of Mistsplitter's Emblem in each of the following scenarios: Normal Attack deals Elemental DMG (stack lasts 5s), casting Elemental Burst (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
     "Gain a 21% Elemental DMG Bonus for every element and receive the might of Mistsplitter's Emblem. At stack levels 1/2/3, Mistsplitter's Emblem provides a 14/28/49% Elemental DMG Bonus for the character's Elemental Type. The character will obtain 1 stack of Mistsplitter's Emblem in each of the following scenarios: Normal Attack deals Elemental DMG (stack lasts 5s), casting Elemental Burst (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
     "Gain a 24% Elemental DMG Bonus for every element and receive the might of Mistsplitter's Emblem. At stack levels 1/2/3, Mistsplitter's Emblem provides a 16/32/56% Elemental DMG Bonus for the character's Elemental Type. The character will obtain 1 stack of Mistsplitter's Emblem in each of the following scenarios: Normal Attack deals Elemental DMG (stack lasts 5s), casting Elemental Burst (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
+  ],
+);
+
+final polarStar = WeaponModel(
+  name: 'Polar Star',
+  image: 'polar_star.png',
+  rarity: 5,
+  weaponType: 'Bow',
+  acquired: 'Gacha',
+  base: 608,
+  subStat: 'CRIT Rate 33.1%',
+  description:
+      'A pristine bow that is as sharp as the glaciers of the far north.',
+  users: <CharacterPortraitModel>[
+    tartagliaPortrait,
+  ],
+  materials: <MaterialModel>[
+    maskOfTheKijin,
+    concealedTalon,
+    spectralNucleus,
+  ],
+  effectName: "Daylight's Augury",
+  effectScaling: <String>[
+    'Elemental Skill and Elemental Burst DMG increased by 12%. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by 10/20/30/48%. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.',
+    'Elemental Skill and Elemental Burst DMG increased by 15%. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by 12.5/25/37.5/60%. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.',
+    'Elemental Skill and Elemental Burst DMG increased by 15%. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by 12.5/25/37.5/60%. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.',
+    'Elemental Skill and Elemental Burst DMG increased by 21%. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by 17.5/35/52.5/84%. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.',
+    'Elemental Skill and Elemental Burst DMG increased by 24%. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by 20/40/60/96%. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.',
   ],
 );
 
@@ -1375,6 +1562,69 @@ final serpentSpine = WeaponModel(
     'Every 4s a character is on the field, they will deal 8% more DMG and take 2.4% more DMG. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be reduced by 1 stack when the character takes DMG.',
     'Every 4s a character is on the field, they will deal 9% more DMG and take 2.2% more DMG. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be reduced by 1 stack when the character takes DMG.',
     'Every 4s a character is on the field, they will deal 10% more DMG and take 2% more DMG. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be reduced by 1 stack when the character takes DMG.',
+  ],
+);
+
+final skywardAtlas = WeaponModel(
+  name: 'Skyward Atlas',
+  image: 'skyward_atlas.png',
+  rarity: 5,
+  weaponType: 'Catalyst',
+  acquired: 'Gacha',
+  base: 674,
+  subStat: 'ATK 33.1%',
+  description:
+      'A cloud atlas symbolizing Dvalin and its former master, the Anemo Archon. It details the winds and clouds of the northern regions and contains the powers of the sky and wind.',
+  users: <CharacterPortraitModel>[
+    lisaPortrait,
+    ningguangPortrait,
+    yanfeiPortrait,
+  ],
+  materials: <MaterialModel>[
+    borealWolfsNostalgia,
+    leyLineSprout,
+    weatheredArrowhead,
+  ],
+  effectName: 'Wandering Clouds',
+  effectScaling: <String>[
+    'Increases Elemental DMG Bonus by 12%. Normal Attack hits have a 50% chance to earn the favor of the clouds. which actively seek out nearby opponents to attack for 15s, dealing 160% ATK DMG. Can only occur once every 30s.',
+    'Increases Elemental DMG Bonus by 15%. Normal Attack hits have a 50% chance to earn the favor of the clouds. which actively seek out nearby opponents to attack for 15s, dealing 200% ATK DMG. Can only occur once every 30s.',
+    'Increases Elemental DMG Bonus by 18%. Normal Attack hits have a 50% chance to earn the favor of the clouds. which actively seek out nearby opponents to attack for 15s, dealing 240% ATK DMG. Can only occur once every 30s.',
+    'Increases Elemental DMG Bonus by 21%. Normal Attack hits have a 50% chance to earn the favor of the clouds. which actively seek out nearby opponents to attack for 15s, dealing 280% ATK DMG. Can only occur once every 30s.',
+    'Increases Elemental DMG Bonus by 24%. Normal Attack hits have a 50% chance to earn the favor of the clouds. which actively seek out nearby opponents to attack for 15s, dealing 320% ATK DMG. Can only occur once every 30s.',
+  ],
+);
+
+final skywardHarp = WeaponModel(
+  name: 'Skyward Harp',
+  image: 'skyward_harp.png',
+  rarity: 5,
+  weaponType: 'Bow',
+  acquired: 'Gacha',
+  base: 674,
+  subStat: 'CRIT Rate 22.1%',
+  description:
+      "A greatbow that symbolizes Dvalin's affiliation with the Anemo Archon. The sound of the bow firing is music to the Anemo Archon's ears. It contains the power of the sky and wind within.",
+  users: <CharacterPortraitModel>[
+    amberPortrait,
+    fischlPortrait,
+    ganyuPortrait,
+    kujouSaraPortrait,
+    tartagliaPortrait,
+    yoimiyaPortrait,
+  ],
+  materials: <MaterialModel>[
+    borealWolfsNostalgia,
+    leyLineSprout,
+    weatheredArrowhead,
+  ],
+  effectName: 'Echoing Ballad',
+  effectScaling: <String>[
+    'Increases CRIT DMG by 20%. Hits have a 60% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 4s.',
+    'Increases CRIT DMG by 25%. Hits have a 70% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 4s.',
+    'Increases CRIT DMG by 30%. Hits have a 80% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 4s.',
+    'Increases CRIT DMG by 35%. Hits have a 90% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 2.5s.',
+    'Increases CRIT DMG by 40%. Hits have a 100% chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every 2s.',
   ],
 );
 
@@ -1797,6 +2047,32 @@ final thrillingTalesOfDragonSlayers = WeaponModel(
     'When switching characters, the new character taking the field has their ATK increased by 36% for 10s. This effect can only occur once every 20s.',
     'When switching characters, the new character taking the field has their ATK increased by 42% for 10s. This effect can only occur once every 20s.',
     'When switching characters, the new character taking the field has their ATK increased by 48% for 10s. This effect can only occur once every 20s.',
+  ],
+);
+
+final thunderingPulse = WeaponModel(
+  name: 'Thundering Pulse',
+  image: 'thundering_pulse.png',
+  rarity: 5,
+  weaponType: 'Bow',
+  acquired: 'Gacha',
+  base: 608,
+  subStat: 'CRIT DMG 66.2%',
+  description:
+      'A longbow that was a gift from the Shogun. Eternal lightning crackles all around it.',
+  users: <CharacterPortraitModel>[
+    fischlPortrait,
+    tartagliaPortrait,
+    yoimiyaPortrait,
+  ],
+  materials: <MaterialModel>[],
+  effectName: 'Rule By Thunder',
+  effectScaling: <String>[
+    "Increases ATK by 20% and grants the might of the Thunder Emblem. At stack levels 1/2/3, the Thunder Emblem increases Normal Attack DMG by 12/24/40%. The character will obtain 1 stack of Thunder Emblem in each of the following scenarios: Normal Attack deals DMG (stack lasts 5s), casting Elemental Skill (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
+    "Increases ATK by 25% and grants the might of the Thunder Emblem. At stack levels 1/2/3, the Thunder Emblem increases Normal Attack DMG by 15/30/50%. The character will obtain 1 stack of Thunder Emblem in each of the following scenarios: Normal Attack deals DMG (stack lasts 5s), casting Elemental Skill (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
+    "Increases ATK by 30% and grants the might of the Thunder Emblem. At stack levels 1/2/3, the Thunder Emblem increases Normal Attack DMG by 18/36/60%. The character will obtain 1 stack of Thunder Emblem in each of the following scenarios: Normal Attack deals DMG (stack lasts 5s), casting Elemental Skill (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
+    "Increases ATK by 30% and grants the might of the Thunder Emblem. At stack levels 1/2/3, the Thunder Emblem increases Normal Attack DMG by 18/36/60%. The character will obtain 1 stack of Thunder Emblem in each of the following scenarios: Normal Attack deals DMG (stack lasts 5s), casting Elemental Skill (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
+    "Increases ATK by 40% and grants the might of the Thunder Emblem. At stack levels 1/2/3, the Thunder Emblem increases Normal Attack DMG by 24/48/80%. The character will obtain 1 stack of Thunder Emblem in each of the following scenarios: Normal Attack deals DMG (stack lasts 5s), casting Elemental Skill (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
   ],
 );
 
