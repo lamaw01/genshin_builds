@@ -38,9 +38,9 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: () => MaterialApp(
-        debugShowCheckedModeBanner: false,
         title: 'Genshin Builds',
         locale: const Locale('en', 'US'),
+        debugShowCheckedModeBanner: false,
         theme: themeProvider.getThemeData(themeProvider.getCurrentTheme),
         initialRoute: '/',
         onGenerateRoute: RouteGenerator.generateRoute,
