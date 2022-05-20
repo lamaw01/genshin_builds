@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'artifact/artifacts.dart';
 import 'character/characters.dart';
+// import 'settings/settings.dart';
 import 'weapon/weapons.dart';
 
 class BottomNavWidget extends StatefulWidget {
@@ -20,6 +21,7 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
     const MyCharacters(),
     const MyWeapons(),
     const MyArtifacts(),
+    // const SettingsPage(),
   ];
 
   @override
@@ -76,6 +78,12 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                 Icons.star,
               ),
             ),
+            // BottomNavigationBarItem(
+            //   label: 'Settings',
+            //   icon: Icon(
+            //     Icons.settings,
+            //   ),
+            // ),
           ],
         ),
       ),

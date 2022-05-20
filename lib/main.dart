@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
+
     return ScreenUtilInit(
       designSize: const Size(411, 683), //pixel 5.0"
       minTextAdapt: true,
