@@ -8,7 +8,7 @@ Genshin Impact Character build guides with weapon and artifact data.
 * Weapon data
 * Artifact data
 
-[Download Here](https://drive.google.com/file/d/12QFOP3Q9GgbRRXZLAgqEmoaZzLXKphiI/view?usp=sharing)
+[Download Here](https://drive.google.com/file/d/1SDw15jzI9EeCn_d6Y59lriKUpSCczONU/view?usp=sharing)
 
 ### Screenshots
 
